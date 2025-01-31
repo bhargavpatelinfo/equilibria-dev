@@ -9,3 +9,12 @@ labelLink{
 ${labelLinkFields}
 }
 `;
+
+{/* Title Value Unit */ }
+
+export const titleValueUnitFields = /* groq */ `
+color,
+title,
+value,
+suffix
+`;
