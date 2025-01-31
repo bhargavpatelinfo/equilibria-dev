@@ -3,19 +3,70 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFF9FC;
+  --maroon: #1C0917;
+  --pink:#FFF0F0;
+  --darkPink: #C46BAE;
+  --lightPink: #FDC6E0;
+  --darkPurple: #4A2040;
+  --darkRed: #6C0E23;
+  
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+html,body {
+  background: var(--background);
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+  color: #1C0917;
+  font-weight: 400;
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-[1488px] px-4 mx-auto w-full;
+  }
+
+  h1 {
+    @apply text-[64px] tracking-[-2%] font-semibold;
+  }
+
+  h2 {
+    @apply text-[64px] tracking-[-2%] font-semibold;
+  }
+
+  h3 {
+    @apply text-[52px] tracking-[-2%] font-semibold;
+  }
+
+  h4 {
+    @apply text-[40px] tracking-[-2%] font-semibold;
+  }
+
+  .sectionTitle {
+    @apply text-[84px]  tracking-[-2%] font-bold;
+  }
+
+
+  .basic-transition {
+    @apply transition ease-linear duration-300;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
