@@ -5,12 +5,12 @@
 :root {
   --background: #FFF9FC;
   --maroon: #1C0917;
+  --darkMaroon: #120412;
   --pink:#FFF0F0;
   --darkPink: #C46BAE;
   --lightPink: #FDC6E0;
   --darkPurple: #4A2040;
   --darkRed: #6C0E23;
-  
 }
 
 html {
@@ -52,7 +52,7 @@ html,body {
 
 
   .basic-transition {
-    @apply transition ease-linear duration-300;
+    @apply transition ease-linear duration-200;
   }
 }
 

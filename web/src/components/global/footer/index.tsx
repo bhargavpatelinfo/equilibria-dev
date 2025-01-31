@@ -12,93 +12,107 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
   const { logo, bottomDescription, connectWithUs, footerLinks, legalLinks } =
     block || {};
   return (
-    <footer className="bg-black relative">
-      {logo && (
-        <Link to={routes.home()} className="">
-          <Image src={logo} alt={logo?.alt} priority className="" />
-        </Link>
-      )}
-      {bottomDescription && (
-        <p className="text-base font-norma text-left  text-white">
-          {`© ${currentYear} ${bottomDescription}`}
-        </p>
-      )}
-      {footerLinks?.length > 0 && (
-        <ul className="grid grid-cols-1 em:grid-cols-2 md:grid-cols-2 gap-8 em:gap-12 sm:gap-18 lg:gap-20 place-content-between xl:flex xl:gap-13 2xl:gap-16">
-          {footerLinks?.map((item, index) => {
-            const { labelLinks, title } = item || {};
-            return (
-              <li
-                key={index}
-                className="flex items-start  flex-col gap-4 md:gap-8"
-              >
-                {title && (
-                  <h4 className="text-base text-white font-bold">{title}</h4>
+    <footer className="bg-darkMaroon relative pt-[60px] lg:pt-[104px] pb-[60px]">
+      <div className="container">
+        <div className="flex flex-col xl:flex-row justify-between gap-14 xl:gap-10">
+          <div className="max-w-[464px] w-full">
+          {logo && (
+            <Link to={routes.home()} className="">
+              <Image src={logo} alt={logo?.alt} priority className="max-w-[250px] em:max-w-[350px] 1xl:max-w-[464px] h-auto w-full" />
+            </Link>
+          )}
+          </div>
+          <div className="flex flex-col md:flex-row justify-between gap-10 md:gap-5 max-w-[850px] w-full">
+            <div className="max-w-[520px] w-full">
+            {footerLinks?.length > 0 && (
+              <ul className="flex flex-col sm:flex-row justify-between gap-10 sm:gap-5">
+                {footerLinks?.map((item, index) => {
+                  const { labelLinks, title } = item || {};
+                  return (
+                    <li
+                      key={index}
+                      className="flex flex-col gap-6 sm:gap-8"
+                    >
+                      {title && (
+                        <h4 className="text-base tracking-[-2%] font-medium text-white opacity-70">{title}</h4>
+                      )}
+                      {labelLinks?.length > 0 && (
+                        <div className="flex flex-col gap-3">
+                          {labelLinks?.map((item, index) => {
+                            const { label, link } = item || {};
+                            return (
+                              <div
+                                key={index}
+                                className=""
+                              >
+                                <Link to={link || "#"} className="text-lg em:text-xl text-white tracking-[-2%] font-medium hover:opacity-70 basic-transition">{label}</Link>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            </div>
+            {connectWithUs?.title && (
+              <div className="flex flex-col gap-5 sm:gap-8">
+                {connectWithUs?.title && (
+                  <h4 className="text-base tracking-[-2%] font-medium text-white opacity-70">
+                    {connectWithUs?.title}
+                  </h4>
                 )}
-                {labelLinks?.length > 0 && (
-                  <div className="flex flex-col items-start  gap-2 md:gap-3">
-                    {labelLinks?.map((item, index) => {
-                      const { label, link } = item || {};
+                {connectWithUs?.titleLabelLinks?.length > 0 && (
+                  <div className="flex flex-col gap-3">
+                    {connectWithUs?.titleLabelLinks?.map((item, index) => {
+                      const { labelLink, title } = item || {};
                       return (
                         <div
                           key={index}
-                          className="[&>a]:text-base hover:[&>a]:opacity-70 [&>a]:1xl:text-xl [&>a]:font-extralight [&>a]:text-white [&>a]:cursor-pointer"
+                          className="flex flex-col gap-3"
                         >
-                          <Link to={link || "#"}>{label}</Link>
+                          {title && <div className="text-xl text-white tracking-[-2%] font-medium">{title}</div>}
+                          <Link to={labelLink?.link || "#"} className="text-lg em:text-xl text-white tracking-[-2%] font-medium hover:opacity-70 basic-transition">{labelLink?.label}</Link>
                         </div>
                       );
                     })}
                   </div>
                 )}
-              </li>
-            );
-          })}
-        </ul>
-      )}
-      {connectWithUs?.title && (
-        <div>
-          {connectWithUs?.title && (
-            <h4 className="text-base text-white font-bold">
-              {connectWithUs?.title}
-            </h4>
+              </div>
+            )}
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-between items-center mt-20 md:mt-[156px] gap-5 em:gap-8">
+          {bottomDescription && (
+            <p className="text-base em:text-xl tracking-[-2%] text-white">
+              {`© ${currentYear} ${bottomDescription}`}
+            </p>
           )}
-          {connectWithUs?.titleLabelLinks?.length > 0 && (
-            <div className="flex flex-col items-start  gap-2 md:gap-3">
-              {connectWithUs?.titleLabelLinks?.map((item, index) => {
-                const { labelLink, title } = item || {};
+          {legalLinks?.length > 0 && (
+            <div className="flex flex-row flex-wrap items-center justify-center  gap-3">
+              {legalLinks?.map((item, index) => {
+                const { label, link } = item || {};
+                const isLast = index === legalLinks.length - 1;
                 return (
                   <div
                     key={index}
-                    className="[&>a]:text-base hover:[&>a]:opacity-70 [&>a]:1xl:text-xl [&>a]:font-extralight [&>a]:text-white [&>a]:cursor-pointer"
+                    className="text-white text-base em:text-xl tracking-[-2%] flex flex-row  gap-3 items-center"
                   >
-                    {title && <div>{title}</div>}
-                    <Link to={labelLink?.link || "#"}>{labelLink?.label}</Link>
+                    <Link to={link || "#"} className="">
+                      {label}
+                    </Link>
+                    <div className="hidden em:block">
+                    {!isLast && " - "}
+                    </div>
                   </div>
                 );
               })}
             </div>
           )}
         </div>
-      )}
-      {legalLinks?.length > 0 && (
-        <div className="flex flex-col items-start  gap-2 md:gap-3">
-          {legalLinks?.map((item, index) => {
-            const { label, link } = item || {};
-            const isLast = index === legalLinks.length - 1;
-            return (
-              <div
-                key={index}
-                className="[&>a]:text-base hover:[&>a]:opacity-70 [&>a]:1xl:text-xl [&>a]:font-extralight [&>a]:text-white [&>a]:cursor-pointer"
-              >
-                <Link to={link || "#"}>
-                  {label}
-                </Link>
-                {!isLast && " - "}
-              </div>
-            );
-          })}
-        </div>
-      )}
+      </div>
     </footer>
   );
 };
