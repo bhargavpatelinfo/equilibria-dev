@@ -3,6 +3,7 @@ import { SectionType } from "../../../../lib/sanity/types";
 import HomeHeroSection from "@/components/homeHeroSection";
 import LifeChangingResultsSection from "@/components/lifeChangingResultsSection";
 import SliderSection from "@/components/sliderSection";
+import BestCareSection from "@/components/bestCareSection";
 
 interface SectionProps {
   data: SectionType;
@@ -16,6 +17,8 @@ const Section: React.FC<SectionProps> = ({ data }) => {
       return <LifeChangingResultsSection {...data} />;
     case "sliderSection":
       return <SliderSection {...data} />;
+    case "bestCareSection":
+      return <BestCareSection {...data} />;
 
 
     default:

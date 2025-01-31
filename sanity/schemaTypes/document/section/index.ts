@@ -22,6 +22,7 @@ export default {
         { type: "homeHeroSection" },
         { type: "lifeChangingResultsSection" },
         { type: "sliderSection" },
+        { type: "bestCareSection" },
       ],
     },
   ],

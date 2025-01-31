@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { titleValueUnitFields } from "../globalFields";
+import { imageTitleDescriptionCtaFields, titleValueUnitFields } from "../globalFields";
 
 {
   /* Home Hero Section */
@@ -43,4 +43,19 @@ export const sliderSectionFields = /* groq */ `
 _type,
 id,
 texts
+`;
+
+{
+  /* Best Care Section */
+}
+
+export const bestCareSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+imageTitleDescriptionCtas[]{
+${imageTitleDescriptionCtaFields}
+}
 `;

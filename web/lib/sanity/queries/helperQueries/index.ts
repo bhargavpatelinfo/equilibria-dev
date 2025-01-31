@@ -1,6 +1,6 @@
 import { footerFields } from "../helper/footerFields";
 import { headerFields } from "../helper/headerFields";
-import { homeHeroSectionFields, lifeChangingResultsSectionFields, sliderSectionFields } from "../helper/sectionFields";
+import { bestCareSectionFields, homeHeroSectionFields, lifeChangingResultsSectionFields, sliderSectionFields } from "../helper/sectionFields";
 import { seofields } from "../helper/seoFields";
 
 {
@@ -58,6 +58,9 @@ ${lifeChangingResultsSectionFields}
 },
 (_type == "sliderSection") => {
 ${sliderSectionFields}
+},
+(_type == "bestCareSection") => {
+${bestCareSectionFields}
 },
   
 },
