@@ -42,4 +42,16 @@ export default {
       group: 'main',
     },
   ],
+  preview: {
+    select: {
+      title: 'name',
+      image: 'image',
+    },
+    prepare({title, image}) {
+      return {
+        title: title || 'Leader',
+        media: image,
+      }
+    },
+  },
 } as SchemaTypeDefinition
