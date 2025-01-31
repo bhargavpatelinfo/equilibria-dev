@@ -1,4 +1,9 @@
-import { LabelLinkType } from "./common";
+import {
+  ButtonType,
+  CustomImageType,
+  LabelLinkType,
+  RichTextType,
+} from "./common";
 
 {
   /* Color */
@@ -35,4 +40,27 @@ export type TitleValueUnitType = {
   title: string;
   value: string;
   suffix: string;
+};
+
+{
+  /* Image Title Description Cta */
+}
+
+export type ImageTitleDescriptionCtaType = {
+  _type: "imageTitleDescriptionCta";
+  image: CustomImageType;
+  title: string;
+  description: RichTextType;
+  cta: ButtonType;
+};
+
+{
+  /* Title Description Image */
+}
+
+export type TitleDescriptionImageType = {
+  _type: "titleDescriptionImage";
+  image: CustomImageType;
+  title: string;
+  description: RichTextType;
 };

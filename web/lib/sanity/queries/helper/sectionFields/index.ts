@@ -1,5 +1,6 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { titleValueUnitFields } from "../globalFields";
+import { imageTitleDescriptionCtaFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
+import { imageFields } from "../imageFields";
 
 {
   /* Home Hero Section */
@@ -43,4 +44,58 @@ export const sliderSectionFields = /* groq */ `
 _type,
 id,
 texts
+`;
+
+{
+  /* Best Care Section */
+}
+
+export const bestCareSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+imageTitleDescriptionCtas[]{
+${imageTitleDescriptionCtaFields}
+}
+`;
+
+{
+  /* Stop Managing Section */
+}
+
+export const stopManagingSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+titleDescriptionImages[]{
+${titleDescriptionImageFields}
+}
+`;
+
+{
+  /* We Can Help Section */
+}
+
+export const weCanHelpSectionFields = /* groq */ `
+_type,
+id,
+backgroundImage{
+${imageFields}
+},
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+button{
+${buttonFields}
+}
 `;
