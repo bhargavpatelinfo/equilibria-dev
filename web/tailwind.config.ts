@@ -24,6 +24,7 @@ export default {
       colors: {
         background: "var(--background)",
         maroon: "var(--maroon)",
+        darkMaroon:"var(--darkMaroon)",
         pink:"var(--pink)",
         darkPink:"var(--darkPink)",
         lightPink:"var(--lightPink)",
