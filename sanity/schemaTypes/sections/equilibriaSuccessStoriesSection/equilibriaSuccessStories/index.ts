@@ -38,12 +38,16 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title.custom_rich_text',
+      title: 'name',
+      description: 'description.custom_rich_text',
+      image: 'image',
     },
-    prepare({title}) {
-      const getTitle = title ? toPlainText(title) : null
+    prepare({title, description, image}) {
+      const getDescription = description ? toPlainText(description) : null
       return {
-        title: getTitle || 'Equilibria Success Stories',
+        title: title || 'Equilibria Success Stories',
+        subtitle: getDescription,
+        media: image,
       }
     },
   },
