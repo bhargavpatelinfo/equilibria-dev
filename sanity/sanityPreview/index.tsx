@@ -5,7 +5,7 @@ import { JsonView } from './JsonView'
 
 export const iframeOptions: IframeOptions = {
   url: {
-    origin: 'https://equilibria-health-dev.vercel.app/',
+    origin: 'https://equilibria-dev.vercel.app/',
     preview: (document) => {
       const slug = (document?.slug as { current: string })?.current
       if (slug) {
