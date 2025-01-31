@@ -24,6 +24,7 @@ export default {
         { type: "sliderSection" },
         { type: "bestCareSection" },
         { type: "stopManagingSection" },
+        { type: "weCanHelpSection" },
       ],
     },
   ],

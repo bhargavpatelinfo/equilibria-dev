@@ -1,5 +1,9 @@
-import { ButtonType, RichTextType } from "./common";
-import { ImageTitleDescriptionCtaType, TitleDescriptionImageType, TitleValueUnitType } from "./global";
+import { ButtonType, CustomImageType, RichTextType } from "./common";
+import {
+  ImageTitleDescriptionCtaType,
+  TitleDescriptionImageType,
+  TitleValueUnitType,
+} from "./global";
 
 export type SectionType =
   | HomeHeroSectionType
@@ -7,6 +11,7 @@ export type SectionType =
   | SliderSectionType
   | BestCareSectionType
   | StopManagingSectionType
+  | WeCanHelpSectionType
 
 {
   /*  Home Hero Section */
@@ -63,4 +68,17 @@ export interface StopManagingSectionType {
   title: RichTextType;
   description: RichTextType;
   titleDescriptionImages: TitleDescriptionImageType[];
+}
+
+{
+  /* We Can Help Section */
+}
+
+export interface WeCanHelpSectionType {
+  _type: "weCanHelpSection";
+  id?: string;
+  backgroundImage: CustomImageType;
+  title: RichTextType;
+  description: RichTextType;
+  button: ButtonType;
 }
