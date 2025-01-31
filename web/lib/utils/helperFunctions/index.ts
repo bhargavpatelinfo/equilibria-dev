@@ -31,3 +31,9 @@ export const fetchSanityAsset = async <T>({
 
 export const generateSlug = (text: string) =>
   slugify(text, { lower: true, strict: true });
+
+export const generateFormattedIndex = (index: number) => {
+  const updatedCount = index + 1;
+  const formattedIndex = updatedCount < 10 ? `0${updatedCount}` : updatedCount;
+  return formattedIndex;
+};

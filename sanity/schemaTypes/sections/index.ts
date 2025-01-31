@@ -1,4 +1,5 @@
 import bestCareSection from "./bestCareSection";
+import betterHealthSection from "./betterHealthSection";
 import homeHeroSection from "./homeHeroSection";
 import lifeChangingResultsSection from "./lifeChangingResultsSection";
 import sliderSection from "./sliderSection";
@@ -13,6 +14,7 @@ export const sectionsTypes = [
     sliderSection,
     bestCareSection,
     stopManagingSection,
-    weCanHelpSection
+    weCanHelpSection,
+    betterHealthSection
 ];
 export default sectionsTypes;
