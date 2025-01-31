@@ -84,12 +84,16 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
         <div className="flex flex-col items-start  gap-2 md:gap-3">
           {legalLinks?.map((item, index) => {
             const { label, link } = item || {};
+            const isLast = index === legalLinks.length - 1;
             return (
               <div
                 key={index}
                 className="[&>a]:text-base hover:[&>a]:opacity-70 [&>a]:1xl:text-xl [&>a]:font-extralight [&>a]:text-white [&>a]:cursor-pointer"
               >
-                <Link to={link || "#"}>{label}</Link>
+                <Link to={link || "#"}>
+                  {label}
+                </Link>
+                {!isLast && " - "}
               </div>
             );
           })}

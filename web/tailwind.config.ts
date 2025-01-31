@@ -7,7 +7,73 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      animation: {
+        borderFill: "borderFill 7s ease-in-out forwards",
+      },
+      keyframes: {
+        borderFill: {
+          "0%": {
+            transform: "scaleX(0)",
+          },
+          "100%": {
+            transform: "scaleX(1)",
+          },
+        },
+      },
+      colors: {
+        background: "var(--background)",
+        maroon: "var(--maroon)",
+        pink:"var(--pink)",
+        darkPink:"var(--darkPink)",
+        lightPink:"var(--lightPink)",
+        darkPurple:"var(--darkPurple)",
+        darkRed:"var(--darkRed)",
+      },
+      spacing: {
+        'calc-padding': 'calc(1245px * 0.02)',
+      },
+    },
+    screens: {
+      lsm: "350px",
 
+      esm: "400px",
+
+      em: "480px",
+
+      ew: "500px",
+
+      vem: "560px",
+
+      sm: "640px",
+
+      md: "768px",
+
+      emd: "1000px",
+
+      lg: "1024px",
+
+      xlg: "1150px",
+
+      xl: "1280px",
+
+      mxl: "1300px",
+
+      "1xl": "1440px",
+
+      "2xl": "1530px",
+
+      "3xl": "1832px",
+
+      "4xl": "1920px",
+    },
+    boxShadow: {
+      buttonHovershadow: "0 20px 38px rgba(0, 0, 0, 0.16)",
+    },
+    fontFamily: {
+      Inter: "Inter, serif",
+      Kulim: "Nunito, serif",
+    },
   },
   plugins: [],
 } satisfies Config;

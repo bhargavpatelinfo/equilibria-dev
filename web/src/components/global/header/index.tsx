@@ -38,7 +38,7 @@ const Header: React.FC<HeaderProps> = ({ block, path }) => {
   };
 
   return (
-    <div id="header" className="">
+    <div id="header">
       <DeskTopView block={block} path={path} scrolled={scrolled} />
       <MobileView
         block={block}
