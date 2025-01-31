@@ -1,13 +1,10 @@
 import { labelLinkFields } from "../commonFields";
-import { imageFields } from "../imageFields";
 
-{/* Image Label Link  */ }
+{/* Title Label Link  */ }
 
-export const imageLabelLinkFields = /* groq */ `
+export const titleLabelLinkFields = /* groq */ `
 _type,
-image{
-${imageFields}
-},
+title,
 labelLink{
 ${labelLinkFields}
 }

@@ -1,3 +1,5 @@
+import { LabelLinkType } from "./common";
+
 {
   /* Color */
 }
@@ -12,3 +14,12 @@ export type ColorType = {
 }
 
 export type AlignmentType = "left" | "right";
+
+{
+  /* Title Label Link */
+}
+
+export type TitleLabelLinkType = {
+  title: string;
+  labelLink: LabelLinkType;
+};

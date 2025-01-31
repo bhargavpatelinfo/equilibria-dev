@@ -1,4 +1,5 @@
 import footer from "./footer";
+import footerConnectWithUs from "./footer/footerConnectWithUs";
 import footerLink from "./footer/footerLink";
 import header from "./header";
 import navItem from "./header/navItem";
@@ -14,6 +15,7 @@ export const documentsTypes = [
     section,
     page,
     navItem,
-    footerLink
+    footerLink,
+    footerConnectWithUs
 ];
 export default documentsTypes;

@@ -1,5 +1,6 @@
 import imageTitleDescriptionCta from "./imageTitleDescriptionCta";
 import titleDescriptionImage from "./titleDescriptionImage";
+import titleLabelLink from "./titleLabelLink";
 
 
 
@@ -7,6 +8,7 @@ import titleDescriptionImage from "./titleDescriptionImage";
 
 export const objectTypes = [
    titleDescriptionImage,
-   imageTitleDescriptionCta
+   imageTitleDescriptionCta,
+   titleLabelLink
 ];
 export default objectTypes;
