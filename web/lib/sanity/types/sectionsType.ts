@@ -1,5 +1,6 @@
 import { ButtonType, CustomImageType, RichTextType } from "./common";
 import {
+  EquilibriaSuccessStoriesType,
   ImageTitleDescriptionCtaType,
   TitleDescriptionImageType,
   TitleValueUnitType,
@@ -13,6 +14,7 @@ export type SectionType =
   | StopManagingSectionType
   | WeCanHelpSectionType
   | BetterHealthSectionType
+  | EquilibriaSuccessStoriesSectionType
 
 {
   /*  Home Hero Section */
@@ -80,6 +82,16 @@ export interface BetterHealthSectionType {
   id?: string;
   title: RichTextType;
   titleDescriptionImages: TitleDescriptionImageType[];
+}
+
+{
+  /* Equilibria Success Stories Section */
+}
+
+export interface EquilibriaSuccessStoriesSectionType {
+  _type: "equilibriaSuccessStoriesSection";
+  id?: string;
+  equilibriaSuccessStories: EquilibriaSuccessStoriesType[];
 }
 
 {

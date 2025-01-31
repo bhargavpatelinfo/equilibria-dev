@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { imageTitleDescriptionCtaFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
+import { equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -91,6 +91,18 @@ ${richTextFields}
 },
 titleDescriptionImages[]{
 ${titleDescriptionImageFields}
+}
+`;
+
+{
+  /* Equilibria Success Stories Section */
+}
+
+export const equilibriaSuccessStoriesSectionFields = /* groq */ `
+_type,
+id,
+equilibriaSuccessStories[]{
+${equilibriaSuccessStoriesFields}
 }
 `;
 

@@ -7,6 +7,7 @@ import BestCareSection from "@/components/bestCareSection";
 import StopManagingSection from "@/components/stopManagingSection";
 import WeCanHelpSection from "@/components/weCanHelpSection";
 import BetterHealthSection from "@/components/betterHealthSection";
+import EquilibriaSuccessStoriesSection from "@/components/equilibriaSuccessStoriesSection";
 
 interface SectionProps {
   data: SectionType;
@@ -28,6 +29,8 @@ const Section: React.FC<SectionProps> = ({ data }) => {
       return <WeCanHelpSection {...data} />;
     case "betterHealthSection":
       return <BetterHealthSection {...data} />;
+    case "equilibriaSuccessStoriesSection":
+      return <EquilibriaSuccessStoriesSection {...data} />;
 
 
     default:

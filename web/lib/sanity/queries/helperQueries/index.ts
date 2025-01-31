@@ -1,6 +1,6 @@
 import { footerFields } from "../helper/footerFields";
 import { headerFields } from "../helper/headerFields";
-import { bestCareSectionFields, betterHealthSectionFields, homeHeroSectionFields, lifeChangingResultsSectionFields, sliderSectionFields, stopManagingSectionFields, weCanHelpSectionFields } from "../helper/sectionFields";
+import { bestCareSectionFields, betterHealthSectionFields, equilibriaSuccessStoriesSectionFields, homeHeroSectionFields, lifeChangingResultsSectionFields, sliderSectionFields, stopManagingSectionFields, weCanHelpSectionFields } from "../helper/sectionFields";
 import { seofields } from "../helper/seoFields";
 
 {
@@ -70,6 +70,9 @@ ${weCanHelpSectionFields}
 },
 (_type == "betterHealthSection") => {
 ${betterHealthSectionFields}
+},
+(_type == "equilibriaSuccessStoriesSection") => {
+${equilibriaSuccessStoriesSectionFields}
 },
   
 },

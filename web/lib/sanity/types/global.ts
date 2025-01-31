@@ -64,3 +64,17 @@ export type TitleDescriptionImageType = {
   title: string;
   description: RichTextType;
 };
+
+{
+  /* Equilibria Success Stories */
+}
+
+export type EquilibriaSuccessStoriesType = {
+  _type: "equilibriaSuccessStories";
+  title: string;
+  description: RichTextType;
+  name: string;
+  age: string;
+  bio: string;
+  image: CustomImageType;
+};

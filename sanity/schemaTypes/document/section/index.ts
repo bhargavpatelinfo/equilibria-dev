@@ -26,6 +26,7 @@ export default {
         { type: "stopManagingSection" },
         { type: "weCanHelpSection" },
         { type: "betterHealthSection" },
+        { type: "equilibriaSuccessStoriesSection" },
       ],
     },
   ],
