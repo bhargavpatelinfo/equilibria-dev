@@ -1,6 +1,7 @@
 import imageTitleDescriptionCta from "./imageTitleDescriptionCta";
 import titleDescriptionImage from "./titleDescriptionImage";
 import titleLabelLink from "./titleLabelLink";
+import titleValueUnit from "./titleValueUnit";
 
 
 
@@ -9,6 +10,7 @@ import titleLabelLink from "./titleLabelLink";
 export const objectTypes = [
    titleDescriptionImage,
    imageTitleDescriptionCta,
-   titleLabelLink
+   titleLabelLink,
+   titleValueUnit
 ];
 export default objectTypes;

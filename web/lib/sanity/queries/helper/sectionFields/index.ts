@@ -1,4 +1,5 @@
-import { richTextFields } from "../commonFields";
+import { buttonFields, richTextFields } from "../commonFields";
+import { titleValueUnitFields } from "../globalFields";
 
 {
   /* Home Hero Section */
@@ -13,4 +14,23 @@ ${richTextFields}
 description{
 ${richTextFields}
 },
+`;
+
+{
+  /* Life Changing Results Section */
+}
+
+export const lifeChangingResultsSectionFields = /* groq */ `
+_type,
+id,
+headLine,
+title{
+${richTextFields}
+},
+buttons[]{
+${buttonFields}
+},
+titleValueUnit{
+${titleValueUnitFields}
+}
 `;

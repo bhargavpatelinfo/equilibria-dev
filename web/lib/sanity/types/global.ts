@@ -20,6 +20,19 @@ export type AlignmentType = "left" | "right";
 }
 
 export type TitleLabelLinkType = {
+  _type: "titleLabelLink";
   title: string;
   labelLink: LabelLinkType;
+};
+
+{
+  /* Title Value Unit */
+}
+
+export type TitleValueUnitType = {
+  _type: "titleValueUnit";
+  color: ColorType;
+  title: string;
+  value: string;
+  suffix: string;
 };
