@@ -2,7 +2,7 @@ import { CogIcon } from '@sanity/icons'
 import { StructureBuilder, StructureResolverContext } from 'sanity/structure'
 import { RiPagesLine } from 'react-icons/ri'
 import { HiOutlineTerminal } from 'react-icons/hi'
-import { AiOutlineGlobal } from 'react-icons/ai'
+import { AiOutlineGlobal, AiOutlineTeam } from 'react-icons/ai'
 
 
 export const deskStructure = (S: StructureBuilder, context: StructureResolverContext) => {
@@ -39,5 +39,10 @@ export const deskStructure = (S: StructureBuilder, context: StructureResolverCon
         .title('Page')
         .icon(RiPagesLine)
         .child(S.documentTypeList('page').schemaType('page').title('Page')),
+      S.divider(),
+      S.listItem()
+        .title('Leader')
+        .icon(AiOutlineTeam)
+        .child(S.documentTypeList('leader').schemaType('leader').title('Leader')),
     ])
 }

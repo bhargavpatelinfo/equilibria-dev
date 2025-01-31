@@ -49,3 +49,32 @@ description{
 ${richTextFields}
 }
 `;
+
+{/* Equilibria Success Stories */ }
+
+export const equilibriaSuccessStoriesFields = /* groq */ `
+_type,
+title,
+description{
+${richTextFields}
+},
+name,
+age,
+bio,
+image{
+${imageFields}
+}
+`;
+
+{/* Leader*/ }
+
+export const leaderFields = /* groq */ `
+_type,
+_id,
+name,
+slug,
+bio,
+image{
+${imageFields}
+}
+`;

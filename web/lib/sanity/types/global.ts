@@ -5,6 +5,11 @@ import {
   RichTextType,
 } from "./common";
 
+export declare interface Slug {
+  _type: "slug";
+  current: string;
+}
+
 {
   /* Color */
 }
@@ -63,4 +68,30 @@ export type TitleDescriptionImageType = {
   image: CustomImageType;
   title: string;
   description: RichTextType;
+};
+
+{
+  /* Equilibria Success Stories */
+}
+
+export type EquilibriaSuccessStoriesType = {
+  _type: "equilibriaSuccessStories";
+  title: string;
+  description: RichTextType;
+  name: string;
+  age: string;
+  bio: string;
+  image: CustomImageType;
+};
+
+{
+  /* Leader */
+}
+
+export type LeaderType = {
+  _type: "leader";
+  name: string;
+  slug: Slug;
+  bio: string;
+  image: CustomImageType;
 };
