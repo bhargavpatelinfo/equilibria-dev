@@ -12,6 +12,7 @@ export type SectionType =
   | BestCareSectionType
   | StopManagingSectionType
   | WeCanHelpSectionType
+  | BetterHealthSectionType
 
 {
   /*  Home Hero Section */
@@ -67,6 +68,17 @@ export interface StopManagingSectionType {
   id?: string;
   title: RichTextType;
   description: RichTextType;
+  titleDescriptionImages: TitleDescriptionImageType[];
+}
+
+{
+  /* Better Health Section */
+}
+
+export interface BetterHealthSectionType {
+  _type: "betterHealthSection";
+  id?: string;
+  title: RichTextType;
   titleDescriptionImages: TitleDescriptionImageType[];
 }
 

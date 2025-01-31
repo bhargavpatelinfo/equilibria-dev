@@ -25,6 +25,7 @@ export default {
         { type: "bestCareSection" },
         { type: "stopManagingSection" },
         { type: "weCanHelpSection" },
+        { type: "betterHealthSection" },
       ],
     },
   ],

@@ -80,6 +80,21 @@ ${titleDescriptionImageFields}
 `;
 
 {
+  /* Better Health Section */
+}
+
+export const betterHealthSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+titleDescriptionImages[]{
+${titleDescriptionImageFields}
+}
+`;
+
+{
   /* We Can Help Section */
 }
 
