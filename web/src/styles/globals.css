@@ -19,3 +19,46 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+
+
+
+
+
+/* Infinite Scroll */
+
+.marqueeLogo {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.marqueeLogoInner {
+  flex: 0 0 auto;
+  animation: scroll 16s linear infinite;
+  animation-play-state: running;
+  animation-delay: 2s;
+  animation-direction: normal;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(-0%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Infinite Scroll */

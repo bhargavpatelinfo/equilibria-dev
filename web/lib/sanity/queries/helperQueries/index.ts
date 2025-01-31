@@ -1,6 +1,6 @@
 import { footerFields } from "../helper/footerFields";
 import { headerFields } from "../helper/headerFields";
-import { homeHeroSectionFields, lifeChangingResultsSectionFields } from "../helper/sectionFields";
+import { homeHeroSectionFields, lifeChangingResultsSectionFields, sliderSectionFields } from "../helper/sectionFields";
 import { seofields } from "../helper/seoFields";
 
 {
@@ -55,6 +55,9 @@ ${homeHeroSectionFields}
 },
 (_type == "lifeChangingResultsSection") => {
 ${lifeChangingResultsSectionFields}
+},
+(_type == "sliderSection") => {
+${sliderSectionFields}
 },
   
 },

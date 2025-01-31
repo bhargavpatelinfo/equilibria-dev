@@ -1,7 +1,7 @@
 import { ButtonType, RichTextType } from "./common";
 import { TitleValueUnitType } from "./global";
 
-export type SectionType = HomeHeroSectionType | LifeChangingResultsSectionType;
+export type SectionType = HomeHeroSectionType | LifeChangingResultsSectionType | SliderSectionType;
 
 {
   /*  Home Hero Section */
@@ -25,4 +25,14 @@ export interface LifeChangingResultsSectionType {
   title?: RichTextType;
   buttons: ButtonType[];
   titleValueUnit: TitleValueUnitType;
+}
+
+{
+  /*  Slider Section */
+}
+
+export interface SliderSectionType {
+  _type: "sliderSection";
+  id?: string;
+  texts: string[];
 }

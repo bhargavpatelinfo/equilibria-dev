@@ -34,3 +34,13 @@ titleValueUnit{
 ${titleValueUnitFields}
 }
 `;
+
+{
+  /* Slider Section */
+}
+
+export const sliderSectionFields = /* groq */ `
+_type,
+id,
+texts
+`;

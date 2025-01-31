@@ -21,6 +21,7 @@ export default {
       of: [
         { type: "homeHeroSection" },
         { type: "lifeChangingResultsSection" },
+        { type: "sliderSection" },
       ],
     },
   ],
