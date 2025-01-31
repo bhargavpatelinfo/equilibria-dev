@@ -2,6 +2,7 @@ import { ButtonType, CustomImageType, RichTextType } from "./common";
 import {
   EquilibriaSuccessStoriesType,
   ImageTitleDescriptionCtaType,
+  LeaderType,
   TitleDescriptionImageType,
   TitleValueUnitType,
 } from "./global";
@@ -15,7 +16,8 @@ export type SectionType =
   | WeCanHelpSectionType
   | BetterHealthSectionType
   | EquilibriaSuccessStoriesSectionType
-  | AffordableExpertCareSectionType;
+  | AffordableExpertCareSectionType
+  | LeadersSectionType;
 
 {
   /*  Home Hero Section */
@@ -105,6 +107,19 @@ export interface AffordableExpertCareSectionType {
   title: RichTextType;
   description: RichTextType;
   imageTitleDescriptionCtas: ImageTitleDescriptionCtaType[];
+}
+
+{
+  /* LeadersSection */
+}
+
+export interface LeadersSectionType {
+  _type: "leadersSection";
+  id?: string;
+  title: RichTextType;
+  description: RichTextType;
+  buttons: ButtonType[];
+  leaders: LeaderType[];
 }
 
 {

@@ -65,3 +65,16 @@ image{
 ${imageFields}
 }
 `;
+
+{/* Leader*/ }
+
+export const leaderFields = /* groq */ `
+_type,
+_id,
+name,
+slug,
+bio,
+image{
+${imageFields}
+}
+`;

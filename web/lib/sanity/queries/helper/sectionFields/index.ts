@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
+import { equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -121,6 +121,27 @@ ${richTextFields}
 },
 imageTitleDescriptionCtas[]{
 ${imageTitleDescriptionCtaFields}
+}
+`;
+
+{
+  /* Leaders Section */
+}
+
+export const leadersSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+buttons[]{
+${buttonFields}
+},
+leaders[]->{
+${leaderFields}
 }
 `;
 

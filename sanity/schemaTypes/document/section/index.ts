@@ -28,6 +28,7 @@ export default {
         { type: "betterHealthSection" },
         { type: "equilibriaSuccessStoriesSection" },
         { type: "affordableExpertCareSection" },
+        { type: "leadersSection" },
       ],
     },
   ],
