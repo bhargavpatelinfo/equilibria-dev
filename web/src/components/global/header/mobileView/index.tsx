@@ -38,7 +38,7 @@ const MobileView: React.FC<MobileViewProps> = ({
                 height={image?.height}
                 width={image?.width}
                 priority
-                className="w-[180px] em:w-[220px] h-auto"
+                className="w-[190px] em:w-[220px] h-auto"
               />
             </Link>
           )}
@@ -51,7 +51,7 @@ const MobileView: React.FC<MobileViewProps> = ({
           </div>
           <div className={`w-full absolute left-0 right-0 top-[100%] overflow-hidden transition-all duration-500 ease-linear ${toggle ? "h-screen z-10" : "h-0 -z-10"}`}>
           <div
-            className={`absolute z-10 top-0 left-0 right-0  transition-all duration-500  lg:hidden ${toggle ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} bg-white  mt-6 p-8 rounded-3xl`}
+            className={`absolute z-10 top-0 left-0 right-0  transition-all duration-500  lg:hidden  ${toggle ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} bg-white  mt-6 p-8 rounded-3xl shadow-xl`}
             style={{ pointerEvents: toggle ? "auto" : "none" }}
           >
             {navItems && (

@@ -6,17 +6,21 @@ import RichText from "../global/richText";
 const HomeHeroSection: React.FC<HomeHeroSectionType> = (block) => {
   const { id, title, description } = block || {};
   return (
-    <section id={id} className="bg-[red] pt-[211px] pb-[228px]">
-      {title?.custom_rich_text && (
-        <div className="[&>p]:text-theme-slateGray [&>p]:text-62px [&>p]:font-semibold [&>p]:text-center [&>p]:leading-1.3">
-          <RichText block={title} />
+    <section id={id} className="mb-[50px] sm:mb-[120px] lg:mb-[173px] mt-[30px] em:mt-[50px] md:mt-[95px]">
+      <div className="container">
+        <div className="max-w-[850px] w-full">
+        {title?.custom_rich_text && (
+          <div className="[&>*]:text-maroon [&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:font-Kulim [&>*]:font-semibold [&>*]:leading-[120%] [&>*]:tracking-[-2%]">
+            <RichText block={title} />
+          </div>
+        )}
+        {description?.custom_rich_text && (
+          <div className="mt-6 em:mt-8 [&>*]:text-lg sm:[&>*]:text-xl [&>*]:tracking-[0.5%] [&>*]:text-maroon">
+            <RichText block={description} />
+          </div>
+        )}
         </div>
-      )}
-      {description?.custom_rich_text && (
-        <div className="[&>p]:text-theme-slateGray [&>p]:text-base [&>p]:font-normal [&>p]:text-center">
-          <RichText block={description} />
-        </div>
-      )}
+      </div>
     </section>
   );
 };
