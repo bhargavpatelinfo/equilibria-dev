@@ -15,6 +15,7 @@ export type SectionType =
   | WeCanHelpSectionType
   | BetterHealthSectionType
   | EquilibriaSuccessStoriesSectionType
+  | AffordableExpertCareSectionType;
 
 {
   /*  Home Hero Section */
@@ -92,6 +93,18 @@ export interface EquilibriaSuccessStoriesSectionType {
   _type: "equilibriaSuccessStoriesSection";
   id?: string;
   equilibriaSuccessStories: EquilibriaSuccessStoriesType[];
+}
+
+{
+  /* Affordable Expert Care Section */
+}
+
+export interface AffordableExpertCareSectionType {
+  _type: "affordableExpertCareSection";
+  id?: string;
+  title: RichTextType;
+  description: RichTextType;
+  imageTitleDescriptionCtas: ImageTitleDescriptionCtaType[];
 }
 
 {

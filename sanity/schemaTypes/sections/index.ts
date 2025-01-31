@@ -1,3 +1,4 @@
+import affordableExpertCareSection from "./affordableExpertCareSection";
 import bestCareSection from "./bestCareSection";
 import betterHealthSection from "./betterHealthSection";
 import equilibriaSuccessStoriesSection from "./equilibriaSuccessStoriesSection";
@@ -19,6 +20,7 @@ export const sectionsTypes = [
     weCanHelpSection,
     betterHealthSection,
     equilibriaSuccessStoriesSection,
-    equilibriaSuccessStories
+    equilibriaSuccessStories,
+    affordableExpertCareSection
 ];
 export default sectionsTypes;

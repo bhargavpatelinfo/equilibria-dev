@@ -27,6 +27,7 @@ export default {
         { type: "weCanHelpSection" },
         { type: "betterHealthSection" },
         { type: "equilibriaSuccessStoriesSection" },
+        { type: "affordableExpertCareSection" },
       ],
     },
   ],

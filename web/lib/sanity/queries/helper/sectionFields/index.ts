@@ -107,6 +107,24 @@ ${equilibriaSuccessStoriesFields}
 `;
 
 {
+  /* Affordable Expert Care Section */
+}
+
+export const affordableExpertCareSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+imageTitleDescriptionCtas[]{
+${imageTitleDescriptionCtaFields}
+}
+`;
+
+{
   /* We Can Help Section */
 }
 
