@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { imageTitleDescriptionCtaFields, titleValueUnitFields } from "../globalFields";
+import { imageTitleDescriptionCtaFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
 
 {
   /* Home Hero Section */
@@ -57,5 +57,23 @@ ${richTextFields}
 },
 imageTitleDescriptionCtas[]{
 ${imageTitleDescriptionCtaFields}
+}
+`;
+
+{
+  /* Stop Managing Section */
+}
+
+export const stopManagingSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+titleDescriptionImages[]{
+${titleDescriptionImageFields}
 }
 `;

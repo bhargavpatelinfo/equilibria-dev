@@ -4,6 +4,7 @@ import HomeHeroSection from "@/components/homeHeroSection";
 import LifeChangingResultsSection from "@/components/lifeChangingResultsSection";
 import SliderSection from "@/components/sliderSection";
 import BestCareSection from "@/components/bestCareSection";
+import StopManagingSection from "@/components/stopManagingSection";
 
 interface SectionProps {
   data: SectionType;
@@ -19,6 +20,8 @@ const Section: React.FC<SectionProps> = ({ data }) => {
       return <SliderSection {...data} />;
     case "bestCareSection":
       return <BestCareSection {...data} />;
+    case "stopManagingSection":
+      return <StopManagingSection {...data} />;
 
 
     default:

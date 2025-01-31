@@ -1,11 +1,12 @@
 import { ButtonType, RichTextType } from "./common";
-import { ImageTitleDescriptionCtaType, TitleValueUnitType } from "./global";
+import { ImageTitleDescriptionCtaType, TitleDescriptionImageType, TitleValueUnitType } from "./global";
 
 export type SectionType =
   | HomeHeroSectionType
   | LifeChangingResultsSectionType
   | SliderSectionType
-  | BestCareSectionType;
+  | BestCareSectionType
+  | StopManagingSectionType
 
 {
   /*  Home Hero Section */
@@ -50,4 +51,16 @@ export interface BestCareSectionType {
   id?: string;
   title: RichTextType;
   imageTitleDescriptionCtas: ImageTitleDescriptionCtaType[];
+}
+
+{
+  /* Stop Managing Section */
+}
+
+export interface StopManagingSectionType {
+  _type: "stopManagingSection";
+  id?: string;
+  title: RichTextType;
+  description: RichTextType;
+  titleDescriptionImages: TitleDescriptionImageType[];
 }

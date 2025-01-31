@@ -23,6 +23,7 @@ export default {
         { type: "lifeChangingResultsSection" },
         { type: "sliderSection" },
         { type: "bestCareSection" },
+        { type: "stopManagingSection" },
       ],
     },
   ],
