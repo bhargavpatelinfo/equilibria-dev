@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://equilibria-health-dev.vercel.app/
+
+# Sitemaps
+Sitemap: https://equilibria-health-dev.vercel.app/sitemap.xml
