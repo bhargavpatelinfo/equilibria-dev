@@ -1,6 +1,6 @@
 import { footerFields } from "../helper/footerFields";
 import { headerFields } from "../helper/headerFields";
-import { homeHeroSectionFields } from "../helper/sectionFields";
+import { affordableExpertCareSectionFields, bestCareSectionFields, betterHealthSectionFields, equilibriaSuccessStoriesSectionFields, homeHeroSectionFields, leadersSectionFields, lifeChangingResultsSectionFields, sliderSectionFields, stopManagingSectionFields, weCanHelpSectionFields } from "../helper/sectionFields";
 import { seofields } from "../helper/seoFields";
 
 {
@@ -52,6 +52,33 @@ _type,
 content[]{
 (_type == "homeHeroSection") => {
 ${homeHeroSectionFields}
+},
+(_type == "lifeChangingResultsSection") => {
+${lifeChangingResultsSectionFields}
+},
+(_type == "sliderSection") => {
+${sliderSectionFields}
+},
+(_type == "bestCareSection") => {
+${bestCareSectionFields}
+},
+(_type == "stopManagingSection") => {
+${stopManagingSectionFields}
+},
+(_type == "weCanHelpSection") => {
+${weCanHelpSectionFields}
+},
+(_type == "betterHealthSection") => {
+${betterHealthSectionFields}
+},
+(_type == "equilibriaSuccessStoriesSection") => {
+${equilibriaSuccessStoriesSectionFields}
+},
+(_type == "affordableExpertCareSection") => {
+${affordableExpertCareSectionFields}
+},
+(_type == "leadersSection") => {
+${leadersSectionFields}
 },
   
 },

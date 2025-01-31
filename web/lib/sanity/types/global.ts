@@ -1,3 +1,15 @@
+import {
+  ButtonType,
+  CustomImageType,
+  LabelLinkType,
+  RichTextType,
+} from "./common";
+
+export declare interface Slug {
+  _type: "slug";
+  current: string;
+}
+
 {
   /* Color */
 }
@@ -12,3 +24,74 @@ export type ColorType = {
 }
 
 export type AlignmentType = "left" | "right";
+
+{
+  /* Title Label Link */
+}
+
+export type TitleLabelLinkType = {
+  _type: "titleLabelLink";
+  title: string;
+  labelLink: LabelLinkType;
+};
+
+{
+  /* Title Value Unit */
+}
+
+export type TitleValueUnitType = {
+  _type: "titleValueUnit";
+  color: ColorType;
+  title: string;
+  value: string;
+  suffix: string;
+};
+
+{
+  /* Image Title Description Cta */
+}
+
+export type ImageTitleDescriptionCtaType = {
+  _type: "imageTitleDescriptionCta";
+  image: CustomImageType;
+  title: string;
+  description: RichTextType;
+  cta: ButtonType;
+};
+
+{
+  /* Title Description Image */
+}
+
+export type TitleDescriptionImageType = {
+  _type: "titleDescriptionImage";
+  image: CustomImageType;
+  title: string;
+  description: RichTextType;
+};
+
+{
+  /* Equilibria Success Stories */
+}
+
+export type EquilibriaSuccessStoriesType = {
+  _type: "equilibriaSuccessStories";
+  title: string;
+  description: RichTextType;
+  name: string;
+  age: string;
+  bio: string;
+  image: CustomImageType;
+};
+
+{
+  /* Leader */
+}
+
+export type LeaderType = {
+  _type: "leader";
+  name: string;
+  slug: Slug;
+  bio: string;
+  image: CustomImageType;
+};

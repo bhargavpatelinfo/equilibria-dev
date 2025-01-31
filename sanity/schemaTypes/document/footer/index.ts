@@ -34,8 +34,7 @@ export default {
     {
       name: 'connectWithUs',
       title: 'ConnectWithUs',
-      type: 'array',
-      of: [{ type: 'labelLink' }],
+      type: 'footerConnectWithUs',
       group: 'main',
     },
     {

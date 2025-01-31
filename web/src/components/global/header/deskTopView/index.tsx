@@ -17,9 +17,9 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
   const image = useSanityImage(logo);
 
   return (
-    <header>
-      <div className="">
-        <div className="">
+    <header className="py-[57px] bg-background hidden lg:block">
+      <div className="container">
+        <div className="flex flex-row justify-between items-center gap-5">
           {image && (
             <Link to={routes.home()} className="">
               <Image
@@ -28,19 +28,19 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
                 height={image?.height}
                 width={image?.width}
                 priority
-                className=""
+                className="w-[220px] xl:w-[248px] h-auto xl:h-[36px]"
               />
             </Link>
           )}
           <div className="">
             {navItems && (
-              <div className="">
+              <div className="flex flex-row gap-6 xl:gap-8 items-center">
                 {navItems?.map((item, index) => {
                   return (
                     <div key={index}>
                       <Link
                         to={item?.link}
-                        className=""
+                        className="text-base tracking-[-2%] hover:text-darkPink basic-transition"
                       >
                         {item?.title}
                       </Link>

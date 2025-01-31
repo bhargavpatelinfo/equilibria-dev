@@ -4,7 +4,7 @@ import { LinkType } from "./linkType";
 
 {/* Button Variant */ }
 
-export type ButtonVariantType = "pinkPurple" | "darkPink";
+export type ButtonVariantType = "darkPurple" | "darkPink" | "lightPink" | "transparentWithWhite" | "transparentWithPink";
 
 {/* Rich Text Link */ }
 

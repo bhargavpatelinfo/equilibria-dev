@@ -1,14 +1,80 @@
-import { labelLinkFields } from "../commonFields";
+import { buttonFields, labelLinkFields, richTextFields } from "../commonFields";
 import { imageFields } from "../imageFields";
 
-{/* Image Label Link  */ }
+{/* Title Label Link  */ }
 
-export const imageLabelLinkFields = /* groq */ `
+export const titleLabelLinkFields = /* groq */ `
+_type,
+title,
+labelLink{
+${labelLinkFields}
+}
+`;
+
+{/* Title Value Unit */ }
+
+export const titleValueUnitFields = /* groq */ `
+_type,
+color,
+title,
+value,
+suffix
+`;
+
+{/* Image Title Description Cta */ }
+
+export const imageTitleDescriptionCtaFields = /* groq */ `
 _type,
 image{
 ${imageFields}
 },
-labelLink{
-${labelLinkFields}
+title,
+description{
+${richTextFields}
+},
+cta{
+${buttonFields}
+}
+`;
+
+{/* Title Description Image */ }
+
+export const titleDescriptionImageFields = /* groq */ `
+_type,
+image{
+${imageFields}
+},
+title,
+description{
+${richTextFields}
+}
+`;
+
+{/* Equilibria Success Stories */ }
+
+export const equilibriaSuccessStoriesFields = /* groq */ `
+_type,
+title,
+description{
+${richTextFields}
+},
+name,
+age,
+bio,
+image{
+${imageFields}
+}
+`;
+
+{/* Leader*/ }
+
+export const leaderFields = /* groq */ `
+_type,
+_id,
+name,
+slug,
+bio,
+image{
+${imageFields}
 }
 `;
