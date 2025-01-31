@@ -4,8 +4,20 @@ export const buttonVariant = [
     value: "darkPink",
   },
   {
-    title: "Pink Purple",
-    value: "pinkPurple",
+    title: "Dark Purple",
+    value: "darkPurple",
+  },
+  {
+    title: "Light Pink",
+    value: "lightPink",
+  },
+  {
+    title: "Transparent With White",
+    value: "transparentWithWhite",
+  },
+  {
+    title: "Transparent With Pink",
+    value: "transparentWithPink",
   },
 ];
 
