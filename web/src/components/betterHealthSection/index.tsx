@@ -1,7 +1,6 @@
 import React from "react";
 import { BetterHealthSectionType } from "../../../lib/sanity/types";
 import RichText from "../global/richText";
-import { useSanityImage } from "../../../lib/sanity";
 import { generateFormattedIndex } from "../../../lib/utils/helperFunctions";
 import Image from "../global/image";
 
@@ -18,7 +17,6 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
         <div className="grid grid-cols-1  items-center gap-12">
           {titleDescriptionImages?.map((item, index) => {
             const { description, image, title } = item || {};
-            const bgImage = useSanityImage(image);
             const formattedIndex = generateFormattedIndex(index);
             return (
               <div key={index} className="flex flex-col space-y-6">
