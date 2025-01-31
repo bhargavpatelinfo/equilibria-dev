@@ -24,7 +24,7 @@ export default {
     },
     {
       name: 'imageTitleDescriptionCtas',
-      title: 'imageTitleDescriptionCtas',
+      title: 'Image Title Description Ctas',
       type: 'array',
       of: [{type: 'imageTitleDescriptionCta'}],
     },
