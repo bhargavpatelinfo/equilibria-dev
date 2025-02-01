@@ -17,7 +17,11 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
         <div className="flex flex-col xl:flex-row justify-between items-center gap-20 xl:gap-5">
           <div className="xl:max-w-[741px] w-full flex flex-col gap-8">
             <div className="flex flex-col gap-2">
-              {headLine && <div className="text-lightPink text-xl tracking-[-1px] font-Kulim">{headLine}</div>}
+              {headLine && (
+                <div className="text-lightPink text-xl tracking-[-1px] font-Kulim">
+                  {headLine}
+                </div>
+              )}
               {title?.custom_rich_text && (
                 <div className="[&>*]:text-[42px] md:[&>*]:text-[60px] xl:[&>*]:text-[84px] [&>*]:text-white [&>*]:tracking-[-2px] [&>*]:font-Kulim [&>*]:leading-[120%]">
                   <RichText block={title} />
@@ -36,39 +40,47 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
               </div>
             )}
           </div>
-          {/* <div className="max-w-[560px] w-full">
-            {titleValueUnit?.title && (
+          <div className="max-w-[560px] w-full">
+            {circularProgressBar?.title && (
               <div
                 //  style={{ backgroundColor: titleValueUnit?.color?.hex || "" }}
                 className="flex flex-col gap-1 items-center justify-center h-[300px] em:h-[400px] md:h-[450px] xl:h-[560px] w-[300px] em:w-[400px] md:w-[450px] xl:w-[560px] border-[30px] md:border-[45px] border-darkPink rounded-full ml-auto mr-auto xl:mr-0"
               >
                 <div className="text-[60px] em:text-[80px] md:text-[100px] xl:text-[134px] tracking-[-3px] text-lightPink font-semibold font-Kulim leading-[120%]">
-                  {`${titleValueUnit?.value} ${titleValueUnit?.suffix}`
+                  {`${circularProgressBar?.value} ${circularProgressBar?.suffix}`
                   }</div>
                 <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
-                  {titleValueUnit?.title && <div>{titleValueUnit?.title}</div>}
+                  {circularProgressBar?.title && <div>{circularProgressBar?.title}</div>}
                 </span>
               </div>
             )}
-          </div> */}
-          {circularProgressBar?.title && (
+          </div>
+          {/* {circularProgressBar?.title && (
             <div className="max-w-[560px] w-full">
               <CircularProgressBar
                 value={Number(percentage)}
                 size={100}
                 strokeWidth={10}
                 textColor={circularProgressBar?.valueColor?.hex || ""}
-                progressBarColor={circularProgressBar?.progressBarColor?.hex || ""}
+                progressBarColor={
+                  circularProgressBar?.progressBarColor?.hex || ""
+                }
+                backgroundBarColor="#4D0F3B"
+                mainClassName=""
+                parentClassName=""
+                svgClassName=""
               >
-                {text}
-                {circularProgressBar?.title &&
+                <div className="">
+                  {text}
+                </div>
+                {circularProgressBar?.title && (
                   <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
                     {circularProgressBar?.title}
                   </span>
-                }
+                )}
               </CircularProgressBar>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </section>
