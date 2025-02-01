@@ -1,7 +1,7 @@
 import imageTitleDescriptionCta from "./imageTitleDescriptionCta";
 import titleDescriptionImage from "./titleDescriptionImage";
 import titleLabelLink from "./titleLabelLink";
-import titleValueUnit from "./titleValueUnit";
+import circularProgressBar from "./circularProgressBar";
 
 
 
@@ -11,6 +11,6 @@ export const objectTypes = [
    titleDescriptionImage,
    imageTitleDescriptionCta,
    titleLabelLink,
-   titleValueUnit
+   circularProgressBar
 ];
 export default objectTypes;

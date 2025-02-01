@@ -3,6 +3,7 @@ import React, { PropsWithChildren } from "react";
 
 import { LinkType } from "../../../../lib/sanity/types/linkType";
 import { resolveUrl } from "../../../../lib/utils/resolveUrl";
+import { cn } from "../../../../lib/utils/helperFunctions";
 
 const Link: React.FC<
   PropsWithChildren<
@@ -14,27 +15,73 @@ const Link: React.FC<
   >
 > = ({ to, target, children, className, prefetch, ...props }) => {
   if (!to) {
-    return <span className={className} {...props}>{children}</span>;
+    return null;
   }
-
-  const url = typeof to === "object" ? resolveUrl(to) : to;
-  const openInNewWindow = typeof to === "object" && to?.openTheLinkinANewWindow;
-
-  const rel = openInNewWindow ? "noopener noreferrer" : "";
-  const linkTarget = openInNewWindow ? "_blank" : target ?? "_self";
-
-  return (
-    <NextLink
-      href={url || "#"}
-      rel={rel}
-      target={linkTarget}
-      className={className}
-      prefetch={prefetch ?? false}
-      {...props}
-    >
-      {children}
-    </NextLink>
-  );
+  if (typeof to === "object") {
+    const link = resolveUrl(to);
+    const isExternal = to?.openTheLinkinANewWindow;
+    if (
+      link?.startsWith("http") ||
+      link?.startsWith("mailto:") ||
+      link?.startsWith("tel:")
+    ) {
+      return (
+        <NextLink
+          href={link || "#"}
+          target={"_blank"}
+          rel="noopener noreferrer"
+          className={cn(className)}
+          prefetch={prefetch ?? false}
+          {...props}
+        >
+          {children}
+        </NextLink>
+      );
+    } else {
+      return (
+        <NextLink
+          href={link || "#"}
+          target={isExternal ? "_blank" : "_self"}
+          rel={isExternal ? "noopener noreferrer" : ""}
+          className={cn(className)}
+          prefetch={prefetch ?? false}
+          {...props}
+        >
+          {children}
+        </NextLink>
+      );
+    }
+  } else if (
+    to?.startsWith("http") ||
+    to?.startsWith("mailto:") ||
+    to?.startsWith("tel:")
+  ) {
+    return (
+      <NextLink
+        href={to || "#"}
+        target={"_blank"}
+        rel="noopener noreferrer"
+        className={cn(className)}
+        prefetch={prefetch ?? false}
+        {...props}
+      >
+        {children}
+      </NextLink>
+    );
+  } else {
+    return (
+      <NextLink
+        href={to || "#"}
+        target={target ?? "_self"}
+        rel={target ? "noopener noreferrer" : ""}
+        className={cn(className)}
+        prefetch={prefetch ?? false}
+        {...props}
+      >
+        {children}
+      </NextLink>
+    );
+  }
 };
 
-export default Link
+export default Link;

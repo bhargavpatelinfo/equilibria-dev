@@ -6,42 +6,27 @@ const SliderSection: React.FC<SliderSectionType> = (block) => {
   const { id, texts } = block || {};
   const groupData = groupItems<string>(texts || [], 1);
   return (
-    <section id={id}>
+    <section id={id} className="bg-lightPink">
       <div className="marqueeLogo py-5">
         {[...Array(2)]?.map((_, repeatIndex) => (
-          <div
+          <ul
             key={repeatIndex}
-            className="flex justify-between items-center gap-8 min-w-full marqueeLogoInner px-4 md:px-8 xl:px-12"
+            className="flex justify-between items-center gap-8 marqueeLogoInner min-w-full  px-4 h-[60px] sm:h-[80px] lg:h-[112px]"
           >
-            {groupData?.map((groupItem, groupIndex) => {
+            {groupData?.map((item, index) => {
               return (
-                <ul
-                  key={groupIndex}
-                  className={cn(
-                    `flex flex-col gap-10`,
-                    groupIndex === 0 && "mt-[40px]",
-                    groupIndex === 1 && "mt-[20px]",
-                    groupIndex === 2 && "mt-[16px]",
-                    groupIndex === 5 && "mt-[16px]",
-                    groupIndex === 6 && "mt-[20px]",
-                    groupIndex === 7 && "mt-[40px]"
-                  )}
+                <div
+                  key={index}
+                  className="flex items-center gap-8"
                 >
-                  {groupItem?.map((item, index) => {
-                    return (
-                      <li
-                        key={index}
-                        className={`rounded-lg shadow-logoShadow flex justify-center items-center w-[56px] md:w-[70px] lg:w-[90px] h-[56px] md:h-[70px] lg:h-[90px]  
-                `}
-                      >
-                        {item}
-                      </li>
-                    );
-                  })}
-                </ul>
+                  <div className={`text-nowrap text-darkPurple text-lg sm:text-xl font-semibold `}>
+                    {item}
+                  </div>
+                  <div className="w-[14px] h-[14px] bg-darkPink rounded-full" />
+                </div>
               );
             })}
-          </div>
+          </ul>
         ))}
       </div>
     </section>
