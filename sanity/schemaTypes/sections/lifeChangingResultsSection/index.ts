@@ -29,9 +29,9 @@ export default {
       of: [{type: 'button'}],
     },
     {
-      name: 'titleValueUnit',
-      title: 'Title Value Unit',
-      type: 'titleValueUnit',
+      name: 'circularProgressBar',
+      title: 'Circular Progress Bar',
+      type: 'circularProgressBar',
     },
   ],
   preview: {

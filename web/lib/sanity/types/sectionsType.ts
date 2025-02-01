@@ -1,10 +1,10 @@
 import { ButtonType, CustomImageType, RichTextType } from "./common";
 import {
+  CircularProgressBarType,
   EquilibriaSuccessStoriesType,
   ImageTitleDescriptionCtaType,
   LeaderType,
   TitleDescriptionImageType,
-  TitleValueUnitType,
 } from "./global";
 
 export type SectionType =
@@ -40,7 +40,7 @@ export interface LifeChangingResultsSectionType {
   headLine?: string;
   title?: RichTextType;
   buttons: ButtonType[];
-  titleValueUnit: TitleValueUnitType;
+  circularProgressBar:CircularProgressBarType
 }
 
 {

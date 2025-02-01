@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionImageFields, titleValueUnitFields } from "../globalFields";
+import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionImageFields, } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -31,8 +31,8 @@ ${richTextFields}
 buttons[]{
 ${buttonFields}
 },
-titleValueUnit{
-${titleValueUnitFields}
+circularProgressBar{
+${circularProgressBarFields}
 }
 `;
 

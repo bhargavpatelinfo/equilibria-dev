@@ -9,44 +9,48 @@ const AffordableExpertCareSection: React.FC<AffordableExpertCareSectionType> = (
 ) => {
   const { id, title, imageTitleDescriptionCtas, description } = block || {};
   return (
-    <section id={id} className="bg-[teal] pt-[211px] pb-[228px]">
-      {title?.custom_rich_text && (
-        <div className="[&>p]:text-theme-slateGray [&>p]:text-62px [&>p]:font-semibold [&>p]:text-center [&>p]:leading-1.3">
-          <RichText block={title} />
+    <section id={id} className="py-[88px] bg-pink mb-[100px] lg:mb-[206px]">
+      <div className="container">
+        <div className="flex flex-col gap-4">
+          {title?.custom_rich_text && (
+            <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%] [&>*]:text-center">
+              <RichText block={title} />
+            </div>
+          )}
+          {description?.custom_rich_text && (
+            <div className="">
+              <RichText block={description} />
+            </div>
+          )}
         </div>
-      )}
-      {description?.custom_rich_text && (
-        <div className="[&>p]:text-theme-slateGray [&>p]:text-62px [&>p]:font-semibold [&>p]:text-center [&>p]:leading-1.3">
-          <RichText block={description} />
-        </div>
-      )}
-      {imageTitleDescriptionCtas?.length > 0 && (
-        <div>
-          {imageTitleDescriptionCtas?.map((item, index) => {
-            const { cta, description, image, title } = item || {};
-            return (
-              <div key={index}>
-                {title && <div>{title}</div>}
-                {description?.custom_rich_text && (
-                  <div className="[&>p]:text-theme-slateGray [&>p]:text-62px [&>p]:font-semibold [&>p]:text-center [&>p]:leading-1.3">
-                    <RichText block={description} />
-                  </div>
-                )}
-                {image && (
-                  <div className="bg-[teal]">
-                    <Image src={image} alt={image?.alt} />
-                  </div>
-                )}
-                {cta?.label && (
-                  <div>
-                    <Button block={cta} />
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      )}
+        {imageTitleDescriptionCtas?.length > 0 && (
+          <div>
+            {imageTitleDescriptionCtas?.map((item, index) => {
+              const { cta, description, image, title } = item || {};
+              return (
+                <div key={index}>
+                  {title && <div>{title}</div>}
+                  {description?.custom_rich_text && (
+                    <div className="">
+                      <RichText block={description} />
+                    </div>
+                  )}
+                  {image && (
+                    <div className="">
+                      <Image src={image} alt={image?.alt} />
+                    </div>
+                  )}
+                  {cta?.label && (
+                    <div>
+                      <Button block={cta} />
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </section>
   );
 };

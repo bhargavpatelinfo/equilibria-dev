@@ -4,8 +4,9 @@ interface CircularProgressBarProps {
   value: number; // Progress value (0 to 100)
   size: number; // Size of the circular progress bar
   strokeWidth: number; // Width of the circle's stroke
-  text: string; // Text to display inside the circle (percentage)
   textColor: string;
+  progressBarColor: string;
+  children?: React.ReactNode;
 }
 
 const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
@@ -13,8 +14,9 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
     value,
     size,
     strokeWidth,
-    text,
+    children,
     textColor = "#ffffff",
+    progressBarColor = "#C46BAE",
   } = props || {};
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -42,7 +44,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
         cx={size / 2}
         cy={size / 2}
         r={radius}
-        stroke="#C46BAE"
+        stroke={"#C46BAE"}
         strokeWidth={strokeWidth}
         fill="transparent"
         strokeDasharray={circumference}
@@ -60,7 +62,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
         fontWeight="bold"
         fill={textColor}
       >
-        {text}
+        {children}
       </text>
     </svg>
   );

@@ -11,16 +11,6 @@ ${labelLinkFields}
 }
 `;
 
-{/* Title Value Unit */ }
-
-export const titleValueUnitFields = /* groq */ `
-_type,
-color,
-title,
-value,
-suffix
-`;
-
 {/* Image Title Description Cta */ }
 
 export const imageTitleDescriptionCtaFields = /* groq */ `
@@ -77,4 +67,15 @@ bio,
 image{
 ${imageFields}
 }
+`;
+
+{/* Circular Progress Bar */ }
+
+export const circularProgressBarFields = /* groq */ `
+_type,
+progressBarColor,
+title,
+valueColor,
+value,
+suffix
 `;

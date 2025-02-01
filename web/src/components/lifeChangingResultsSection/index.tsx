@@ -2,11 +2,15 @@ import React from "react";
 import { LifeChangingResultsSectionType } from "../../../lib/sanity/types";
 import RichText from "../global/richText";
 import Button from "../global/button";
+import CircularProgressBar from "../commons/circularProgressBar";
 
 const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
   block
 ) => {
-  const { id, title, buttons, titleValueUnit, headLine } = block || {};
+  const { id, title, buttons, circularProgressBar, headLine } = block || {};
+  const percentage = circularProgressBar?.value || 0;
+  const suffix = circularProgressBar?.suffix || "%";
+  const text = `${percentage}${suffix}`;
   return (
     <section id={id} className="bg-maroon py-16">
       <div className="container">
@@ -32,19 +36,39 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
               </div>
             )}
           </div>
-          <div className="max-w-[560px] w-full">
+          {/* <div className="max-w-[560px] w-full">
             {titleValueUnit?.title && (
               <div
-              //  style={{ backgroundColor: titleValueUnit?.color?.hex || "" }}
-              className="flex flex-col gap-1 items-center justify-center h-[300px] em:h-[400px] md:h-[450px] xl:h-[560px] w-[300px] em:w-[400px] md:w-[450px] xl:w-[560px] border-[30px] md:border-[45px] border-darkPink rounded-full ml-auto mr-auto xl:mr-0"
-               >
-                <div className="text-[60px] em:text-[80px] md:text-[100px] xl:text-[134px] tracking-[-3px] text-lightPink font-semibold font-Kulim leading-[120%]">{`${titleValueUnit?.value} ${titleValueUnit?.suffix}`}</div>
+                //  style={{ backgroundColor: titleValueUnit?.color?.hex || "" }}
+                className="flex flex-col gap-1 items-center justify-center h-[300px] em:h-[400px] md:h-[450px] xl:h-[560px] w-[300px] em:w-[400px] md:w-[450px] xl:w-[560px] border-[30px] md:border-[45px] border-darkPink rounded-full ml-auto mr-auto xl:mr-0"
+              >
+                <div className="text-[60px] em:text-[80px] md:text-[100px] xl:text-[134px] tracking-[-3px] text-lightPink font-semibold font-Kulim leading-[120%]">
+                  {`${titleValueUnit?.value} ${titleValueUnit?.suffix}`
+                  }</div>
                 <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
                   {titleValueUnit?.title && <div>{titleValueUnit?.title}</div>}
                 </span>
               </div>
             )}
-          </div>
+          </div> */}
+          {circularProgressBar?.title && (
+            <div className="max-w-[560px] w-full">
+              <CircularProgressBar
+                value={Number(percentage)}
+                size={100}
+                strokeWidth={10}
+                textColor={circularProgressBar?.valueColor?.hex || ""}
+                progressBarColor={circularProgressBar?.progressBarColor?.hex || ""}
+              >
+                {text}
+                {circularProgressBar?.title &&
+                  <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
+                    {circularProgressBar?.title}
+                  </span>
+                }
+              </CircularProgressBar>
+            </div>
+          )}
         </div>
       </div>
     </section>

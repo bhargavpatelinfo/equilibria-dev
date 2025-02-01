@@ -36,18 +36,6 @@ export type TitleLabelLinkType = {
 };
 
 {
-  /* Title Value Unit */
-}
-
-export type TitleValueUnitType = {
-  _type: "titleValueUnit";
-  color: ColorType;
-  title: string;
-  value: string;
-  suffix: string;
-};
-
-{
   /* Image Title Description Cta */
 }
 
@@ -94,4 +82,17 @@ export type LeaderType = {
   slug: Slug;
   bio: string;
   image: CustomImageType;
+};
+
+{
+  /* Circular Progress Bar */
+}
+
+export type CircularProgressBarType = {
+  _type: "circularProgressBar";
+  progressBarColor: ColorType;
+  valueColor: ColorType;
+  title: string;
+  value: string;
+  suffix: string;
 };
