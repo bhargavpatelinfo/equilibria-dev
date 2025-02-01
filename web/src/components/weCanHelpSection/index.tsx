@@ -9,34 +9,35 @@ const WeCanHelpSection: React.FC<WeCanHelpSectionType> = (block) => {
   const { id, title, description, backgroundImage, button } = block || {};
   const bgImage = useSanityImage(backgroundImage);
   return (
-    <section id={id} className="overflow-hidden">
+    <section id={id} className="mb-[100px] lg:mb-[206px]">
       <div
         className={cn(
-          "relative py-[50px] md:py-[75px]  rounded-3xl  max-w-7xl mx-auto px-5 "
+          "container"
         )}
-        style={{
+      >
+        
+        <div className="rounded-3xl py-16 em:py-24 lg:py-[177px] px-8"
+         style={{
           backgroundImage: bgImage?.src ? `url(${bgImage?.src})` : undefined,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundColor: "linear-gradient(180deg, #5D5BD4 0%, #8C75E6 100%)",
         }}
-      >
-        <div className="cardBorder  overflow-hidden rounded-3xl " />
-        <div className="rounded-3xl ">
-          <div className="max-w-[220px] sm:max-w-[400px] md:max-w-[700px] lg:max-w-[881px] flex flex-col gap-5 sm:gap-8 justify-center items-center mx-auto w-full">
+        >
+          <div className="max-w-[956px] mx-auto w-full flex flex-col gap-4">
             {title?.custom_rich_text && (
-              <div className="[&>*]:my-0 [&>*]:text-3xl em:[&>*]:text-4xl md:[&>*]:text-5xl [&>*]:text-black [&>*]:tracking-[-0.72px] [&>*]:sm:tracking-[-0.96px] [&>*]:text-center [&>*]:font-semibold [&>*]:pr-0 [&>*]:font-Avenir [&>*]:!leading-[110%]  ">
+              <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%] [&>*]:text-center">
                 <RichText block={title} />
               </div>
             )}
             {description?.custom_rich_text && (
-              <div className="[&>*]:my-0 [&>*]:text-center [&>*]:text-black [&>*]:leading-[140%] [&>*]:text-base ">
+              <div className="[&>*]:text-lg em:[&>*]:text-xl [&>*]:font-medium [&>*]:tracking-[-0.1px] [&>*]:text-maroon [&>*]:text-center [&>*]:opacity-70">
                 <RichText block={description} />
               </div>
             )}
           </div>
           {button?.label && (
-            <div className="w-fit  mx-auto mt-8">
+            <div className="w-fit  mx-auto mt-10 em:mt-14">
               <Button
                 block={button}
                 className=""
