@@ -15,16 +15,15 @@ const SliderSection: React.FC<SliderSectionType> = (block) => {
           >
             {groupData?.map((item, index) => {
               return (
-                <>
-                  <div
-                    key={index}
-                    className={`text-nowrap text-darkPurple text-lg sm:text-xl font-semibold `}
-                  >
+                <div
+                  key={index}
+                  className="flex items-center gap-8"
+                >
+                  <div className={`text-nowrap text-darkPurple text-lg sm:text-xl font-semibold `}>
                     {item}
-
                   </div>
-                  <div className="w-[14px] h-[14px] bg-darkPink rounded-full"></div>
-                </>
+                  <div className="w-[14px] h-[14px] bg-darkPink rounded-full" />
+                </div>
               );
             })}
           </ul>
