@@ -10,9 +10,9 @@ export const buttonVariants: Record<ButtonVariantType, string> = {
 
     darkPurple:"bg-[red]",
 
-    lightPink:"py-4 px-10 bg-lightPink rounded-[60px] text-maroon text-lg tracking-[-2%] border border-lightPink hover:bg-transparent basic-transition hover:text-lightPink block text-center w-fit",
+    lightPink:"py-3 sm:py-4 px-6 sm:px-10 bg-lightPink rounded-[60px] text-maroon text-base sm:text-lg tracking-[-2%] border border-lightPink hover:bg-transparent basic-transition hover:text-lightPink block text-center w-full em:w-fit",
 
-    transparentWithPink:"py-4 px-10 bg-transparent rounded-[60px] text-white text-lg tracking-[-2%] border border-white hover:bg-lightPink basic-transition hover:text-maroon hover:border-lightPink block text-center w-fit",
+    transparentWithPink:"py-3 sm:py-4 px-6 sm:px-10 bg-transparent rounded-[60px] text-white text-base sm:text-lg tracking-[-2%] border border-white hover:bg-lightPink basic-transition hover:text-maroon hover:border-lightPink block text-center w-full em:w-fit",
 
     transparentWithWhite:"bg-[teal]"
 };

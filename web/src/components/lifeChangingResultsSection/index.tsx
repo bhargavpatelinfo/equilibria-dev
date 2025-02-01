@@ -21,7 +21,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
               )}
             </div>
             {buttons?.length > 0 && (
-              <div className="flex flex-col sm:flex-row gap-4 ">
+              <div className="flex flex-col em:flex-row gap-4 ">
                 {buttons?.map((item, index) => {
                   return (
                     <div key={index}>
@@ -36,10 +36,10 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
             {titleValueUnit?.title && (
               <div
               //  style={{ backgroundColor: titleValueUnit?.color?.hex || "" }}
-              className="hidden md:flex flex-col gap-1 items-center justify-center h-[400px] md:h-[560px] border-[45px] border-darkPink rounded-full"
+              className="flex flex-col gap-1 items-center justify-center h-[300px] em:h-[400px] md:h-[450px] xl:h-[560px] w-[300px] em:w-[400px] md:w-[450px] xl:w-[560px] border-[30px] md:border-[45px] border-darkPink rounded-full ml-auto mr-auto xl:mr-0"
                >
-                <div className="text-[100px] xl:text-[134px] tracking-[-2%] text-lightPink font-semibold font-Kulim leading-[120%]">{`${titleValueUnit?.value} ${titleValueUnit?.suffix}`}</div>
-                <span className="text-xl tracking-[-2%] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center">
+                <div className="text-[60px] em:text-[80px] md:text-[100px] xl:text-[134px] tracking-[-3px] text-lightPink font-semibold font-Kulim leading-[120%]">{`${titleValueUnit?.value} ${titleValueUnit?.suffix}`}</div>
+                <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
                   {titleValueUnit?.title && <div>{titleValueUnit?.title}</div>}
                 </span>
               </div>
