@@ -6,9 +6,9 @@ import { ButtonType, ButtonVariantType } from "../../../../lib/sanity/types";
 
 export const buttonVariants: Record<ButtonVariantType, string> = {
   darkPink:
-    "text-black text-base font-semibold bg-theme-green px-10 py-4 rounded-62 inline-flex items-center justify-center border border-transparent hover:bg-transparent hover:border-theme-primary hover:text-theme-primary",
+    "",
 
-    darkPurple:"bg-[red]",
+    darkPurple:"py-3 sm:py-4 px-6 sm:px-10 bg-darkPurple rounded-[60px] text-lightPink text-base sm:text-lg tracking-[-2%] border border-darkPurple hover:bg-transparent basic-transition hover:text-darkPurple block text-center w-full em:w-fit",
 
     lightPink:"py-3 sm:py-4 px-6 sm:px-10 bg-lightPink rounded-[60px] text-maroon text-base sm:text-lg tracking-[-2%] border border-lightPink hover:bg-transparent basic-transition hover:text-lightPink block text-center w-full em:w-fit",
 

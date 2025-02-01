@@ -14,19 +14,19 @@ const SliderSection: React.FC<SliderSectionType> = (block) => {
             className="flex justify-between items-center gap-8 marqueeLogoInner min-w-full  px-4 h-[60px] sm:h-[80px] lg:h-[112px]"
           >
             {groupData?.map((item, index) => {
-                    return (
-                      <>
-                        <div
-                        key={index}
-                        className={`text-nowrap text-darkPurple text-lg sm:text-xl font-semibold `}
-                      >
-                        {item}
-                       
-                      </div>
-                       <div className="w-[14px] h-[14px] bg-darkPink rounded-full"></div>
-                      </>
-                    );
-                  })}
+              return (
+                <>
+                  <div
+                    key={index}
+                    className={`text-nowrap text-darkPurple text-lg sm:text-xl font-semibold `}
+                  >
+                    {item}
+
+                  </div>
+                  <div className="w-[14px] h-[14px] bg-darkPink rounded-full"></div>
+                </>
+              );
+            })}
           </ul>
         ))}
       </div>
