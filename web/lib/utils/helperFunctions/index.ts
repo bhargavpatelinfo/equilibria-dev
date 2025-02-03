@@ -1,10 +1,12 @@
 import { clsx, type ClassValue } from "clsx";
 import slugify from "slugify";
+import { twMerge } from "tailwind-merge";
 import { getClient, readToken } from "../../sanity";
 
 export function cn(...inputs: ClassValue[]) {
-  return clsx(inputs);
+  return twMerge(clsx(inputs));
 }
+
 
 export const groupItems = <T>(items: T[], size: number): T[][] => {
   const data: T[][] = [];

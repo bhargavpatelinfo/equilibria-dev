@@ -25,6 +25,7 @@
     "next-seo": "^6.6.0",
     "react": "^18",
     "react-dom": "^18",
+    "tailwind-merge": "^2.6.0",
     "react-layout-masonry": "^1.2.0",
     "react-share": "^5.1.0",
     "slugify": "^1.6.6",

@@ -14,7 +14,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
   return (
     <section id={id} className="bg-maroon py-16">
       <div className="container">
-        <div className="flex flex-col xl:flex-row justify-between items-center gap-20 xl:gap-5">
+        <div className="flex flex-col xl:flex-row justify-between items-center gap-20 xl:gap-8">
           <div className="xl:max-w-[741px] w-full flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               {headLine && (
@@ -23,7 +23,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
                 </div>
               )}
               {title?.custom_rich_text && (
-                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] xl:[&>*]:text-[84px] [&>*]:text-white [&>*]:tracking-[-1.68px] [&>*]:font-Kulim [&>*]:leading-[120%]">
+                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] xl:[&>*]:text-[84px] [&>*]:text-white [&>*]:tracking-[-1.68px] [&>*]:font-Kulim [&>*]:leading-[110%]">
                   <RichText block={title} />
                 </div>
               )}
@@ -40,7 +40,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
               </div>
             )}
           </div>
-          <div className="max-w-[560px] w-full">
+          {/* <div className="max-w-[560px] w-full">
             {circularProgressBar?.title && (
               <div
                 //  style={{ backgroundColor: titleValueUnit?.color?.hex || "" }}
@@ -54,33 +54,37 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
                 </span>
               </div>
             )}
-          </div>
-          {/* {circularProgressBar?.title && (
-            <div className="max-w-[560px] w-full">
+          </div> */}
+          {circularProgressBar?.title && (
+            <div className="max-w-[560px] w-full ">
               <CircularProgressBar
                 value={Number(percentage)}
-                size={100}
-                strokeWidth={10}
-                textColor={circularProgressBar?.valueColor?.hex || ""}
                 progressBarColor={
                   circularProgressBar?.progressBarColor?.hex || ""
                 }
+                size={560}
+                // strokeWidth={40}
                 backgroundBarColor="#4D0F3B"
                 mainClassName=""
-                parentClassName=""
-                svgClassName=""
+                parentClassName="absolute top-[50%] translate-y-[-50%]  translate-x-[50%]"
+                svgClassName="size-[400px] lg:size-[559px] "
+                strokeWidthClassName=""
               >
-                <div className="">
+                <div className="text-[60px] em:text-[80px] md:text-[100px] lg:text-[134px] tracking-[-2.68px]  font-semibold font-Kulim leading-[110%] text-center"
+                  style={{
+                    color: circularProgressBar?.valueColor?.hex || "#FDC6E0"
+                  }}
+                >
                   {text}
                 </div>
                 {circularProgressBar?.title && (
-                  <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
+                  <p className="text-base em:text-xl tracking-[-1px] font-Kulim text-white max-w-[280px] mx-auto w-full text-center px-4">
                     {circularProgressBar?.title}
-                  </span>
+                  </p>
                 )}
               </CircularProgressBar>
             </div>
-          )} */}
+          )}
         </div>
       </div>
     </section>

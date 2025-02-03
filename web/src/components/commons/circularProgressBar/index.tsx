@@ -3,14 +3,14 @@ import { cn } from "../../../../lib/utils/helperFunctions";
 
 interface CircularProgressBarProps {
   value: number; // Progress value (0 to 100)
-  size: number; // Size of the circular progress bar
-  strokeWidth: number; // Width of the circle's stroke
-  textColor: string;
+  size?: number; // Size of the circular progress bar
+  strokeWidth?: number; // Width of the circle's stroke
   progressBarColor: string;
   backgroundBarColor: string;
   mainClassName: string;
   parentClassName: string;
   svgClassName: string;
+  strokeWidthClassName: string;
   children?: React.ReactNode;
 }
 
@@ -20,12 +20,12 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
     size,
     strokeWidth,
     children,
-    textColor = "#000",
     progressBarColor,
     backgroundBarColor,
     mainClassName,
     parentClassName,
     svgClassName,
+    strokeWidthClassName
   } = props || {};
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
@@ -40,7 +40,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
   return (
     <div
       className={cn("relative", mainClassName)}
-      style={{ width: size, height: size, position: "relative" }}
+      style={{ width: size, height: size,}}
     >
       <svg width={size} height={size} className={cn("mx-auto", svgClassName)}>
         <circle
@@ -50,7 +50,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
           r={radius}
           fill="transparent"
           stroke={backgroundBarColor}
-          strokeWidth={strokeWidth}
+          strokeWidth={cn("",strokeWidth, strokeWidthClassName)}
         />
         <circle
           className="circle-progress"
@@ -58,7 +58,7 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
           cy={size / 2}
           r={radius}
           stroke={progressBarColor}
-          strokeWidth={strokeWidth}
+          strokeWidth={cn("",strokeWidth, strokeWidthClassName)}
           fill="transparent"
           strokeDasharray={circumference}
           strokeDashoffset={progress}
