@@ -27,7 +27,7 @@ const MobileView: React.FC<MobileViewProps> = ({
   const image = useSanityImage(logo);
 
   return (
-    <div className="py-8 sm:py-10 bg-background block lg:hidden ">
+    <div className="py-6  bg-background block lg:hidden fixed top-0 right-0 left-0 z-10 shadow-headerShadow">
       <div className="container">
         <div className="flex justify-between items-center flex-1 relative">
           {image && (
@@ -51,7 +51,7 @@ const MobileView: React.FC<MobileViewProps> = ({
           </div>
           <div className={`w-full absolute left-0 right-0 top-[100%] overflow-hidden transition-all duration-500 ease-linear ${toggle ? "h-screen z-10" : "h-0 -z-10"}`}>
           <div
-            className={`absolute z-10 top-0 left-0 right-0  transition-all duration-500  lg:hidden  ${toggle ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} bg-white  mt-6 p-8 rounded-3xl shadow-xl`}
+            className={`absolute z-10 top-0 left-0 right-0  transition-all duration-500  lg:hidden  ${toggle ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"} bg-white  mt-6 p-8 rounded-3xl shadow-headerShadow`}
             style={{ pointerEvents: toggle ? "auto" : "none" }}
           >
             {navItems && (

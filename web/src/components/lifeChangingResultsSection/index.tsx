@@ -23,7 +23,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
                 </div>
               )}
               {title?.custom_rich_text && (
-                <div className="[&>*]:text-[42px] md:[&>*]:text-[60px] xl:[&>*]:text-[84px] [&>*]:text-white [&>*]:tracking-[-2px] [&>*]:font-Kulim [&>*]:leading-[120%]">
+                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] xl:[&>*]:text-[84px] [&>*]:text-white [&>*]:tracking-[-1.68px] [&>*]:font-Kulim [&>*]:leading-[120%]">
                   <RichText block={title} />
                 </div>
               )}

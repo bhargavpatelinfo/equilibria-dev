@@ -17,7 +17,7 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
   const image = useSanityImage(logo);
 
   return (
-    <header className="py-[57px] bg-background hidden lg:block">
+    <header className="py-10 xl:py-[57px] bg-background hidden lg:block fixed top-0 right-0 left-0 z-10 shadow-headerShadow">
       <div className="container">
         <div className="flex flex-row justify-between items-center gap-5">
           {image && (
@@ -28,7 +28,7 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
                 height={image?.height}
                 width={image?.width}
                 priority
-                className="w-[220px] xl:w-[248px] h-auto xl:h-[36px]"
+                className="w-[220px] xl:w-[248px] h-auto"
               />
             </Link>
           )}

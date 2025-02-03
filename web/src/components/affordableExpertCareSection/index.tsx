@@ -13,7 +13,7 @@ const AffordableExpertCareSection: React.FC<AffordableExpertCareSectionType> = (
       <div className="container">
         <div className="flex flex-col gap-4">
           {title?.custom_rich_text && (
-            <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
+            <div className="[&>*]:text-[36px] em:[&>*]:text-[46px]  lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
               <RichText block={title} />
             </div>
           )}

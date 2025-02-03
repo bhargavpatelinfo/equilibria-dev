@@ -7,7 +7,7 @@ const SliderSection: React.FC<SliderSectionType> = (block) => {
   const groupData = groupItems<string>(texts || [], 1);
   return (
     <section id={id} className="bg-lightPink">
-      <div className="marqueeLogo py-5">
+      <div className="marqueeLogo">
         {[...Array(2)]?.map((_, repeatIndex) => (
           <ul
             key={repeatIndex}

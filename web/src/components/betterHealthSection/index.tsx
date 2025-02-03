@@ -19,10 +19,11 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
         <Carousel
           swiperWrapperClass="!overflow-visible"
           swiperSlideClass="transition-all duration-300 ease-linear rounded-lg"
-          className='  mx-auto mt-16 lg:mt-[88px]'
+          className='  mx-auto mt-8 sm:mt-16 lg:mt-[88px]'
           data={titleDescriptionImages}
           spaceBetween={24}
           slidesPerView={1}
+          loop={false}
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -44,8 +45,9 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
                   alt={image?.alt}
                   className="aspect-[1318/790] object-cover rounded-xl sm:rounded-[32px]"
                 />
-                <div className="flex flex-col gap-4 absolute top-5 sm:top-10 xl:top-[64px] left-5 sm:left-10 xl:left-[64px] max-w-[300px] sm:max-w-[464px] w-[80%] sm:w-full">
-                  <h3 className="text-[26px] sm:text-[40px] md:text-[50px] xl:text-[64px] text-white tracking-[-1.28px] font-semibold font-Kulim leading-[110%] ">
+                <div className="absolute top-0 w-full h-full bg-black/20 rounded-xl sm:rounded-[32px]"></div>
+                <div className="flex flex-col gap-4 absolute top-5 sm:top-10 xl:top-[64px] left-5 sm:left-10 xl:left-[64px] max-w-[300px] sm:max-w-[464px] w-[80%] sm:w-full z-[5]">
+                  <h3 className="text-[22px] esm:text-[26px] sm:text-[40px] lg:text-[50px] xl:text-[64px] text-white tracking-[-1.28px] font-semibold font-Kulim leading-[110%] ">
                     {`#${formattedIndex} ${title}`}
                   </h3>
                   {description?.custom_rich_text && (
