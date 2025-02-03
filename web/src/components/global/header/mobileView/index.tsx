@@ -41,7 +41,7 @@ const MobileView: React.FC<MobileViewProps> = ({
 
   return (
     <div 
-    className={`py-6  bg-background block lg:hidden fixed top-0 right-0 left-0 z-10  ${isScrolled ? "shadow-headerShadow" : ""}`
+    className={`py-6  bg-background block lg:hidden fixed top-0 right-0 left-0 z-10  ${isScrolled ? "border-b border-black/10" : ""}`
   }
     >
       <div className="container">

@@ -31,8 +31,8 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
 
   return (
     <header 
-    className={`py-10 xl:py-[57px] bg-background hidden lg:block fixed top-0 right-0 left-0 z-10 transition-shadow duration-300 ${
-      isScrolled ? "shadow-headerShadow" : ""
+    className={`pt-10 xl:pt-[57px] pb-8 bg-background hidden lg:block fixed top-0 right-0 left-0 z-10 duration-300 ${
+      isScrolled ? "border-b border-black/10" : ""
     }`}
     >
       <div className="container">
