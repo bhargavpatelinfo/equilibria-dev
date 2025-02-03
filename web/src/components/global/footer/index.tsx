@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
                   </h4>
                 )}
                 {connectWithUs?.titleLabelLinks?.length > 0 && (
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-3 ">
                     {connectWithUs?.titleLabelLinks?.map((item, index) => {
                       const { labelLink, title } = item || {};
                       return (
@@ -74,7 +74,7 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
                           className="flex flex-col gap-3"
                         >
                           {title && <div className="text-xl text-white tracking-[-2%] font-medium">{title}</div>}
-                          <Link to={labelLink?.link || "#"} className="text-lg em:text-xl text-white tracking-[-2%] font-medium hover:opacity-70 basic-transition">{labelLink?.label}</Link>
+                          <Link to={labelLink?.link || "#"} className="text-lg em:text-xl text-white tracking-[-2%] font-medium hover:opacity-70 basic-transition underline underline-offset-4 decoration-darkPink">{labelLink?.label}</Link>
                         </div>
                       );
                     })}
@@ -100,7 +100,7 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
                     key={index}
                     className="text-white text-base em:text-xl tracking-[-2%] flex flex-row  gap-3 items-center"
                   >
-                    <Link to={link || "#"} className="">
+                    <Link to={link || "#"} className="hover:opacity-70 basic-transition">
                       {label}
                     </Link>
                     <div className="hidden em:block">

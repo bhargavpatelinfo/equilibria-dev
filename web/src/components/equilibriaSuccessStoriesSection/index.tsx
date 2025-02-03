@@ -18,6 +18,7 @@ const EquilibriaSuccessStoriesSection: React.FC<
           className='w-full max-w-[1320px] overflow-visible mx-auto px-4'
           data={equilibriaSuccessStories}
           hasNavigation
+          loop={true}
           spaceBetween={24}
           slidesPerView={1}
           breakpoints={{
@@ -36,7 +37,7 @@ const EquilibriaSuccessStoriesSection: React.FC<
             return (
               <div key={index} className="flex flex-col md:flex-row justify-between gap-10">
                 <div className="max-w-[636px] w-full flex flex-col gap-4 sm:gap-6">
-                  {title && <h2 className="text-[38px] sm:text-[40px] lg:text-[52px] font-semibold text-[#121212] tracking-[-2px] font-Kulim">{title}</h2>}
+                  {title && <h2 className="text-[38px] sm:text-[40px] lg:text-[52px] font-semibold text-[#121212] tracking-[-2px] font-Kulim leading-[110%]">{title}</h2>}
                   {description?.custom_rich_text && (
                     <div className="[&>*]:text-[24px] sm:[&>*]:text-[30px] lg:[&>*]:text-[40px] [&>*]:text-[#121212] [&>*]:tracking-[-2px] [&>*]:font-Kulim">
                       <RichText block={description} />

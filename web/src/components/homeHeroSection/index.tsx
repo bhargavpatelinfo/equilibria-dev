@@ -6,7 +6,7 @@ import RichText from "../global/richText";
 const HomeHeroSection: React.FC<HomeHeroSectionType> = (block) => {
   const { id, title, description } = block || {};
   return (
-    <section id={id} className="mb-[50px] sm:mb-[120px] lg:mb-[173px] mt-[30px] em:mt-[50px] md:mt-[95px]">
+    <section id={id} className="mb-[50px] sm:mb-[64px] lg:mb-[173px] mt-[140px] sm:mt-[150px] lg:mt-[250px]">
       <div className="container">
         <div className="max-w-[850px] w-full">
         {title?.custom_rich_text && (

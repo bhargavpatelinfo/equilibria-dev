@@ -26,7 +26,7 @@ const WeCanHelpSection: React.FC<WeCanHelpSectionType> = (block) => {
         >
           <div className="max-w-[956px] mx-auto w-full flex flex-col gap-4">
             {title?.custom_rich_text && (
-              <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%] [&>*]:text-center">
+              <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%] [&>*]:text-center">
                 <RichText block={title} />
               </div>
             )}

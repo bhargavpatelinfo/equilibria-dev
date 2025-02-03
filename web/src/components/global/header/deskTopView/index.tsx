@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "@/components/global/image";
 
 import Link from "../../link";
@@ -16,8 +16,25 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
   const { logo, navItems } = block || {};
   const image = useSanityImage(logo);
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="py-[57px] bg-background hidden lg:block">
+    <header 
+    className={`py-10 xl:py-[57px] bg-background hidden lg:block fixed top-0 right-0 left-0 z-10 transition-shadow duration-300 ${
+      isScrolled ? "shadow-headerShadow" : ""
+    }`}
+    >
       <div className="container">
         <div className="flex flex-row justify-between items-center gap-5">
           {image && (
@@ -28,7 +45,7 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
                 height={image?.height}
                 width={image?.width}
                 priority
-                className="w-[220px] xl:w-[248px] h-auto xl:h-[36px]"
+                className="w-[220px] xl:w-[248px] h-auto"
               />
             </Link>
           )}

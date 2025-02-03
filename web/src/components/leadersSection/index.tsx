@@ -9,13 +9,13 @@ const Masonry = dynamic(() => import('react-layout-masonry'), { ssr: false });
 const LeadersSection: React.FC<LeadersSectionType> = (block) => {
   const { id, title, buttons, description, leaders } = block || {};
   return (
-    <section id={id} className="mb-[120px] lg:mb-[200px] xl:mb-[264px]">
+    <section id={id} className="mb-[100px] lg:mb-[200px] xl:mb-[264px]">
       <div className="container">
         <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-10">
           <div className="max-w-full lg:max-w-[604px] w-full flex flex-col gap-8 em:gap-12">
             <div className="flex flex-col gap-6">
               {title?.custom_rich_text && (
-                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
+                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
                   <RichText block={title} />
                 </div>
               )}

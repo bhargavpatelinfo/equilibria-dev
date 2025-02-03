@@ -70,6 +70,7 @@ export default {
     },
     boxShadow: {
       buttonHovershadow: "0 20px 38px rgba(0, 0, 0, 0.16)",
+      headerShadow:"0px 5px 13px -8px rgba(0,0,0,0.15)",
     },
     fontFamily: {
       Inter: "Inter, serif",

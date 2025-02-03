@@ -10,12 +10,12 @@ const StopManagingSection: React.FC<StopManagingSectionType> = (block) => {
       <div className="container">
         <div className="flex flex-col gap-4 max-w-[956px] w-full">
           {title?.custom_rich_text && (
-            <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
+            <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
               <RichText block={title} />
             </div>
           )}
           {description?.custom_rich_text && (
-            <div className="[&>*]:text-xl [&>*]:text-maroon [&>*]:font-medium [&>*]:tracking-[-0.1px] [&>*]:opacity-70 [&>*]:leading-[150%]">
+            <div className="[&>*]:text-lg sm:[&>*]:text-xl [&>*]:text-maroon [&>*]:font-medium [&>*]:tracking-[-0.1px] [&>*]:opacity-70 [&>*]:leading-[150%]">
               <RichText block={description} />
             </div>
           )}
