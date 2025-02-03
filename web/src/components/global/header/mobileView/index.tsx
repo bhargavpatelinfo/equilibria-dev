@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import clsx from "clsx";
 import MobileToggleCloseIcon from "@/components/commons/icons/mobileToggleCloseIcon";
 import MobileToggle from "@/components/commons/icons/mobileToggle";
@@ -24,10 +24,26 @@ const MobileView: React.FC<MobileViewProps> = ({
 }) => {
   const { logo, navItems } = block || {};
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 200);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const image = useSanityImage(logo);
 
   return (
-    <div className="py-6  bg-background block lg:hidden fixed top-0 right-0 left-0 z-10 shadow-headerShadow">
+    <div 
+    className={`py-6  bg-background block lg:hidden fixed top-0 right-0 left-0 z-10  ${isScrolled ? "shadow-headerShadow" : ""}`
+  }
+    >
       <div className="container">
         <div className="flex justify-between items-center flex-1 relative">
           {image && (

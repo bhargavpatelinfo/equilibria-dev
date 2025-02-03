@@ -11,6 +11,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
   const percentage = circularProgressBar?.value || 0;
   const suffix = circularProgressBar?.suffix || "%";
   const text = `${percentage}${suffix}`;
+
   return (
     <section id={id} className="bg-maroon py-16">
       <div className="container">
@@ -29,59 +30,37 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
               )}
             </div>
             {buttons?.length > 0 && (
-              <div className="flex flex-col em:flex-row gap-4 ">
-                {buttons?.map((item, index) => {
-                  return (
-                    <div key={index}>
-                      <Button block={item} />
-                    </div>
-                  );
-                })}
+              <div className="flex flex-col em:flex-row gap-4">
+                {buttons.map((item, index) => (
+                  <div key={index}>
+                    <Button block={item} />
+                  </div>
+                ))}
               </div>
             )}
           </div>
-          {/* <div className="max-w-[560px] w-full">
-            {circularProgressBar?.title && (
-              <div
-                //  style={{ backgroundColor: titleValueUnit?.color?.hex || "" }}
-                className="flex flex-col gap-1 items-center justify-center h-[300px] em:h-[400px] md:h-[450px] xl:h-[560px] w-[300px] em:w-[400px] md:w-[450px] xl:w-[560px] border-[30px] md:border-[45px] border-darkPink rounded-full ml-auto mr-auto xl:mr-0"
-              >
-                <div className="text-[60px] em:text-[80px] md:text-[100px] xl:text-[134px] tracking-[-3px] text-lightPink font-semibold font-Kulim leading-[120%]">
-                  {`${circularProgressBar?.value} ${circularProgressBar?.suffix}`
-                  }</div>
-                <span className="text-base em:text-xl tracking-[-1px] font-Kulim text-lightPink max-w-[280px] mx-auto w-full text-center px-4">
-                  {circularProgressBar?.title && <div>{circularProgressBar?.title}</div>}
-                </span>
-              </div>
-            )}
-          </div> */}
           {circularProgressBar?.title && (
-            <div className="max-w-[560px] w-full ">
+            <div className="max-w-[559px] w-full hidden lg:block">
               <CircularProgressBar
                 value={Number(percentage)}
-                progressBarColor={
-                  circularProgressBar?.progressBarColor?.hex || ""
-                }
-                size={560}
-                // strokeWidth={40}
+                progressBarColor={circularProgressBar?.progressBarColor?.hex || ""}
+                size={559}
+                strokeWidth={40}
                 backgroundBarColor="#4D0F3B"
                 mainClassName=""
-                parentClassName="absolute top-[50%] translate-y-[-50%]  translate-x-[50%]"
-                svgClassName="size-[400px] lg:size-[559px] "
-                strokeWidthClassName=""
+                parentClassName="absolute top-[50%] translate-y-[-50%] translate-x-[50%]"
+                svgClassName=""
+                strokeWidthClassName="stroke-[40px]"
               >
-                <div className="text-[60px] em:text-[80px] md:text-[100px] lg:text-[134px] tracking-[-2.68px]  font-semibold font-Kulim leading-[110%] text-center"
-                  style={{
-                    color: circularProgressBar?.valueColor?.hex || "#FDC6E0"
-                  }}
+                <div
+                  className="text-[60px] em:text-[80px] md:text-[100px] xl:text-[134px] tracking-[-2.68px] font-semibold font-Kulim leading-[110%] text-center"
+                  style={{ color: circularProgressBar?.valueColor?.hex || "#FDC6E0" }}
                 >
                   {text}
                 </div>
-                {circularProgressBar?.title && (
-                  <p className="text-base em:text-xl tracking-[-1px] font-Kulim text-white max-w-[280px] mx-auto w-full text-center px-4">
-                    {circularProgressBar?.title}
-                  </p>
-                )}
+                <p className="text-base em:text-xl tracking-[-1px] font-Kulim text-white max-w-[280px] mx-auto w-full text-center px-4">
+                  {circularProgressBar?.title}
+                </p>
               </CircularProgressBar>
             </div>
           )}

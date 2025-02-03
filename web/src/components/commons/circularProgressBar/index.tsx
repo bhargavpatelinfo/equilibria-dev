@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import { cn } from "../../../../lib/utils/helperFunctions";
 
 interface CircularProgressBarProps {
-  value: number; // Progress value (0 to 100)
-  size?: number; // Size of the circular progress bar
-  strokeWidth?: number; // Width of the circle's stroke
+  value: number;
+  size?: number;
+  strokeWidth?: number;
   progressBarColor: string;
   backgroundBarColor: string;
   mainClassName: string;
@@ -14,19 +14,18 @@ interface CircularProgressBarProps {
   children?: React.ReactNode;
 }
 
-const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
-  const {
-    value,
-    size,
-    strokeWidth,
-    children,
-    progressBarColor,
-    backgroundBarColor,
-    mainClassName,
-    parentClassName,
-    svgClassName,
-    strokeWidthClassName
-  } = props || {};
+const CircularProgressBar: React.FC<CircularProgressBarProps> = ({
+  value,
+  size = 100,
+  strokeWidth = 10,
+  children,
+  progressBarColor,
+  backgroundBarColor,
+  mainClassName,
+  parentClassName,
+  svgClassName,
+  strokeWidthClassName,
+}) => {
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const [progress, setProgress] = useState(circumference);
@@ -38,28 +37,25 @@ const CircularProgressBar: React.FC<CircularProgressBarProps> = (props) => {
   }, [value, circumference]);
 
   return (
-    <div
-      className={cn("relative", mainClassName)}
-      style={{ width: size, height: size,}}
-    >
-      <svg width={size} height={size} className={cn("mx-auto", svgClassName)}>
+    <div className={cn("relative", mainClassName)} style={{ width: size, height: size }}>
+      <svg width={size} height={size} className={cn("", svgClassName)}>
+        {/* Background Circle */}
         <circle
-          className="circle-background"
           cx={size / 2}
           cy={size / 2}
           r={radius}
           fill="transparent"
           stroke={backgroundBarColor}
-          strokeWidth={cn("",strokeWidth, strokeWidthClassName)}
+          className={cn(strokeWidthClassName)} // Apply Tailwind stroke width class
         />
+        {/* Progress Circle */}
         <circle
-          className="circle-progress"
           cx={size / 2}
           cy={size / 2}
           r={radius}
           stroke={progressBarColor}
-          strokeWidth={cn("",strokeWidth, strokeWidthClassName)}
           fill="transparent"
+          className={cn(strokeWidthClassName)} // Apply Tailwind stroke width class
           strokeDasharray={circumference}
           strokeDashoffset={progress}
           style={{
