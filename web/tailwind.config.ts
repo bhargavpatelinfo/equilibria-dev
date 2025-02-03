@@ -74,7 +74,7 @@ export default {
     },
     fontFamily: {
       Inter: "Inter, serif",
-      Kulim: "Nunito, serif",
+      Kulim: "Kulim Park, serif",
     },
   },
   plugins: [],
