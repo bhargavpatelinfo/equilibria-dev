@@ -3,7 +3,7 @@ import { LifeChangingResultsSectionType } from "../../../lib/sanity/types";
 import RichText from "../global/richText";
 import Button from "../global/button";
 import ChangingProgressProvider from "../commons/changingProgressProvider";
-import { CircularProgressbar,buildStyles } from "react-circular-progressbar";
+import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (block) => {
