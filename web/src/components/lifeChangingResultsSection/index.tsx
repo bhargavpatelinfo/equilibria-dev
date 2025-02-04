@@ -5,44 +5,19 @@ import Button from "../global/button";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (block) => {
+const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
+  block
+) => {
   const { id, title, buttons, circularProgressBar, headLine } = block || {};
-  const percentage = Number(circularProgressBar?.value) || 0;
   const suffix = circularProgressBar?.suffix || "%";
 
   const [fontSize, setFontSize] = useState("28px");
   const [strokeWidth, setStrokeWidth] = useState(9);
+  const [percentage, setPercentage] = useState(null);
 
-  const [currentPercentage, setCurrentPercentage] = useState(0);
-  const [isInView, setIsInView] = useState(false);
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  
 
-  useEffect(() => {
-    if (isInView) {
-      setCurrentPercentage(percentage);
-    }
-  }, [isInView, percentage]);
-
-  useEffect(() => {
-    const updateFontSize = () => {
-      if (window.innerWidth >= 1280) {
-        setFontSize("26px"); // xl
-      } else if (window.innerWidth >= 1024) {
-        setFontSize("26px"); // lg
-      } else if (window.innerWidth >= 768) {
-        setFontSize("26px"); // md
-      } else if (window.innerWidth >= 640) {
-        setFontSize("22px"); // sm
-      } else {
-        setFontSize("22px"); // default
-      }
-    };
-
-    updateFontSize();
-    window.addEventListener("resize", updateFontSize);
-
-    return () => window.removeEventListener("resize", updateFontSize);
-  }, []);
 
   useEffect(() => {
     const handleResize = () => {
@@ -68,16 +43,28 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
   }, []);
 
   useEffect(() => {
+    const targetValue = circularProgressBar?.value || 0;
+
     const observer = new IntersectionObserver(
       (entries) => {
-        const entry = entries[0];
+        const [entry] = entries;
         if (entry.isIntersecting) {
-          setIsInView(true);
+          // Reset percentage before starting animation
+          setPercentage(0);
+          const interval = setInterval(() => {
+            setPercentage((prev) => {
+              if (prev >= targetValue) {
+                clearInterval(interval);
+                return targetValue;
+              }
+              return prev + 1;
+            });
+          }, 30);
+        } else {
+          setPercentage(0); // Reset when out of view
         }
       },
-      {
-        threshold: 0.5,
-      }
+      { threshold: 0.5 }
     );
 
     if (sectionRef.current) {
@@ -85,14 +72,12 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
     }
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
-  }, []);
+  }, [circularProgressBar?.value]);
 
   return (
-    <section id={id} className="bg-maroon py-16">
+    <section id={id} ref={sectionRef} className="bg-maroon py-16">
       <div className="container">
         <div className="flex flex-col xl:flex-row justify-between items-center gap-10 em:gap-20 xl:gap-8">
           <div className="xl:max-w-[741px] w-full flex flex-col gap-8">
@@ -110,7 +95,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
             </div>
             {buttons?.length > 0 && (
               <div className="flex flex-col em:flex-row gap-4">
-                {buttons.map((item, index) => (
+                {buttons?.map((item, index) => (
                   <div key={index}>
                     <Button block={item} />
                   </div>
@@ -120,11 +105,11 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
           </div>
 
           {/* Circular Progress Section */}
-          <div className="max-w-[559px] w-full" ref={sectionRef}>
+          <div className="max-w-[559px] w-full">
             <div className="relative max-w-[400px] sm:max-w-[559px] w-full ml-auto mr-auto xl:mr-0">
               <CircularProgressbar
-                value={isInView ? currentPercentage : 0}
-                text={`${currentPercentage}${suffix}`}
+                value={percentage}
+                text={`${percentage}${suffix}`}
                 className="size-[350px] md:size-[450px] xl:size-[560px]"
                 background
                 circleRatio={1}
@@ -136,13 +121,16 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
                   trailColor: "#4A2040",
                   strokeLinecap: "butt",
                   backgroundColor: "#1C0917",
-                  pathColor: circularProgressBar?.progressBarColor?.hex || "#FDC6E0",
-                  textColor: circularProgressBar?.valueColor?.hex || "#FDC6E0",
+                  pathColor:
+                    circularProgressBar?.progressBarColor?.hex || "#FDC6E0",
+                  textColor:
+                    circularProgressBar?.valueColor?.hex || "#FDC6E0",
                   pathTransitionDuration: 1,
                   rotation: 1,
-                  textSize: fontSize
+                  textSize: fontSize,
                 })}
               />
+
               <p className="text-lg md:text-xl tracking-[-1px] font-Kulim text-white max-w-[275px] mx-auto w-full text-center px-4 mt-2 absolute top-[55%] sm:top-[60%] translate-x-[25%] sm:translate-x-[50%] hidden em:block">
                 {circularProgressBar?.title}
               </p>
