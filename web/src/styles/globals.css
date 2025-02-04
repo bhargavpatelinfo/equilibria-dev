@@ -25,6 +25,9 @@ html,body {
   font-family: "Inter", serif;
   color: #1C0917;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @layer utilities {

@@ -30,10 +30,10 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
         setStrokeWidth(8);
       } else if (width < 1280) {
         setFontSize("24px");
-        setStrokeWidth(8);
+        setStrokeWidth(9);
       } else {
         setFontSize("26px");
-        setStrokeWidth(9);
+        setStrokeWidth(11);
       }
     };
 
