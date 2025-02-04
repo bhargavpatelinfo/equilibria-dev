@@ -3,7 +3,7 @@ import { LifeChangingResultsSectionType } from "../../../lib/sanity/types";
 import RichText from "../global/richText";
 import Button from "../global/button";
 import ChangingProgressProvider from "../commons/changingProgressProvider";
-import { CircularProgressbar } from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
 const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (block) => {
@@ -18,18 +18,18 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
   useEffect(() => {
     const updateFontSize = () => {
       if (window.innerWidth >= 1280) {
-        setFontSize("30px"); // xl
+        setFontSize("26px"); // xl
       } else if (window.innerWidth >= 1024) {
-        setFontSize("28px"); // lg
+        setFontSize("26px"); // lg
       } else if (window.innerWidth >= 768) {
-        setFontSize("28px"); // md
+        setFontSize("26px"); // md
       } else if (window.innerWidth >= 640) {
         setFontSize("22px"); // sm
       } else {
         setFontSize("22px"); // default
       }
     };
-   
+
 
     updateFontSize(); // Call on mount
     window.addEventListener("resize", updateFontSize,);
@@ -37,7 +37,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
     return () => window.removeEventListener("resize", updateFontSize);
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       if (width < 640) {
@@ -50,7 +50,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
         setFontSize("24px");
         setStrokeWidth(8);
       } else {
-        setFontSize("28px");
+        setFontSize("26px");
         setStrokeWidth(9);
       }
     };
@@ -103,26 +103,16 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
                     maxValue={100}
                     minValue={0}
                     strokeWidth={strokeWidth}
-                    styles={{
-                      path: { 
-                        stroke: circularProgressBar?.progressBarColor?.hex || "#FDC6E0" 
-                      },
-                      trail: { 
-                        stroke: "#4A2040" 
-                      },
-                      text: {
-                        fill: circularProgressBar?.valueColor?.hex || "#FDC6E0",
-                        fontSize: fontSize,
-                        fontWeight: "600",
-                        letterSpacing: "-1.5px",
-                        lineHeight: "110%",
-                        textAlign: "center",
-                      },
-                      background: { 
-                        fill: "#1C0917" 
-                      },
-                     
-                    }}
+                    styles={buildStyles({
+                      trailColor: "#4A2040",
+                      strokeLinecap: "butt",
+                      backgroundColor: "#1C0917",
+                      pathColor: circularProgressBar?.progressBarColor?.hex || "#FDC6E0",
+                      textColor: circularProgressBar?.valueColor?.hex || "#FDC6E0",
+                      pathTransitionDuration: 1,
+                      rotation: 1,
+                      textSize: fontSize
+                    })}
                   />
                   <p className="text-lg md:text-xl tracking-[-1px] font-Kulim text-white max-w-[275px] mx-auto w-full text-center px-4 mt-2 absolute top-[55%] sm:top-[60%] translate-x-[25%] sm:translate-x-[50%] hidden em:block">
                     {circularProgressBar?.title}
