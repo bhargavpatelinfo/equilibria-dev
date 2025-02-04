@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { LifeChangingResultsSectionType } from "../../../lib/sanity/types";
 import RichText from "../global/richText";
 import Button from "../global/button";
@@ -14,10 +14,14 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
   const [strokeWidth, setStrokeWidth] = useState(9);
 
   const [currentPercentage, setCurrentPercentage] = useState(0);
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    setCurrentPercentage(percentage); 
-  }, [percentage]);
+    if (isInView) {
+      setCurrentPercentage(percentage);
+    }
+  }, [isInView, percentage]);
 
   useEffect(() => {
     const updateFontSize = () => {
@@ -63,6 +67,30 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsInView(true);
+        }
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
     <section id={id} className="bg-maroon py-16">
       <div className="container">
@@ -92,10 +120,10 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (bl
           </div>
 
           {/* Circular Progress Section */}
-          <div className="max-w-[559px] w-full">
+          <div className="max-w-[559px] w-full" ref={sectionRef}>
             <div className="relative max-w-[400px] sm:max-w-[559px] w-full ml-auto mr-auto xl:mr-0">
               <CircularProgressbar
-                value={currentPercentage}
+                value={isInView ? currentPercentage : 0}
                 text={`${currentPercentage}${suffix}`}
                 className="size-[350px] md:size-[450px] xl:size-[560px]"
                 background
