@@ -10,7 +10,7 @@ const StopManagingSection: React.FC<StopManagingSectionType> = (block) => {
       <div className="container">
         <div className="flex flex-col gap-4 max-w-[956px] w-full">
           {title?.custom_rich_text && (
-            <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
+            <div className="[&>*]:text-36 em:[&>*]:text-46 lg:[&>*]:text-64 [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
               <RichText block={title} />
             </div>
           )}
@@ -29,12 +29,12 @@ const StopManagingSection: React.FC<StopManagingSectionType> = (block) => {
                   <div key={index} className="flex flex-col gap-6">
                     {image && (
                       <div className="">
-                        <Image src={image} alt={image?.alt} className="aspect-[2/3] rounded-[32px]"/>
+                        <Image src={image} alt={image?.alt} className="aspect-[2/3] rounded-xxl"/>
                       </div>
                     )}
                     <div className="flex flex-col gap-4">
                       {title && (
-                        <h3 className="text-[32px] lg:text-[40px] font-semibold tracking-[-0.8px] font-Kulim text-darkPurple leading-[110%]">
+                        <h3 className="text-32 lg:text-40 font-semibold tracking-[-0.8px] font-Kulim text-darkPurple leading-[110%]">
                           {title}
                         </h3>
                       )}

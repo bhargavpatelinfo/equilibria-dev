@@ -15,7 +15,7 @@ const LeadersSection: React.FC<LeadersSectionType> = (block) => {
           <div className="max-w-full lg:max-w-[604px] w-full flex flex-col gap-8 em:gap-12">
             <div className="flex flex-col gap-6">
               {title?.custom_rich_text && (
-                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
+                <div className="[&>*]:text-36 em:[&>*]:text-46 lg:[&>*]:text-64 [&>*]:text-darkPurple [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%]">
                   <RichText block={title} />
                 </div>
               )}
@@ -49,10 +49,10 @@ const LeadersSection: React.FC<LeadersSectionType> = (block) => {
                 {leaders?.map((item, index) => {
                   const { bio, image, name, slug } = item || {};
                   return (
-                    <div key={index} className="p-8 pb-0 bg-[#FFE8F4] rounded-[32px]">
+                    <div key={index} className="p-8 pb-0 bg-pinkShade rounded-xxl">
 
                       <div className="flex flex-col gap-4">
-                        {name && <h3 className="text-[32px] xl:text-[40px] font-semibold tracking-[-0.8px] font-Kulim text-darkPink leading-[110%] opacity-50">{name}</h3>}
+                        {name && <h3 className="text-32 xl:text-40 font-semibold tracking-[-0.8px] font-Kulim text-darkPink leading-[110%] opacity-50">{name}</h3>}
                         {bio && <p className="text-xl font-semibold tracking-[-0.1px] leading-[150%] text-darkPurple">{bio}</p>}
                       </div>
                       {image && (

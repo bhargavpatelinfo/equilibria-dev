@@ -30,9 +30,31 @@ export default {
         lightPink:"var(--lightPink)",
         darkPurple:"var(--darkPurple)",
         darkRed:"var(--darkRed)",
+        pinkShade:"var(--pinkShade)",
+        darkShade:"var(--darkShade)",
       },
       spacing: {
         'calc-padding': 'calc(1245px * 0.02)',
+      },
+      borderRadius:{
+         xxl:'32px'
+      },
+      fontSize:{
+         84:'84px',
+         64:'64px',
+         52:'52px',
+         50:'50px',
+         46:'46px',
+         44:'44px',
+         42:'42px',
+         40:'40px', 
+         38:'38px',
+         36:'36px',
+         32:'32px',
+         30:'30px',
+         26:'26px',
+         24:'24px',
+         22:'22px'
       },
     },
     screens: {

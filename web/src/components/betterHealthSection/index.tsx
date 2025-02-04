@@ -11,7 +11,7 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
     <section id={id} className="mb-[100px] lg:mb-[206px] overflow-hidden">
       <div className="container">
         {title?.custom_rich_text && (
-          <div className="max-w-[715px] w-full mx-auto [&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:text-darkPurple [&>*]:text-center [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%] ">
+          <div className="max-w-[715px] w-full mx-auto [&>*]:text-36 em:[&>*]:text-46 sm:[&>*]:text-50 lg:[&>*]:text-64 [&>*]:text-darkPurple [&>*]:text-center [&>*]:tracking-[-1.28px] [&>*]:font-semibold [&>*]:font-Kulim [&>*]:leading-[110%] ">
             <RichText block={title} />
           </div>
         )}
@@ -43,11 +43,11 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
                 <Image
                   src={image}
                   alt={image?.alt}
-                  className="aspect-[1318/790] object-cover rounded-xl sm:rounded-[32px]"
+                  className="aspect-[1318/790] object-cover rounded-xl sm:rounded-xxl"
                 />
-                <div className="absolute top-0 w-full h-full bg-black/20 rounded-xl sm:rounded-[32px]"></div>
+                <div className="absolute top-0 w-full h-full bg-black/20 rounded-xl sm:rounded-xxl"></div>
                 <div className="flex flex-col gap-4 absolute top-5 sm:top-10 xl:top-[64px] left-5 sm:left-10 xl:left-[64px] max-w-[300px] sm:max-w-[464px] w-[80%] sm:w-full z-[5]">
-                  <h3 className="text-[22px] esm:text-[26px] sm:text-[40px] lg:text-[50px] xl:text-[64px] text-white tracking-[-1.28px] font-semibold font-Kulim leading-[110%] ">
+                  <h3 className="text-22 esm:text-26 sm:text-40 lg:text-50 xl:text-64 text-white tracking-[-1.28px] font-semibold font-Kulim leading-[110%] ">
                     {`#${formattedIndex} ${title}`}
                   </h3>
                   {description?.custom_rich_text && (

@@ -37,15 +37,15 @@ const EquilibriaSuccessStoriesSection: React.FC<
             return (
               <div key={index} className="flex flex-col md:flex-row justify-between gap-10">
                 <div className="max-w-[636px] w-full flex flex-col gap-4 sm:gap-6">
-                  {title && <h2 className="text-[38px] sm:text-[40px] lg:text-[52px] font-semibold text-[#121212] tracking-[-2px] font-Kulim leading-[110%]">{title}</h2>}
+                  {title && <h2 className="text-36 sm:text-40 lg:text-52 font-semibold text-darkShade tracking-[-2px] font-Kulim leading-[110%]">{title}</h2>}
                   {description?.custom_rich_text && (
-                    <div className="[&>*]:text-[24px] sm:[&>*]:text-[30px] lg:[&>*]:text-[40px] [&>*]:text-[#121212] [&>*]:tracking-[-1px] md:[&>*]:tracking-[-2px] [&>*]:font-Kulim">
+                    <div className="[&>*]:text-24 sm:[&>*]:text-30 lg:[&>*]:text-40 [&>*]:text-darkShade [&>*]:tracking-[-1px] md:[&>*]:tracking-[-2px] [&>*]:font-Kulim">
                       <RichText block={description} />
                     </div>
                   )}
                   <div className="flex flex-col gap-2">
-                    {name && <h3 className="text-lg font-medium tracking-[-0.16px] text-[#121212]">{`${name} ${age ? `, ${age}` : ""}`}</h3>}
-                    {bio && <span className="text-sm text-[#121212] tracking-[-0.16px]">{bio}</span>}
+                    {name && <h3 className="text-lg font-medium tracking-[-0.16px] text-darkShade">{`${name} ${age ? `, ${age}` : ""}`}</h3>}
+                    {bio && <span className="text-sm text-darkShade tracking-[-0.16px]">{bio}</span>}
                   </div>
                 </div>
                 {image && (
