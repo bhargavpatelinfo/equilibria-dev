@@ -51,5 +51,10 @@ export default {
       description: '© 2024 will be included automatically.',
       group: 'main',
     },
+    {
+      name: 'buildWith',
+      title: 'Build With',
+      type: 'labelLink',
+  },
   ],
 } as SchemaTypeDefinition

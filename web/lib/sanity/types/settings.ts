@@ -53,4 +53,5 @@ export interface FooterType {
   connectWithUs: FooterConnectWithUsType;
   legalLinks: LabelLinkType[];
   bottomDescription: string;
+  buildWith: LabelLinkType
 }
