@@ -72,7 +72,7 @@ const MobileView: React.FC<MobileViewProps> = ({
           >
             {navItems && (
               <div className="flex flex-col w-full gap-6">
-                <MobileNavItem block={navItems} />
+                <MobileNavItem block={navItems} handleToggle={handleToggle}/>
               </div>
             )}
           </div>
