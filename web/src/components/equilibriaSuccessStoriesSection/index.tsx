@@ -9,7 +9,7 @@ const EquilibriaSuccessStoriesSection: React.FC<
 > = (block) => {
   const { id, equilibriaSuccessStories } = block || {};
   return (
-    <section id={id} className="mb-[100px] lg:mb-[206px] overflow-hidden">
+    <section id={id} className="mb-[80px] lg:mb-[206px] overflow-hidden">
       <div className="container">
         <div className="max-w-[1297px] w-full mx-auto">
         <Carousel
@@ -39,7 +39,7 @@ const EquilibriaSuccessStoriesSection: React.FC<
                 <div className="max-w-[636px] w-full flex flex-col gap-4 sm:gap-6">
                   {title && <h2 className="text-[38px] sm:text-[40px] lg:text-[52px] font-semibold text-[#121212] tracking-[-2px] font-Kulim leading-[110%]">{title}</h2>}
                   {description?.custom_rich_text && (
-                    <div className="[&>*]:text-[24px] sm:[&>*]:text-[30px] lg:[&>*]:text-[40px] [&>*]:text-[#121212] [&>*]:tracking-[-2px] [&>*]:font-Kulim">
+                    <div className="[&>*]:text-[24px] sm:[&>*]:text-[30px] lg:[&>*]:text-[40px] [&>*]:text-[#121212] [&>*]:tracking-[-1px] md:[&>*]:tracking-[-2px] [&>*]:font-Kulim">
                       <RichText block={description} />
                     </div>
                   )}
