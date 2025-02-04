@@ -84,12 +84,13 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
             )}
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center mt-20 md:mt-[156px] gap-5 em:gap-8">
+        <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mt-20 md:mt-[156px] gap-5 em:gap-8">
           {bottomDescription && (
-            <p className="text-base em:text-xl tracking-[-2%] text-white">
+            <p className="text-base em:text-xl tracking-[-2%] text-white text-center lg:text-left">
               {`© ${currentYear} ${bottomDescription}`}
             </p>
           )}
+          <div className="flex flex-col gap-8">
           {legalLinks?.length > 0 && (
             <div className="flex flex-row flex-wrap items-center justify-center  gap-3">
               {legalLinks?.map((item, index) => {
@@ -111,6 +112,18 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
               })}
             </div>
           )}
+          <div className="flex justify-center lg:justify-end items-center">
+             <span className="text-base text-white tracking-[-0.32px] font-normal">
+              {`Build With`}
+             </span>
+             <span className="text-[#FF0073] font-bold uppercase tracking-[-0.32px] px-1.5 text-base">
+              {`JAMSTACKY`}
+             </span>
+             <span>
+              {`♥️`}
+             </span>
+          </div>
+          </div>
         </div>
       </div>
     </footer>

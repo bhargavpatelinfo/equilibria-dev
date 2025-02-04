@@ -9,7 +9,7 @@ const AffordableExpertCareSection: React.FC<AffordableExpertCareSectionType> = (
 ) => {
   const { id, title, imageTitleDescriptionCtas, description } = block || {};
   return (
-    <section id={id} className="py-14 sm:py-[88px] bg-pink mb-[100px] lg:mb-[206px]">
+    <section id={id} className="py-14 sm:py-[88px] bg-pink mb-[80px] lg:mb-[206px]">
       <div className="container">
         <div className="flex flex-col gap-4">
           {title?.custom_rich_text && (

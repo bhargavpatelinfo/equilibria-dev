@@ -9,7 +9,7 @@ const WeCanHelpSection: React.FC<WeCanHelpSectionType> = (block) => {
   const { id, title, description, backgroundImage, button } = block || {};
   const bgImage = useSanityImage(backgroundImage);
   return (
-    <section id={id} className="mb-[100px] lg:mb-[206px]">
+    <section id={id} className="mb-[80px] lg:mb-[206px]">
       <div
         className={cn(
           "container"
