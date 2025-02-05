@@ -41,5 +41,8 @@ ${footerConnectWithUsFields}
 legalLinks[]{
 ${labelLinkFields}
 },
+buildWith{
+${labelLinkFields}
+},
 bottomDescription
 `;

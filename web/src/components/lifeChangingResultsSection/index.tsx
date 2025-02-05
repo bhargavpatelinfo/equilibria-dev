@@ -30,10 +30,10 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
         setStrokeWidth(8);
       } else if (width < 1280) {
         setFontSize("24px");
-        setStrokeWidth(8);
+        setStrokeWidth(9);
       } else {
         setFontSize("26px");
-        setStrokeWidth(9);
+        setStrokeWidth(11);
       }
     };
 
@@ -88,7 +88,7 @@ const LifeChangingResultsSection: React.FC<LifeChangingResultsSectionType> = (
                 </div>
               )}
               {title?.custom_rich_text && (
-                <div className="[&>*]:text-[36px] em:[&>*]:text-[46px] lg:[&>*]:text-[64px] xl:[&>*]:text-[84px] [&>*]:text-white [&>*]:tracking-[-1.68px] [&>*]:font-Kulim [&>*]:leading-[110%]">
+                <div className="[&>*]:text-36 em:[&>*]:text-46 lg:[&>*]:text-64 xl:[&>*]:text-84 [&>*]:text-white [&>*]:tracking-[-1.68px] [&>*]:font-Kulim [&>*]:leading-[110%]">
                   <RichText block={title} />
                 </div>
               )}

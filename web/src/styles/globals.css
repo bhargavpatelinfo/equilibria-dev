@@ -11,6 +11,8 @@
   --lightPink: #FDC6E0;
   --darkPurple: #4A2040;
   --darkRed: #6C0E23;
+  --pinkShade: #FFE8F4;
+  --darkShade: #121212;
 }
 
 html {
@@ -23,6 +25,9 @@ html,body {
   font-family: "Inter", serif;
   color: #1C0917;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 @layer utilities {

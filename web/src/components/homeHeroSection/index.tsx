@@ -10,7 +10,7 @@ const HomeHeroSection: React.FC<HomeHeroSectionType> = (block) => {
       <div className="container">
         <div className="max-w-[850px] w-full">
         {title?.custom_rich_text && (
-          <div className="[&>*]:text-maroon [&>*]:text-[36px] em:[&>*]:text-[46px] sm:[&>*]:text-[50px] lg:[&>*]:text-[64px] [&>*]:font-Kulim [&>*]:font-semibold [&>*]:leading-[120%] [&>*]:tracking-[-2%]">
+          <div className="[&>*]:text-maroon [&>*]:text-36 em:[&>*]:text-46 sm:[&>*]:text-50 lg:[&>*]:text-64 [&>*]:font-Kulim [&>*]:font-semibold [&>*]:leading-[120%] [&>*]:tracking-[-1.28px]">
             <RichText block={title} />
           </div>
         )}

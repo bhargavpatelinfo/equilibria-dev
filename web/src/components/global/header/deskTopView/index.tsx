@@ -57,7 +57,7 @@ const DeskTopView: React.FC<DeskTopViewProps> = ({ block, path, scrolled }) => {
                     <div key={index}>
                       <Link
                         to={item?.link}
-                        className="text-base tracking-[-2%] hover:text-darkPink basic-transition"
+                        className="text-base tracking-[-0.32px] hover:text-darkPink basic-transition"
                       >
                         {item?.title}
                       </Link>
