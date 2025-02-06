@@ -26,8 +26,10 @@ export type SectionType =
 export interface HomeHeroSectionType {
   _type: "homeHeroSection";
   id?: string;
-  title?: RichTextType;
+  prefix: string;
+  suffix: string;
   description?: RichTextType;
+  rotatingSubtitles?: string[];
 }
 
 {
@@ -40,7 +42,7 @@ export interface LifeChangingResultsSectionType {
   headLine?: string;
   title?: RichTextType;
   buttons: ButtonType[];
-  circularProgressBar:CircularProgressBarType
+  circularProgressBar: CircularProgressBarType;
 }
 
 {

@@ -9,9 +9,9 @@ import { imageFields } from "../imageFields";
 export const homeHeroSectionFields = /* groq */ `
 _type,
 id,
-title{
-${richTextFields}
-},
+prefix,
+suffix,
+rotatingSubtitles,
 description{
 ${richTextFields}
 },
