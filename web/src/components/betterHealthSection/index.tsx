@@ -68,7 +68,7 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
             );
           }}
         />
-        <div className="relative w-full h-[11px] max-w-[801px] mx-auto bg-[#FDC6E0] rounded-full overflow-hidden mt-8 sm:mt-16 lg:mt-[88px]">
+        <div className="relative w-full h-[11px] max-w-[801px] mx-auto bg-[#FDC6E0] rounded-full overflow-hidden mt-8 sm:mt-14 ">
           <div
             className="absolute top-0 left-0 h-full bg-[#C46BAE] transition-all duration-500 ease-in-out"
             style={{
