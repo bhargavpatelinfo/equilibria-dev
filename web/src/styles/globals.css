@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFF9FC;
+  --maroon: #1C0917;
+  --darkMaroon: #120412;
+  --pink:#FFF0F0;
+  --darkPink: #C46BAE;
+  --lightPink: #FDC6E0;
+  --darkPurple: #4A2040;
+  --darkRed: #6C0E23;
+  --pinkShade: #FFE8F4;
+  --darkShade: #121212;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,body {
+  background: var(--background);
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+  color: #1C0917;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-[1488px] px-4 mx-auto w-full;
+  }
+
+  h1 {
+    @apply text-[64px] tracking-[-2%] font-semibold;
+  }
+
+  h2 {
+    @apply text-[64px] tracking-[-2%] font-semibold;
+  }
+
+  h3 {
+    @apply text-[52px] tracking-[-2%] font-semibold;
+  }
+
+  h4 {
+    @apply text-[40px] tracking-[-2%] font-semibold;
+  }
+
+  .sectionTitle {
+    @apply text-[84px]  tracking-[-2%] font-bold;
+  }
+
+
+  .basic-transition {
+    @apply transition ease-linear duration-200;
+  }
+}
+
+/* Infinite Scroll */
+
+.marqueeLogo {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.marqueeLogoInner {
+  flex: 0 0 auto;
+  animation: scroll 22s linear infinite;
+  animation-play-state: running;
+  animation-delay: 2s;
+  animation-direction: normal;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(-0%);
+  }
+
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Infinite Scroll */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
