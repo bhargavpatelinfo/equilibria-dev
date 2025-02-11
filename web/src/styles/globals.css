@@ -71,7 +71,7 @@ html,body {
 
 .marqueeLogoInner {
   flex: 0 0 auto;
-  animation: scroll 16s linear infinite;
+  animation: scroll 22s linear infinite;
   animation-play-state: running;
   animation-delay: 2s;
   animation-direction: normal;

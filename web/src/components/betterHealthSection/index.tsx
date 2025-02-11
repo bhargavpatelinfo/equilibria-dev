@@ -56,7 +56,7 @@ const BetterHealthSection: React.FC<BetterHealthSectionType> = (block) => {
                 <div className="absolute top-0 w-full h-full bg-black/20 rounded-xl sm:rounded-xxl" />
                 <div className="flex flex-col gap-2 em:gap-4 absolute top-5 sm:top-10 xl:top-[64px] left-5 sm:left-10 xl:left-[64px] max-w-[300px] sm:max-w-[464px] w-[80%] sm:w-full z-[5]">
                   <h3 className="text-22 esm:text-26 sm:text-40 lg:text-50 text-white tracking-[-1.28px] font-semibold font-Kulim leading-[110%]">
-                    {`#${formattedIndex} ${title}`}
+                    {`Step${formattedIndex}: ${title}`}
                   </h3>
                   {description?.custom_rich_text && (
                     <div className="[&>*]:text-white [&>*]:text-sm esm:[&>*]:text-base sm:[&>*]:text-xl [&>*]:tracking-[-0.1px]">
