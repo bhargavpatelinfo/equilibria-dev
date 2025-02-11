@@ -36,6 +36,6 @@ export const generateSlug = (text: string) =>
 
 export const generateFormattedIndex = (index: number) => {
   const updatedCount = index + 1;
-  const formattedIndex = updatedCount < 10 ? `0${updatedCount}` : updatedCount;
+  const formattedIndex = updatedCount < 10 ? `${updatedCount}` : updatedCount;
   return formattedIndex;
 };
