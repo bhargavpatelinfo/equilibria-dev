@@ -1,6 +1,6 @@
 import { footerFields } from "../helper/footerFields";
 import { headerFields } from "../helper/headerFields";
-import { affordableExpertCareSectionFields, bestCareSectionFields, betterHealthSectionFields, equilibriaSuccessStoriesSectionFields, faqSectionFields, heroSectionFields, homeHeroSectionFields, integratedCareSectionFields, leadersSectionFields, lifeChangingResultsSectionFields, simpleStepsSectionFields, sliderSectionFields, stopManagingSectionFields, weCanHelpSectionFields, yourSuccessSectionFields } from "../helper/sectionFields";
+import { affordableExpertCareSectionFields, bestCareSectionFields, betterHealthSectionFields, equilibriaSuccessStoriesSectionFields, faqSectionFields, heroSectionFields, homeHeroSectionFields, integratedCareSectionFields, leadersSectionFields, lifeChangingResultsSectionFields, simpleStepsSectionFields, sliderSectionFields, stopManagingSectionFields, transformationSectionFields, weCanHelpSectionFields, yourSuccessSectionFields } from "../helper/sectionFields";
 import { seofields } from "../helper/seoFields";
 
 {
@@ -94,6 +94,9 @@ ${yourSuccessSectionFields}
 },
 (_type == "faqSection") => {
 ${faqSectionFields}
+},
+(_type == "transformationSection") => {
+${transformationSectionFields}
 },
   
 },

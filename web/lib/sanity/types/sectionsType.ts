@@ -25,6 +25,7 @@ export type SectionType =
   | SimpleStepsSectionType
   | YourSuccessSectionType
   | FaqSectionType
+  | TransformationSectionType
 
 {
   /*  Home Hero Section */
@@ -156,6 +157,19 @@ export interface WeCanHelpSectionType {
   title: RichTextType;
   description: RichTextType;
   button: ButtonType;
+}
+
+{
+  /* Transformation Section */
+}
+
+export interface TransformationSectionType {
+  _type: "transformationSection";
+  id?: string;
+  backgroundImage: CustomImageType;
+  title: RichTextType;
+  description: RichTextType;
+  buttons: ButtonType[];
 }
 
 {

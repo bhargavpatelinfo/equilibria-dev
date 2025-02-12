@@ -189,6 +189,27 @@ ${buttonFields}
 `;
 
 {
+  /* Transformation Section */
+}
+
+export const transformationSectionFields = /* groq */ `
+_type,
+id,
+backgroundImage{
+${imageFields}
+},
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+buttons[]{
+${buttonFields}
+}
+`;
+
+{
   /* Integrated Care */
 }
 
