@@ -5,6 +5,7 @@ import {
   ImageTitleDescriptionCtaType,
   LeaderType,
   TitleDescriptionImageType,
+  TitleDescriptionType,
 } from "./global";
 
 export type SectionType =
@@ -20,6 +21,7 @@ export type SectionType =
   | AffordableExpertCareSectionType
   | LeadersSectionType
   | IntegratedCareSectionType
+  | SimpleStepsSectionType
 
 {
   /*  Home Hero Section */
@@ -172,4 +174,16 @@ export interface IntegratedCareSectionType {
   id?: string;
   title: RichTextType;
   integratedCares: IntegratedCareType[]
+}
+
+{
+  /* Simple Steps Section */
+}
+
+export interface SimpleStepsSectionType {
+  _type: "simpleStepsSection";
+  id?: string;
+  title: RichTextType;
+  image:CustomImageType
+  titleDescriptions: TitleDescriptionType[]
 }

@@ -9,6 +9,7 @@ import integratedCareSection from "./integratedCareSection";
 import integratedCare from "./integratedCareSection/integratedCare";
 import leadersSection from "./leadersSection";
 import lifeChangingResultsSection from "./lifeChangingResultsSection";
+import simpleStepsSection from "./simpleStepsSection";
 import sliderSection from "./sliderSection";
 import stopManagingSection from "./stopManagingSection";
 import weCanHelpSection from "./weCanHelpSection";
@@ -29,6 +30,7 @@ export const sectionsTypes = [
     leadersSection,
     heroSection,
     integratedCare,
-    integratedCareSection
+    integratedCareSection,
+    simpleStepsSection
 ];
 export default sectionsTypes;

@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionImageFields, } from "../globalFields";
+import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionFields, titleDescriptionImageFields, } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -211,5 +211,23 @@ ${richTextFields}
 },
 integratedCares[]{
 ${integratedCareFields}
+}
+`;
+
+{
+  /* Simple Steps Section */
+}
+
+export const simpleStepsSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+titleDescriptions[]{
+${titleDescriptionFields}
 }
 `;

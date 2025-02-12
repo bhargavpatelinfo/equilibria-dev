@@ -31,6 +31,7 @@ export default {
         { type: "affordableExpertCareSection" },
         { type: "leadersSection" },
         { type: "integratedCareSection" },
+        { type: "simpleStepsSection" },
       ],
     },
   ],

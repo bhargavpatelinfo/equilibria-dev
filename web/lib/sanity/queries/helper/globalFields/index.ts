@@ -40,6 +40,16 @@ ${richTextFields}
 }
 `;
 
+{/* Title Description */ }
+
+export const titleDescriptionFields = /* groq */ `
+_type,
+title,
+description{
+${richTextFields}
+}
+`;
+
 {/* Equilibria Success Stories */ }
 
 export const equilibriaSuccessStoriesFields = /* groq */ `

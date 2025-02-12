@@ -59,6 +59,16 @@ export type TitleDescriptionImageType = {
 };
 
 {
+  /* Title Description */
+}
+
+export type TitleDescriptionType = {
+  _type: "titleDescription";
+  title: string;
+  description: RichTextType;
+};
+
+{
   /* Equilibria Success Stories */
 }
 
