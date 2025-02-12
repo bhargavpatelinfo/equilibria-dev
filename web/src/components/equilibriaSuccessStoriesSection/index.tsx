@@ -39,7 +39,7 @@ const EquilibriaSuccessStoriesSection: React.FC<
                 <div key={index} className="flex flex-col md:flex-row justify-between gap-10">
                   <div className="max-w-[636px] w-full flex flex-col gap-4 sm:gap-6">
                     {title &&
-                      <h2 className={cn("text-36 sm:text-40 lg:text-52 font-semibold text-darkShade tracking-[-2px] font-Kulim leading-[110%]",
+                      <h2 className={cn("text-[36px] em:text-46 lg:text-52 font-semibold text-darkShade tracking-[-2px] font-Kulim leading-[110%]",
                       )}
                         style={{
                           color: titleColor ? titleColor : "#121212"
