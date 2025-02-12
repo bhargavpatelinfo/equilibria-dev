@@ -6,6 +6,12 @@ export default {
   type: 'object',
   fields: [
     {
+      name: 'titleColor',
+      title: 'Title Color',
+      type: 'string',
+      description: "Enter a valid HEX color code (e.g., #C46BAE).",
+    },
+    {
       name: 'title',
       title: 'Title',
       type: 'string',

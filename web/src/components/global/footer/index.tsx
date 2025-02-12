@@ -85,40 +85,19 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
           </div>
         </div>
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start mt-20 md:mt-[156px] gap-5 em:gap-8">
-          {bottomDescription && (
-            <p className="text-base em:text-xl tracking-[-2%] text-white text-center lg:text-left">
-              {`© ${currentYear} ${bottomDescription}`}
-            </p>
-          )}
-          <div className="flex flex-col gap-8">
-            {legalLinks?.length > 0 && (
-              <div className="flex flex-row flex-wrap items-center justify-center  gap-3">
-                {legalLinks?.map((item, index) => {
-                  const { label, link } = item || {};
-                  const isLast = index === legalLinks.length - 1;
-                  return (
-                    <div
-                      key={index}
-                      className="text-white text-base em:text-xl tracking-[-2%] flex flex-row  gap-3 items-center"
-                    >
-                      <Link to={link || "#"} className="hover:opacity-70 basic-transition">
-                        {label}
-                      </Link>
-                      <div className="hidden em:block">
-                        {!isLast && " - "}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+          <div className="flex flex-wrap items-center gap-2 justify-center lg:justify-start">
+            {bottomDescription && (
+              <p className="text-base xl:text-xl tracking-[-2%] text-white text-center lg:text-left">
+                {`© ${currentYear} ${bottomDescription}`}
+              </p>
             )}
             {buildWith?.label && (
               <div className="flex justify-center lg:justify-end items-center">
-                <span className="text-base text-white tracking-[-0.32px] font-normal">
+                <span className="text-base xl:text-xl text-white tracking-[-0.32px] font-normal">
                   {`Build With`}
                 </span>
                 <Link to={buildWith?.link ? buildWith?.link : "#"}>
-                  <span className="text-[#FF0073] font-bold uppercase tracking-[-0.32px] px-1.5 text-base">
+                  <span className="text-[#FF0073] font-normal uppercase tracking-[-0.32px] px-1.5 text-base xl:text-xl">
                     {buildWith?.label}
                   </span>
                 </Link>
@@ -128,6 +107,30 @@ const Footer: React.FC<FooterProps> = ({ block }) => {
               </div>
             )}
           </div>
+
+          {legalLinks?.length > 0 && (
+            <div className="flex flex-row flex-wrap items-center justify-center  gap-3">
+              {legalLinks?.map((item, index) => {
+                const { label, link } = item || {};
+                const isLast = index === legalLinks.length - 1;
+                return (
+                  <div
+                    key={index}
+                    className="text-white text-base xl:text-xl tracking-[-0.4px] flex flex-row  gap-3 items-center"
+                  >
+                    <Link to={link || "#"} className="hover:opacity-70 basic-transition">
+                      {label}
+                    </Link>
+                    <div className="hidden em:block">
+                      {!isLast && " - "}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+
         </div>
       </div>
     </footer>

@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionImageFields, } from "../globalFields";
+import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, questionAndAnswerFields, titleDescriptionFields, titleDescriptionImageFields, } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -15,6 +15,28 @@ rotatingSubtitles,
 description{
 ${richTextFields}
 },
+`;
+
+{
+  /* Hero Section */
+}
+
+export const heroSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+features,
+buttons[]{
+${buttonFields}
+}
 `;
 
 {
@@ -164,4 +186,132 @@ ${richTextFields}
 button{
 ${buttonFields}
 }
+`;
+
+{
+  /* Transformation Section */
+}
+
+export const transformationSectionFields = /* groq */ `
+_type,
+id,
+backgroundImage{
+${imageFields}
+},
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+buttons[]{
+${buttonFields}
+}
+`;
+
+{
+  /* Integrated Care */
+}
+
+export const integratedCareFields = /* groq */ `
+_type,
+id,
+title,
+features
+`;
+
+{
+  /* Integrated Care Section */
+}
+
+export const integratedCareSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+integratedCares[]{
+${integratedCareFields}
+}
+`;
+
+{
+  /* Simple Steps Section */
+}
+
+export const simpleStepsSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+titleDescriptions[]{
+${titleDescriptionFields}
+}
+`;
+
+{
+  /* Your Success Section*/
+}
+
+export const yourSuccessSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+titleDescriptions[]{
+${titleDescriptionFields}
+}
+`;
+
+{
+  /* Faq Section */
+}
+
+export const faqSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+questionAndAnswers[]{
+${questionAndAnswerFields}
+},
+`;
+
+{
+  /* Symptom Solution */
+}
+
+export const symptomSolutionFields = /* groq */ `
+_type,
+title,
+icon{
+${imageFields}
+},
+image{
+${imageFields}
+},
+`;
+
+{
+  /* Symptom Solutions Section */
+}
+
+export const symptomSolutionsSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+symptomSolutions[]{
+${symptomSolutionFields}
+},
 `;

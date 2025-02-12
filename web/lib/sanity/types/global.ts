@@ -59,11 +59,22 @@ export type TitleDescriptionImageType = {
 };
 
 {
+  /* Title Description */
+}
+
+export type TitleDescriptionType = {
+  _type: "titleDescription";
+  title: string;
+  description: RichTextType;
+};
+
+{
   /* Equilibria Success Stories */
 }
 
 export type EquilibriaSuccessStoriesType = {
   _type: "equilibriaSuccessStories";
+  titleColor:string
   title: string;
   description: RichTextType;
   name: string;
@@ -95,4 +106,14 @@ export type CircularProgressBarType = {
   title: string;
   value: string;
   suffix: string;
+};
+
+{
+  /* Question And Answer */
+}
+
+export type QuestionAndAnswerType = {
+  _type: "questionAndAnswer";
+  question?: string;
+  answer?: RichTextType;
 };

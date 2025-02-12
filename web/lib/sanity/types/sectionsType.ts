@@ -4,11 +4,14 @@ import {
   EquilibriaSuccessStoriesType,
   ImageTitleDescriptionCtaType,
   LeaderType,
+  QuestionAndAnswerType,
   TitleDescriptionImageType,
+  TitleDescriptionType,
 } from "./global";
 
 export type SectionType =
   | HomeHeroSectionType
+  | HeroSectionType
   | LifeChangingResultsSectionType
   | SliderSectionType
   | BestCareSectionType
@@ -17,7 +20,13 @@ export type SectionType =
   | BetterHealthSectionType
   | EquilibriaSuccessStoriesSectionType
   | AffordableExpertCareSectionType
-  | LeadersSectionType;
+  | LeadersSectionType
+  | IntegratedCareSectionType
+  | SimpleStepsSectionType
+  | YourSuccessSectionType
+  | FaqSectionType
+  | TransformationSectionType
+  | SymptomSolutionsSectionType
 
 {
   /*  Home Hero Section */
@@ -30,6 +39,20 @@ export interface HomeHeroSectionType {
   suffix: string;
   description?: RichTextType;
   rotatingSubtitles?: string[];
+}
+
+{
+  /*  Hero Section */
+}
+
+export interface HeroSectionType {
+  _type: "heroSection";
+  id?: string;
+  title?: RichTextType;
+  description?: RichTextType;
+  image: CustomImageType
+  features?: string[];
+  buttons: ButtonType[]
 }
 
 {
@@ -135,4 +158,95 @@ export interface WeCanHelpSectionType {
   title: RichTextType;
   description: RichTextType;
   button: ButtonType;
+}
+
+{
+  /* Transformation Section */
+}
+
+export interface TransformationSectionType {
+  _type: "transformationSection";
+  id?: string;
+  backgroundImage: CustomImageType;
+  title: RichTextType;
+  description: RichTextType;
+  buttons: ButtonType[];
+}
+
+{
+  /* Integrated Care */
+}
+
+export interface IntegratedCareType {
+  _type: "integratedCare";
+  title: string;
+  features: string[];
+}
+
+{
+  /* Integrated Care Section */
+}
+
+export interface IntegratedCareSectionType {
+  _type: "integratedCareSection";
+  id?: string;
+  title: RichTextType;
+  integratedCares: IntegratedCareType[]
+}
+
+{
+  /* Simple Steps Section */
+}
+
+export interface SimpleStepsSectionType {
+  _type: "simpleStepsSection";
+  id?: string;
+  title: RichTextType;
+  image:CustomImageType
+  titleDescriptions: TitleDescriptionType[]
+}
+
+{
+  /* Your Success Section */
+}
+
+export interface YourSuccessSectionType {
+  _type: "yourSuccessSection";
+  id?: string;
+  title: RichTextType;
+  image:CustomImageType
+  titleDescriptions: TitleDescriptionType[]
+}
+
+{
+  /*  Faq Section */
+}
+
+export interface FaqSectionType {
+  _type: "faqSection";
+  id?: string;
+  title?: RichTextType;
+  questionAndAnswers: QuestionAndAnswerType[];
+}
+
+{
+  /*  Symptom Solution */
+}
+
+export interface SymptomSolutionType {
+  _type: "symptomSolution";
+  title?: string;
+  image: CustomImageType;
+  icon: CustomImageType;
+}
+
+{
+  /*  Symptom Solutions Section */
+}
+
+export interface SymptomSolutionsSectionType {
+  _type: "symptomSolutionsSection";
+  title?: RichTextType;
+  id?: string;
+  symptomSolutions: SymptomSolutionType[];
 }

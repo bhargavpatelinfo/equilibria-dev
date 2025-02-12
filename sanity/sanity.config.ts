@@ -18,7 +18,6 @@ export default defineConfig({
       defaultDocumentNode: previewDocumentNode(),
     }),
     visionTool(),
-    visionTool(),
     colorInput(),
     noteField(),
     seoMetaFields(),

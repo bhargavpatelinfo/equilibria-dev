@@ -40,10 +40,21 @@ ${richTextFields}
 }
 `;
 
+{/* Title Description */ }
+
+export const titleDescriptionFields = /* groq */ `
+_type,
+title,
+description{
+${richTextFields}
+}
+`;
+
 {/* Equilibria Success Stories */ }
 
 export const equilibriaSuccessStoriesFields = /* groq */ `
 _type,
+titleColor,
 title,
 description{
 ${richTextFields}
@@ -78,4 +89,14 @@ title,
 valueColor,
 value,
 suffix
+`;
+
+{/* Question And Answer */ }
+
+export const questionAndAnswerFields = /* groq */ `
+_type,
+question,
+answer{
+${richTextFields}
+},
 `;

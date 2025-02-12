@@ -11,6 +11,9 @@ export default {
       animation: {
         borderFill: "borderFill 7s ease-in-out forwards",
       },
+      backgroundImage: {
+        hrLine: "url('/images/hrLine.png')",
+      },
       keyframes: {
         borderFill: {
           "0%": {
@@ -32,6 +35,8 @@ export default {
         darkRed:"var(--darkRed)",
         pinkShade:"var(--pinkShade)",
         darkShade:"var(--darkShade)",
+        gray900:"var(--gray-900)",
+        gray500:"var(--gray-500)",
       },
       spacing: {
         'calc-padding': 'calc(1245px * 0.02)',
@@ -93,6 +98,7 @@ export default {
     boxShadow: {
       buttonHovershadow: "0 20px 38px rgba(0, 0, 0, 0.16)",
       headerShadow:"5px 8px 13px -8px rgba(0,0,0,0.20)",
+      cardSolutionShadow:"0px 8px 12px 0px rgba(0, 0, 0, 0.25)"
     },
     fontFamily: {
       Inter: "Inter, serif",
