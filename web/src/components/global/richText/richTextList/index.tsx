@@ -14,8 +14,8 @@ export const BulletList: PortableTextListComponent = ({ children }) => {
 
 export const NumberList: PortableTextListComponent = ({ children }) => {
   return (
-    <div className="pt-6 pb-4">
-      <ol className="flex flex-col gap-3 list-decimal pl-6 [&>li]:font-normal [&>li]:text-base">{children}</ol>
+    <div className="mt-2">
+      <ol className="flex flex-col gap-2 [&>li]:text-lg lg:[&>li]:text-xl list-decimal list-inside">{children}</ol>
     </div>
   );
 };

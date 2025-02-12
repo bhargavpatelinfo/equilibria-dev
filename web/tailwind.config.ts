@@ -35,6 +35,8 @@ export default {
         darkRed:"var(--darkRed)",
         pinkShade:"var(--pinkShade)",
         darkShade:"var(--darkShade)",
+        gray900:"var(--gray-900)",
+        gray500:"var(--gray-500)",
       },
       spacing: {
         'calc-padding': 'calc(1245px * 0.02)',
