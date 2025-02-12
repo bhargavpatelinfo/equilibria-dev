@@ -34,6 +34,7 @@ export default {
         { type: "simpleStepsSection" },
         { type: "yourSuccessSection" },
         { type: "faqSection" },
+        { type: "transformationSection" },
       ],
     },
   ],
