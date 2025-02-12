@@ -18,7 +18,8 @@ export type SectionType =
   | BetterHealthSectionType
   | EquilibriaSuccessStoriesSectionType
   | AffordableExpertCareSectionType
-  | LeadersSectionType;
+  | LeadersSectionType
+  | IntegratedCareSectionType
 
 {
   /*  Home Hero Section */
@@ -150,4 +151,25 @@ export interface WeCanHelpSectionType {
   title: RichTextType;
   description: RichTextType;
   button: ButtonType;
+}
+
+{
+  /* Integrated Care */
+}
+
+export interface IntegratedCareType {
+  _type: "integratedCare";
+  title: string;
+  features: string[];
+}
+
+{
+  /* Integrated Care Section */
+}
+
+export interface IntegratedCareSectionType {
+  _type: "integratedCareSection";
+  id?: string;
+  title: RichTextType;
+  integratedCares: IntegratedCareType[]
 }
