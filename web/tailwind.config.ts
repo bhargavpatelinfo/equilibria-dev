@@ -11,6 +11,9 @@ export default {
       animation: {
         borderFill: "borderFill 7s ease-in-out forwards",
       },
+      backgroundImage: {
+        hrLine: "url('/images/hrLine.png')",
+      },
       keyframes: {
         borderFill: {
           "0%": {
