@@ -231,3 +231,21 @@ titleDescriptions[]{
 ${titleDescriptionFields}
 }
 `;
+
+{
+  /* Your Success Section*/
+}
+
+export const yourSuccessSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+titleDescriptions[]{
+${titleDescriptionFields}
+}
+`;

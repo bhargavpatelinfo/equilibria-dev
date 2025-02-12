@@ -22,6 +22,7 @@ export type SectionType =
   | LeadersSectionType
   | IntegratedCareSectionType
   | SimpleStepsSectionType
+  | YourSuccessSectionType
 
 {
   /*  Home Hero Section */
@@ -182,6 +183,18 @@ export interface IntegratedCareSectionType {
 
 export interface SimpleStepsSectionType {
   _type: "simpleStepsSection";
+  id?: string;
+  title: RichTextType;
+  image:CustomImageType
+  titleDescriptions: TitleDescriptionType[]
+}
+
+{
+  /* Your Success Section */
+}
+
+export interface YourSuccessSectionType {
+  _type: "yourSuccessSection";
   id?: string;
   title: RichTextType;
   image:CustomImageType

@@ -13,6 +13,7 @@ import simpleStepsSection from "./simpleStepsSection";
 import sliderSection from "./sliderSection";
 import stopManagingSection from "./stopManagingSection";
 import weCanHelpSection from "./weCanHelpSection";
+import yourSuccessSection from "./yourSuccessSection";
 
 
 
@@ -31,6 +32,7 @@ export const sectionsTypes = [
     heroSection,
     integratedCare,
     integratedCareSection,
-    simpleStepsSection
+    simpleStepsSection,
+    yourSuccessSection
 ];
 export default sectionsTypes;
