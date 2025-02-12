@@ -44,6 +44,7 @@ ${richTextFields}
 
 export const equilibriaSuccessStoriesFields = /* groq */ `
 _type,
+titleColor,
 title,
 description{
 ${richTextFields}

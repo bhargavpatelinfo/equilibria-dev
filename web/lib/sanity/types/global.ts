@@ -64,6 +64,7 @@ export type TitleDescriptionImageType = {
 
 export type EquilibriaSuccessStoriesType = {
   _type: "equilibriaSuccessStories";
+  titleColor:string
   title: string;
   description: RichTextType;
   name: string;
