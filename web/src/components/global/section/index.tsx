@@ -10,6 +10,7 @@ import BetterHealthSection from "@/components/betterHealthSection";
 import EquilibriaSuccessStoriesSection from "@/components/equilibriaSuccessStoriesSection";
 import AffordableExpertCareSection from "@/components/affordableExpertCareSection";
 import LeadersSection from "@/components/leadersSection";
+import HeroSection from "@/components/heroSection";
 
 interface SectionProps {
   data: SectionType;
@@ -19,6 +20,8 @@ const Section: React.FC<SectionProps> = ({ data }) => {
   switch (data._type) {
     case "homeHeroSection":
       return <HomeHeroSection {...data} />;
+    case "heroSection":
+      return <HeroSection {...data} />;
     case "lifeChangingResultsSection":
       return <LifeChangingResultsSection {...data} />;
     case "sliderSection":

@@ -18,6 +18,28 @@ ${richTextFields}
 `;
 
 {
+  /* Hero Section */
+}
+
+export const heroSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+description{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+features,
+buttons[]{
+${buttonFields}
+}
+`;
+
+{
   /* Life Changing Results Section */
 }
 

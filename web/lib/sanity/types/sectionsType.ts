@@ -9,6 +9,7 @@ import {
 
 export type SectionType =
   | HomeHeroSectionType
+  | HeroSectionType
   | LifeChangingResultsSectionType
   | SliderSectionType
   | BestCareSectionType
@@ -30,6 +31,20 @@ export interface HomeHeroSectionType {
   suffix: string;
   description?: RichTextType;
   rotatingSubtitles?: string[];
+}
+
+{
+  /*  Hero Section */
+}
+
+export interface HeroSectionType {
+  _type: "heroSection";
+  id?: string;
+  title?: RichTextType;
+  description?: RichTextType;
+  image: CustomImageType
+  features?: string[];
+  buttons: ButtonType[]
 }
 
 {

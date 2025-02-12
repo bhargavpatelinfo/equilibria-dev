@@ -20,6 +20,7 @@ export default {
       validation: (Rule) => Rule.max(1),
       of: [
         { type: "homeHeroSection" },
+        { type: "heroSection" },
         { type: "lifeChangingResultsSection" },
         { type: "sliderSection" },
         { type: "bestCareSection" },
