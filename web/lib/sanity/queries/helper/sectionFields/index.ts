@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, titleDescriptionFields, titleDescriptionImageFields, } from "../globalFields";
+import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, questionAndAnswerFields, titleDescriptionFields, titleDescriptionImageFields, } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -230,4 +230,37 @@ ${imageFields}
 titleDescriptions[]{
 ${titleDescriptionFields}
 }
+`;
+
+{
+  /* Your Success Section*/
+}
+
+export const yourSuccessSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+image{
+${imageFields}
+},
+titleDescriptions[]{
+${titleDescriptionFields}
+}
+`;
+
+{
+  /* Faq Section */
+}
+
+export const faqSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+questionAndAnswers[]{
+${questionAndAnswerFields}
+},
 `;

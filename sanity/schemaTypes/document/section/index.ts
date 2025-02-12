@@ -32,6 +32,8 @@ export default {
         { type: "leadersSection" },
         { type: "integratedCareSection" },
         { type: "simpleStepsSection" },
+        { type: "yourSuccessSection" },
+        { type: "faqSection" },
       ],
     },
   ],

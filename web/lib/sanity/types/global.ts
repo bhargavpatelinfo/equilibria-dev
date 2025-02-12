@@ -107,3 +107,13 @@ export type CircularProgressBarType = {
   value: string;
   suffix: string;
 };
+
+{
+  /* Question And Answer */
+}
+
+export type QuestionAndAnswerType = {
+  _type: "questionAndAnswer";
+  question?: string;
+  answer?: RichTextType;
+};

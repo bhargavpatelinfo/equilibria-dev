@@ -3,6 +3,8 @@ import bestCareSection from "./bestCareSection";
 import betterHealthSection from "./betterHealthSection";
 import equilibriaSuccessStoriesSection from "./equilibriaSuccessStoriesSection";
 import equilibriaSuccessStories from "./equilibriaSuccessStoriesSection/equilibriaSuccessStories";
+import faqSection from "./faqSection";
+import questionAndAnswer from "./faqSection/questionAndAnswer";
 import heroSection from "./heroSection";
 import homeHeroSection from "./homeHeroSection";
 import integratedCareSection from "./integratedCareSection";
@@ -13,6 +15,7 @@ import simpleStepsSection from "./simpleStepsSection";
 import sliderSection from "./sliderSection";
 import stopManagingSection from "./stopManagingSection";
 import weCanHelpSection from "./weCanHelpSection";
+import yourSuccessSection from "./yourSuccessSection";
 
 
 
@@ -31,6 +34,9 @@ export const sectionsTypes = [
     heroSection,
     integratedCare,
     integratedCareSection,
-    simpleStepsSection
+    simpleStepsSection,
+    yourSuccessSection,
+    faqSection,
+    questionAndAnswer
 ];
 export default sectionsTypes;
