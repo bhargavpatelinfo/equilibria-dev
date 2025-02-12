@@ -10,7 +10,7 @@ const EquilibriaSuccessStoriesSection: React.FC<
 > = (block) => {
   const { id, equilibriaSuccessStories } = block || {};
   return (
-    <section id={id} className="mb-[80px] lg:mb-[206px] overflow-hidden">
+    <section id={id} className="mb-[80px] lg:mb-[160px] overflow-hidden">
       <div className="container">
         <div className="max-w-[1297px] w-full mx-auto">
           <Carousel
