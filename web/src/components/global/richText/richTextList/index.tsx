@@ -6,8 +6,8 @@ import React from "react";
 
 export const BulletList: PortableTextListComponent = ({ children }) => {
   return (
-    <div className="pt-6 pb-4 ">
-      <ul className="flex flex-col gap-3 list-disc pl-6 [&>li]:font-normal [&>li]:text-base">{children}</ul>
+    <div className="">
+      <ul className="flex flex-col gap-2 list-disc pl-6 [&>li]:font-normal [&>li]:text-lg lg:[&>li]:text-xl [&>li]:text-darkPurple">{children}</ul>
     </div>
   );
 };

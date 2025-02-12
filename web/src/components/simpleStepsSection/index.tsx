@@ -21,7 +21,7 @@ const SimpleStepsSection: React.FC<SimpleStepsSectionType> = (block) => {
                             </div>
                         )}
                         {titleDescriptions?.length > 0 && (
-                            <div className="flex flex-col gap-10 sm:gap-16 mt-[72px]">
+                            <div className="flex flex-col gap-10 sm:gap-16 mt-10 em:mt-[72px]">
                                 {titleDescriptions?.map((item, index) => {
                                     const { description, title } = item || {};
                                     return (
