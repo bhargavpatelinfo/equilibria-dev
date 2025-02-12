@@ -187,3 +187,29 @@ button{
 ${buttonFields}
 }
 `;
+
+{
+  /* Integrated Care */
+}
+
+export const integratedCareFields = /* groq */ `
+_type,
+id,
+title,
+features
+`;
+
+{
+  /* Integrated Care Section */
+}
+
+export const integratedCareSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+integratedCares[]{
+${integratedCareFields}
+}
+`;

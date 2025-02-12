@@ -30,6 +30,7 @@ export default {
         { type: "equilibriaSuccessStoriesSection" },
         { type: "affordableExpertCareSection" },
         { type: "leadersSection" },
+        { type: "integratedCareSection" },
       ],
     },
   ],
