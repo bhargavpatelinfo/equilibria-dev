@@ -33,6 +33,7 @@ export default {
         { type: "integratedCareSection" },
         { type: "simpleStepsSection" },
         { type: "yourSuccessSection" },
+        { type: "faqSection" },
       ],
     },
   ],

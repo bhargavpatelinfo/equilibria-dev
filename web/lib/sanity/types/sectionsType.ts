@@ -4,6 +4,7 @@ import {
   EquilibriaSuccessStoriesType,
   ImageTitleDescriptionCtaType,
   LeaderType,
+  QuestionAndAnswerType,
   TitleDescriptionImageType,
   TitleDescriptionType,
 } from "./global";
@@ -23,6 +24,7 @@ export type SectionType =
   | IntegratedCareSectionType
   | SimpleStepsSectionType
   | YourSuccessSectionType
+  | FaqSectionType
 
 {
   /*  Home Hero Section */
@@ -199,4 +201,14 @@ export interface YourSuccessSectionType {
   title: RichTextType;
   image:CustomImageType
   titleDescriptions: TitleDescriptionType[]
+}
+
+{
+  /*  Faq Section */
+}
+
+export interface FaqSectionType {
+  _type: "faqSection";
+  title?: RichTextType;
+  questionAndAnswers: QuestionAndAnswerType[];
 }

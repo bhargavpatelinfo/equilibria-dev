@@ -90,3 +90,13 @@ valueColor,
 value,
 suffix
 `;
+
+{/* Question And Answer */ }
+
+export const questionAndAnswerFields = /* groq */ `
+_type,
+question,
+answer{
+${richTextFields}
+},
+`;

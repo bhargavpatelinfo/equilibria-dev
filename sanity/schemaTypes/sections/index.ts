@@ -3,6 +3,8 @@ import bestCareSection from "./bestCareSection";
 import betterHealthSection from "./betterHealthSection";
 import equilibriaSuccessStoriesSection from "./equilibriaSuccessStoriesSection";
 import equilibriaSuccessStories from "./equilibriaSuccessStoriesSection/equilibriaSuccessStories";
+import faqSection from "./faqSection";
+import questionAndAnswer from "./faqSection/questionAndAnswer";
 import heroSection from "./heroSection";
 import homeHeroSection from "./homeHeroSection";
 import integratedCareSection from "./integratedCareSection";
@@ -33,6 +35,8 @@ export const sectionsTypes = [
     integratedCare,
     integratedCareSection,
     simpleStepsSection,
-    yourSuccessSection
+    yourSuccessSection,
+    faqSection,
+    questionAndAnswer
 ];
 export default sectionsTypes;
