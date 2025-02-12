@@ -98,6 +98,7 @@ export default {
     boxShadow: {
       buttonHovershadow: "0 20px 38px rgba(0, 0, 0, 0.16)",
       headerShadow:"5px 8px 13px -8px rgba(0,0,0,0.20)",
+      cardSolutionShadow:"0px 8px 12px 0px rgba(0, 0, 0, 0.25)"
     },
     fontFamily: {
       Inter: "Inter, serif",
