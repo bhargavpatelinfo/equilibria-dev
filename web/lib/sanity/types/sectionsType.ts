@@ -26,6 +26,7 @@ export type SectionType =
   | YourSuccessSectionType
   | FaqSectionType
   | TransformationSectionType
+  | SymptomSolutionsSectionType
 
 {
   /*  Home Hero Section */
@@ -223,6 +224,29 @@ export interface YourSuccessSectionType {
 
 export interface FaqSectionType {
   _type: "faqSection";
+  id?: string;
   title?: RichTextType;
   questionAndAnswers: QuestionAndAnswerType[];
+}
+
+{
+  /*  Symptom Solution */
+}
+
+export interface SymptomSolutionType {
+  _type: "symptomSolution";
+  title?: string;
+  image: CustomImageType;
+  icon: CustomImageType;
+}
+
+{
+  /*  Symptom Solutions Section */
+}
+
+export interface SymptomSolutionsSectionType {
+  _type: "symptomSolutionsSection";
+  title?: RichTextType;
+  id?: string;
+  symptomSolutions: SymptomSolutionType[];
 }

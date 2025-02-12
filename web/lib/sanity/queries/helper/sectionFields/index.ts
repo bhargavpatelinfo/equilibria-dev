@@ -285,3 +285,33 @@ questionAndAnswers[]{
 ${questionAndAnswerFields}
 },
 `;
+
+{
+  /* Symptom Solution */
+}
+
+export const symptomSolutionFields = /* groq */ `
+_type,
+title,
+icon{
+${imageFields}
+},
+image{
+${imageFields}
+},
+`;
+
+{
+  /* Symptom Solutions Section */
+}
+
+export const symptomSolutionsSectionFields = /* groq */ `
+_type,
+id,
+title{
+${richTextFields}
+},
+symptomSolutions[]{
+${symptomSolutionFields}
+},
+`;

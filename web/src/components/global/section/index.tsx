@@ -16,6 +16,7 @@ import SimpleStepsSection from "@/components/simpleStepsSection";
 import YourSuccessSection from "@/components/yourSuccessSection";
 import FaqSection from "@/components/faqSection";
 import TransformationSection from "@/components/transformationSection";
+import SymptomSolutionsSection from "@/components/symptomSolutionsSection";
 
 interface SectionProps {
   data: SectionType;
@@ -55,6 +56,8 @@ const Section: React.FC<SectionProps> = ({ data }) => {
       return <FaqSection {...data} />;
     case "transformationSection":
       return <TransformationSection {...data} />;
+    case "symptomSolutionsSection":
+      return <SymptomSolutionsSection {...data} />;
 
     default:
       return null;

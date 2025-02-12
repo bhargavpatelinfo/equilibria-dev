@@ -14,6 +14,8 @@ import lifeChangingResultsSection from "./lifeChangingResultsSection";
 import simpleStepsSection from "./simpleStepsSection";
 import sliderSection from "./sliderSection";
 import stopManagingSection from "./stopManagingSection";
+import symptomSolutionsSection from "./symptomSolutionsSection";
+import symptomSolution from "./symptomSolutionsSection/symptomSolution";
 import transformationSection from "./transformationSection";
 import weCanHelpSection from "./weCanHelpSection";
 import yourSuccessSection from "./yourSuccessSection";
@@ -39,6 +41,8 @@ export const sectionsTypes = [
     yourSuccessSection,
     faqSection,
     questionAndAnswer,
-    transformationSection
+    transformationSection,
+    symptomSolutionsSection,
+    symptomSolution
 ];
 export default sectionsTypes;

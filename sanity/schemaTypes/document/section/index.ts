@@ -35,6 +35,7 @@ export default {
         { type: "yourSuccessSection" },
         { type: "faqSection" },
         { type: "transformationSection" },
+        { type: "symptomSolutionsSection" },
       ],
     },
   ],

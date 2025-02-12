@@ -20,14 +20,12 @@ export default {
   ],
   preview: {
     select: {
-      title: "title",
-      description: "description.custom_rich_text",
+      title: "title.custom_rich_text",
     },
-    prepare: ({ title, description }) => {
-      const getDescription = description ? toPlainText(description) : null;
+    prepare: ({ title }) => {
+      const getTitle = title ? toPlainText(title) : null;
       return {
-        title: title || "Faq Section",
-        subtitle: getDescription,
+        title: getTitle || "Faq Section",
       };
     },
   },
