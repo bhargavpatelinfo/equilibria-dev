@@ -10,13 +10,13 @@ const EquilibriaSuccessStoriesSection: React.FC<
 > = (block) => {
   const { id, equilibriaSuccessStories } = block || {};
   return (
-    <section id={id} className="mb-[80px] lg:mb-[160px] overflow-hidden">
+    <section id={id} className="mb-[100px] lg:mb-[160px] overflow-hidden">
       <div className="container">
         <div className="max-w-[1297px] w-full mx-auto">
           <Carousel
             swiperWrapperClass=""
             swiperSlideClass=" transition-all duration-300 ease-linear rounded-lg"
-            className='w-full max-w-[1320px] overflow-visible mx-auto px-4'
+            className='w-full max-w-[1320px] overflow-visible mx-auto em:px-4'
             data={equilibriaSuccessStories}
             hasNavigation
             loop={true}

@@ -16,7 +16,7 @@ const SymptomSolutionsSection: React.FC<SymptomSolutionsSectionType> = (block) =
                 </div>
             }
             {groupSymptomSolutions?.length > 0 &&
-                <div className='mt-14 md:mt-[130px]'>
+                <div className='mt-10 md:mt-[130px]'>
                     {groupSymptomSolutions?.map((groupItem, groupIndex) => {
                         return (
                             <div key={groupIndex} className='relative flex flex-col md:flex-row justify-center items-center gap-12 md:gap-6 z-0'>

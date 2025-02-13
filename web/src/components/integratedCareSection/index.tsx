@@ -9,7 +9,7 @@ const IntegratedCareSection: React.FC<IntegratedCareSectionType> = (block) => {
     const groupIntegratedCares = groupItems(integratedCares, 3)
 
     return (
-        <section id={id} className="mb-[100px] xl:mb-[160px] py-14 lg:py-20 bg-pink">
+        <section id={id} className="mb-[80px] sm:mb-[100px] lg:mb-[160px] py-16 lg:py-20 bg-pink">
             <div className="container">
                 <div className="">
                     <div className="flex flex-col gap-14 md:gap-20">
@@ -54,14 +54,14 @@ const IntegratedCareSection: React.FC<IntegratedCareSectionType> = (block) => {
                                        }
                                        <div className='flex flex-col gap-5 sm:gap-7 '>
                                            {title &&
-                                               <h3 className="text-22 esm:text-26 sm:text-40 xl:text-50 text-darkPurple tracking-[-1.28px] font-semibold font-Kulim leading-[110%] text-center lg:text-left">
+                                               <h3 className="text-26 esm:text-30 sm:text-40  text-darkPurple tracking-[-0.8px] font-semibold font-Kulim leading-[110%] text-center lg:text-left">
                                                    {title}
                                                </h3>
                                            }
                                            {features?.length > 0 && (
-                                               <ul className="flex flex-col list-disc list-inside gap-4 pl-6 em:pl-10 sm:pl-3">
+                                               <ul className="flex flex-col list-disc list-inside gap-4 pl-6 em:pl-12 sm:pl-3">
                                                    {features?.map((feature, featureIndex) => (
-                                                       <li key={featureIndex} className="text-darkRed text-[16px] em:text-[20px] sm:text-[22px] md:text-24 font-semibold tracking-[-0.12px]">
+                                                       <li key={featureIndex} className="text-darkRed text-[18px] em:text-[20px] sm:text-[22px] md:text-24 font-medium tracking-[-0.12px]">
                                                            {feature}
                                                        </li>
                                                    ))}

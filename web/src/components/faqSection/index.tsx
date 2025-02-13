@@ -43,7 +43,7 @@ const FaqSection: React.FC<FaqSectionType> = (block) => {
   }, [activeIndex]);
 
   return (
-    <section className="mb-[100px] xl:mb-[160px]">
+    <section className="mb-[80px] lg:mb-[100px] xl:mb-[160px]">
       <div className="container bg-pink py-14 em:py-20 xl:rounded-3xl">
         <div className="max-w-[968px] mx-auto w-full">
           {title?.custom_rich_text && (

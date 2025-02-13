@@ -10,7 +10,7 @@ const TransformationSection: React.FC<TransformationSectionType> = (block) => {
     const { id, title, description, backgroundImage, buttons } = block || {};
     const bgImage = useSanityImage(backgroundImage);
     return (
-        <section id={id} className="mb-[100px] xl:mb-[160px]">
+        <section id={id} className="mb-[80px] lg:mb-[100px] xl:mb-[160px]">
             <div
                 className={cn(
                     "container"

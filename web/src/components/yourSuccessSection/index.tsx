@@ -7,7 +7,7 @@ import GreenTrueIcon from '../commons/icons/greenTrueIcon';
 const YourSuccessSection: React.FC<YourSuccessSectionType> = (block) => {
     const { id, image, titleDescriptions, title } = block || {};
     return (
-        <section id={id} className="mb-[100px] lg:mb-[206px]">
+        <section id={id} className="mb-[80px] lg:mb-[206px]">
             <div className="container">
                 <div className='flex flex-col lg:flex-row justify-between items-center gap-16 lg:gap-10'>
                     <div className="max-w-full lg:max-w-[784px] w-full">
