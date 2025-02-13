@@ -8,7 +8,7 @@ import GreenTrueIcon from '../commons/icons/greenTrueIcon';
 const HeroSection: React.FC<HeroSectionType> = (block) => {
     const { id, description, buttons, image, title, features } = block || {};
     return (
-        <section id={id} className='mt-[130px] sm:mt-[150px] mb-[100px] xl:mb-[160px]'>
+        <section id={id} className='mt-[120px] sm:mt-[150px] mb-[50px] lg:mb-[100px] xl:mb-[160px]'>
             <div className='container'>
                 <div className='flex flex-col lg:flex-row items-center gap-10 justify-between'>
                     <div className='lg:basis-[60%] xl:basis-1/2 flex flex-col gap-8 sm:gap-12'>
@@ -60,7 +60,7 @@ const HeroSection: React.FC<HeroSectionType> = (block) => {
                                 <Image
                                     alt={image?.alt}
                                     src={image}
-                                    className='w-full h-auto em:h-[350px] md:h-[500px] lg:h-full object-cover'
+                                    className='w-full h-[280px] sm:h-[350px] md:h-[500px] lg:h-full object-cover'
                                 />
                             </div>
                         }

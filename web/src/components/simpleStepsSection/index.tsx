@@ -6,7 +6,7 @@ import Image from '../global/image';
 const SimpleStepsSection: React.FC<SimpleStepsSectionType> = (block) => {
     const { id, image, titleDescriptions, title } = block || {};
     return (
-        <section id={id} className="mb-[100px] lg:mb-[206px]">
+        <section id={id} className="mb-[80px] lg:mb-[206px]">
             <div className="container">
                 <div className='flex flex-col-reverse lg:flex-row items-center gap-16 lg:gap-10 justify-between'>
                     <div className="max-w-[588px] w-full ">

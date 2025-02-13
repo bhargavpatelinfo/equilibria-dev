@@ -6,7 +6,7 @@ import Image from "../global/image";
 const StopManagingSection: React.FC<StopManagingSectionType> = (block) => {
   const { id, title, description, titleDescriptionImages } = block || {};
   return (
-    <section id={id} className="mb-[100px] lg:mb-[206px]">
+    <section id={id} className="mb-[80px] lg:mb-[206px]">
       <div className="container">
         <div className="flex flex-col gap-4 max-w-[956px] w-full">
           {title?.custom_rich_text && (
