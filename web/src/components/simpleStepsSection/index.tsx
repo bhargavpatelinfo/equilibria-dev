@@ -2,6 +2,7 @@ import React from 'react'
 import { SimpleStepsSectionType } from '../../../lib/sanity/types';
 import RichText from '../global/richText';
 import Image from '../global/image';
+import { generateFormattedIndex } from '../../../lib/utils/helperFunctions';
 
 const SimpleStepsSection: React.FC<SimpleStepsSectionType> = (block) => {
     const { id, image, titleDescriptions, title } = block || {};
@@ -24,12 +25,13 @@ const SimpleStepsSection: React.FC<SimpleStepsSectionType> = (block) => {
                             <div className="flex flex-col gap-10 sm:gap-16 mt-10 em:mt-[72px]">
                                 {titleDescriptions?.map((item, index) => {
                                     const { description, title } = item || {};
+                                    const formattedIndex = generateFormattedIndex(index);
                                     return (
                                         <div key={index} className="flex flex-col gap-6">
                                             <div className="flex flex-col gap-4">
                                                 {title && (
                                                     <h3 className="text-26 sm:text-32 font-semibold tracking-[-0.64px] font-Kulim text-darkPurple leading-[110%]">
-                                                        {title}
+                                                        {`${formattedIndex}. ${title}`}
                                                     </h3>
                                                 )}
                                                 {description?.custom_rich_text && (
