@@ -9,7 +9,7 @@ const SliderSection: React.FC<SliderSectionType> = (block) => {
     <section id={id} className="bg-lightPink">
       <div className="marqueeLogo">
         {[...Array(2)]?.map((_, repeatIndex) => (
-          <ul
+          <div
             key={repeatIndex}
             className="flex justify-between items-center gap-8 marqueeLogoInner min-w-full  px-4 h-[60px] sm:h-[80px] lg:h-[112px]"
           >
@@ -26,7 +26,7 @@ const SliderSection: React.FC<SliderSectionType> = (block) => {
                 </div>
               );
             })}
-          </ul>
+          </div>
         ))}
       </div>
     </section>
