@@ -299,6 +299,7 @@ ${imageFields}
 image{
 ${imageFields}
 },
+lists
 `;
 
 {

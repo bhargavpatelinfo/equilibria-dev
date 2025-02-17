@@ -238,6 +238,7 @@ export interface SymptomSolutionType {
   title?: string;
   image: CustomImageType;
   icon: CustomImageType;
+  lists:string[]
 }
 
 {

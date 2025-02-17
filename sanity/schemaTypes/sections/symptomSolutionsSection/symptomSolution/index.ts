@@ -15,6 +15,12 @@ export default {
             type: 'string',
         },
         {
+            name: "lists",
+            title: "Lists",
+            type: "array",
+            of: [{ type: "string" }],
+        },
+        {
             name: 'image',
             title: 'Image',
             type: 'customImage',
