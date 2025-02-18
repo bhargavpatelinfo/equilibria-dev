@@ -39,6 +39,7 @@ export interface HomeHeroSectionType {
   suffix: string;
   description?: RichTextType;
   rotatingSubtitles?: string[];
+  image:CustomImageType
 }
 
 {

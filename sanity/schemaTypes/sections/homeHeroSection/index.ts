@@ -1,5 +1,5 @@
-import {toPlainText} from '@portabletext/react'
-import {SchemaTypeDefinition} from 'sanity'
+import { toPlainText } from '@portabletext/react'
+import { SchemaTypeDefinition } from 'sanity'
 export default {
   name: 'homeHeroSection',
   title: 'Home Hero Section',
@@ -21,7 +21,7 @@ export default {
       name: 'rotatingSubtitles',
       title: 'Rotating Subtitles',
       type: 'array',
-      of: [{type: 'string'}],
+      of: [{ type: 'string' }],
     },
     {
       name: 'suffix',
@@ -33,12 +33,17 @@ export default {
       title: 'Description',
       type: 'richText',
     },
+    {
+      name: 'image',
+      title: 'Image',
+      type: 'customImage',
+    },
   ],
   preview: {
     select: {
       title: 'title.custom_rich_text',
     },
-    prepare({title}) {
+    prepare({ title }) {
       const getTitle = title ? toPlainText(title) : null
       return {
         title: getTitle || 'Home Hero Section',

@@ -31,7 +31,7 @@ const HeroSection: React.FC<HeroSectionType> = (block) => {
                                     return (
                                         <div key={index} className='flex gap-4'>
                                             <div>
-                                                <GreenTrueIcon/>
+                                                <GreenTrueIcon />
                                             </div>
                                             <div className='text-lg xl:text-xl text-maroon font-medium tracking-[-0.1px]'>
                                                 {item}
@@ -47,15 +47,15 @@ const HeroSection: React.FC<HeroSectionType> = (block) => {
                                     return (
                                         item?.label &&
                                         <div key={index} className='w-full em:w-auto'>
-                                            <Button block={item} className='!px-6 lg:!px-4 xl:!px-6 1xl:!px-10 !text-base xl:!text-lg '/>
+                                            <Button block={item} className='!px-6 lg:!px-4 xl:!px-6 1xl:!px-10 !text-base xl:!text-lg ' />
                                         </div>
                                     )
                                 })}
                             </div>
                         }
                     </div>
-                    <div className='lg:basis-[35%] xl:basis-1/2 mx-auto'>
-                        {image &&
+                    {image &&
+                        <div className='lg:basis-[35%] xl:basis-1/2 mx-auto'>
                             <div className='aspect-square'>
                                 <Image
                                     alt={image?.alt}
@@ -63,8 +63,8 @@ const HeroSection: React.FC<HeroSectionType> = (block) => {
                                     className='w-full h-[280px] sm:h-[350px] md:h-[500px] lg:h-full object-cover'
                                 />
                             </div>
-                        }
-                    </div>
+                        </div>
+                    }
                 </div>
             </div>
         </section>

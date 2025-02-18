@@ -15,6 +15,9 @@ rotatingSubtitles,
 description{
 ${richTextFields}
 },
+image{
+${imageFields}
+}
 `;
 
 {
