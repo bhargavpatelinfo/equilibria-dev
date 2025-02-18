@@ -6,7 +6,6 @@ import { colorInput } from '@sanity/color-input'
 import { noteField } from 'sanity-plugin-note-field'
 import { seoMetaFields } from 'sanity-plugin-seo'
 import { deskStructure } from './deskStructure/deskStructure'
-import { previewDocumentNode } from './sanityPreview'
 
 export default defineConfig({
   title: 'Equilibria Health',
@@ -15,7 +14,6 @@ export default defineConfig({
   plugins: [
     structureTool({
       structure: deskStructure,
-      defaultDocumentNode: previewDocumentNode(),
     }),
     visionTool(),
     colorInput(),
