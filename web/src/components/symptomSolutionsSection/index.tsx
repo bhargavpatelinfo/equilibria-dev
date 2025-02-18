@@ -1,15 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { SymptomSolutionsSectionType } from '../../../lib/sanity/types';
 import RichText from '../global/richText';
 import { cn, groupItems } from '../../../lib/utils/helperFunctions';
 import SymptomSolutionCard from './symptomSolutionCard';
-import useInView from '../../../lib/hooks/useInView';
 
 const SymptomSolutionsSection: React.FC<SymptomSolutionsSectionType> = (block) => {
     const { id, title, symptomSolutions } = block || {};
     const groupSymptomSolutions = groupItems(symptomSolutions, 3);
 
-    const [ref, isInView] = useInView({ threshold: 0.1 });
+    const ref = React.useRef<HTMLDivElement>(null);
+    const [hasAnimated, setHasAnimated] = useState(false);
+
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting && !hasAnimated) {
+                    setHasAnimated(true);
+                }
+            },
+            { root: null, threshold: 0.6 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, [hasAnimated]);
 
     return (
         <section id={id}
@@ -27,7 +49,6 @@ const SymptomSolutionsSection: React.FC<SymptomSolutionsSectionType> = (block) =
                             <div key={groupIndex}
                                 className={cn(
                                     'relative flex flex-col md:flex-row justify-center items-center gap-12 md:gap-6 z-0',
-                                    isInView ? 'bg-[red]' : 'bg-[teal]'
                                 )}
                             >
                                 {groupItem?.map((item, itemIndex) => (
@@ -35,6 +56,7 @@ const SymptomSolutionsSection: React.FC<SymptomSolutionsSectionType> = (block) =
                                         block={item}
                                         key={itemIndex}
                                         itemIndex={itemIndex}
+                                        hasAnimated={hasAnimated}
                                     />
                                 ))}
                             </div>

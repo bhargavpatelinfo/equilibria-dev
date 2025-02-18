@@ -74,7 +74,7 @@ export type TitleDescriptionType = {
 
 export type EquilibriaSuccessStoriesType = {
   _type: "equilibriaSuccessStories";
-  titleColor:string
+  titleColor: string
   title: string;
   description: RichTextType;
   name: string;
@@ -116,4 +116,15 @@ export type QuestionAndAnswerType = {
   _type: "questionAndAnswer";
   question?: string;
   answer?: RichTextType;
+};
+
+{
+  /* Image Title List */
+}
+
+export type ImageTitleListType = {
+  _type: "imageTitleList";
+  image?: CustomImageType;
+  title?: string;
+  lists?: string[];
 };

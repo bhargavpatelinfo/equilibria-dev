@@ -1,5 +1,5 @@
 import { buttonFields, richTextFields } from "../commonFields";
-import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, leaderFields, questionAndAnswerFields, titleDescriptionFields, titleDescriptionImageFields, } from "../globalFields";
+import { circularProgressBarFields, equilibriaSuccessStoriesFields, imageTitleDescriptionCtaFields, imageTitleListFields, leaderFields, questionAndAnswerFields, titleDescriptionFields, titleDescriptionImageFields, } from "../globalFields";
 import { imageFields } from "../imageFields";
 
 {
@@ -295,14 +295,12 @@ ${questionAndAnswerFields}
 
 export const symptomSolutionFields = /* groq */ `
 _type,
-title,
-icon{
-${imageFields}
-},
 image{
 ${imageFields}
 },
-lists
+imageTitleLists[]{
+${imageTitleListFields}
+}
 `;
 
 {

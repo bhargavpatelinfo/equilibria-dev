@@ -1,24 +1,17 @@
 import { SchemaTypeDefinition } from 'sanity'
+import ArrayMaxItems from '../../../../component/arrayFunctions'
 export default {
     name: 'symptomSolution',
     title: 'Symptom Solution',
     type: 'object',
     fields: [
         {
-            name: 'icon',
-            title: 'Icon',
-            type: 'customImage',
-        },
-        {
-            name: 'title',
-            title: 'Title',
-            type: 'string',
-        },
-        {
-            name: "lists",
-            title: "Lists",
-            type: "array",
-            of: [{ type: "string" }],
+            name: 'imageTitleLists',
+            title: 'Image Title Lists',
+            type: 'array',
+            components: { input: ArrayMaxItems },
+            validation: (Rule) => Rule.max(2),
+            of: [{ type: 'imageTitleList' }],
         },
         {
             name: 'image',
@@ -28,12 +21,11 @@ export default {
     ],
     preview: {
         select: {
-            title: 'title',
             image: "image"
         },
-        prepare({ title, image }) {
+        prepare({ image }) {
             return {
-                title: title || 'Symptom Solution',
+                title: 'Symptom Solution',
                 media: image
             }
         },

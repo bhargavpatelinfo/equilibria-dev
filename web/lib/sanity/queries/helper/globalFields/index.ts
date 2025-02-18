@@ -100,3 +100,14 @@ answer{
 ${richTextFields}
 },
 `;
+
+{/* Image Title List */ }
+
+export const imageTitleListFields = /* groq */ `
+_type,
+image{
+${imageFields}
+},
+title,
+lists
+`;

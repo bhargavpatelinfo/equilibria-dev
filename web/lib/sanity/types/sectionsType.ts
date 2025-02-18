@@ -3,6 +3,7 @@ import {
   CircularProgressBarType,
   EquilibriaSuccessStoriesType,
   ImageTitleDescriptionCtaType,
+  ImageTitleListType,
   LeaderType,
   QuestionAndAnswerType,
   TitleDescriptionImageType,
@@ -236,10 +237,8 @@ export interface FaqSectionType {
 
 export interface SymptomSolutionType {
   _type: "symptomSolution";
-  title?: string;
+  imageTitleLists:ImageTitleListType[]
   image: CustomImageType;
-  icon: CustomImageType;
-  lists:string[]
 }
 
 {
