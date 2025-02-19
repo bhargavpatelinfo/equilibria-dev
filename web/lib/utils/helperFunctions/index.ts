@@ -1,7 +1,7 @@
 import { clsx, type ClassValue } from "clsx";
 import slugify from "slugify";
 import { twMerge } from "tailwind-merge";
-import { getClient, readToken } from "../../sanity";
+import { sanityClientWithToken } from "../../sanity";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -21,9 +21,8 @@ export const fetchSanityAsset = async <T>({
 }: {
   ref: string;
 }): Promise<T> => {
-  const client = getClient(readToken);
   try {
-    const response = await client.getDocument(ref);
+    const response = await sanityClientWithToken.getDocument(ref);
     return response as T;
   } catch (error) {
     console.error("Error fetching :", error);

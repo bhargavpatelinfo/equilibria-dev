@@ -8,15 +8,16 @@ import { SharedPageProps } from "../../lib/sanity/types";
 const PreviewProvider = lazy(
   () => import("@/components/global/previewView/previewProvider")
 );
-export default function App({ Component, pageProps }: AppProps<SharedPageProps>) {
+export default function App({ Component, pageProps }: AppProps<SharedPageProps>) {  
   return (
-    <ModalsProvider key={pageProps?.page?._id}>
-      {pageProps.draftMode && (
-        <PreviewProvider token={pageProps.token}>
+    pageProps?.draftMode ?
+      <PreviewProvider token={pageProps.token}>
+        <ModalsProvider key={pageProps?.page?._id}>
           <Component {...pageProps} />
-        </PreviewProvider>
-      )}
-      {!pageProps.draftMode && <Component {...pageProps} />}
-    </ModalsProvider>
+        </ModalsProvider>
+      </PreviewProvider>
+      : <ModalsProvider key={pageProps?.page?._id}>
+        <Component {...pageProps} />
+      </ModalsProvider>
   );
 }

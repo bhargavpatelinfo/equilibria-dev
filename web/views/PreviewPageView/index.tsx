@@ -15,7 +15,6 @@ export default function PreviewPageView(props: PageViewProps) {
   );
   const pageFilteredData = filterSanityDataToSingleItem({
     data: page,
-    isPreview: !!props.preview,
   });
 
   return (

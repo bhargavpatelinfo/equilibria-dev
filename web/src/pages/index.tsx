@@ -34,12 +34,10 @@ export const getStaticProps: GetStaticProps<PageProps> = async (ctx) => {
     queryParams: {
       slug: "/",
     },
-    isPreview: draftMode,
   });
 
   const page = filterSanityDataToSingleItem({
     data: pageData,
-    isPreview: draftMode,
   });
 
   if (!page) {

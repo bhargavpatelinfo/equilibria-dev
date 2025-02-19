@@ -1236,10 +1236,10 @@
   resolved "https://registry.npmjs.org/@microsoft/tsdoc/-/tsdoc-0.15.1.tgz"
   integrity sha512-4aErSrCR/On/e5G2hDP0wjooqDdauzEbIq8hIkIe5pXV0rtWJZvdCEKL0ykZxex+IxIwBp0eGeV48hQN07dXtw==
 
-"@next/env@14.2.12":
-  version "14.2.12"
-  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.12.tgz"
-  integrity sha512-3fP29GIetdwVIfIRyLKM7KrvJaqepv+6pVodEbx0P5CaMLYBtx+7eEg8JYO5L9sveJO87z9eCReceZLi0hxO1Q==
+"@next/env@14.2.24":
+  version "14.2.24"
+  resolved "https://registry.npmjs.org/@next/env/-/env-14.2.24.tgz"
+  integrity sha512-LAm0Is2KHTNT6IT16lxT+suD0u+VVfYNQqM+EJTKuFRRuY2z+zj01kueWXPCxbMBDt0B5vONYzabHGUNbZYAhA==
 
 "@next/eslint-plugin-next@14.2.16":
   version "14.2.16"
@@ -1248,10 +1248,10 @@
   dependencies:
     glob "10.3.10"
 
-"@next/swc-win32-x64-msvc@14.2.12":
-  version "14.2.12"
-  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.12.tgz"
-  integrity sha512-yu8QvV53sBzoIVRHsxCHqeuS8jYq6Lrmdh0briivuh+Brsp6xjg80MAozUsBTAV9KNmY08KlX0KYTWz1lbPzEg==
+"@next/swc-win32-x64-msvc@14.2.24":
+  version "14.2.24"
+  resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.24.tgz"
+  integrity sha512-cXcJ2+x0fXQ2CntaE00d7uUH+u1Bfp/E0HsNQH79YiLaZE5Rbm7dZzyAYccn3uICM7mw+DxoMqEfGXZtF4Fgaw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
@@ -1696,7 +1696,7 @@
     semver "^7.3.5"
     validate-npm-package-name "^3.0.0"
 
-"@sanity/client@^5.0.0 || ^6.0.0", "@sanity/client@^6.21.3", "@sanity/client@^6.22.4", "@sanity/client@^6.24.1", "@sanity/client@^6.27.2":
+"@sanity/client@^5.0.0 || ^6.0.0", "@sanity/client@^6.22.4", "@sanity/client@^6.24.1", "@sanity/client@^6.24.3", "@sanity/client@^6.27.2":
   version "6.27.2"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-6.27.2.tgz"
   integrity sha512-x5KaN5atPnEFa3GGSH3YKSAYh1MAECvEs9o+NSLd5W19imxvSxPquQBv0Q60Zdsg6iaTJPAAa79Ak5Xyg2FHvA==
@@ -1791,7 +1791,7 @@
   resolved "https://registry.npmjs.org/@sanity/icons/-/icons-3.5.7.tgz"
   integrity sha512-Gdqh1Cst/GL2RF23Ztx14hFEOBltK7PYMDHTi83TQ4Vq2/W0rhhMTVlaAopb4MgnUBwzISHRLD85SuvDMi9SuA==
 
-"@sanity/image-url@^1.0.2":
+"@sanity/image-url@^1.0.2", "@sanity/image-url@^1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@sanity/image-url/-/image-url-1.1.0.tgz"
   integrity sha512-JHumVRxzzaZAJyOimntdukA9TjjzsJiaiq/uUBdTknMLCNvtM6KQ5OCp6W5fIdY78uyFxtQjz+MPXwK8WBIxWg==
@@ -1964,21 +1964,7 @@
     "@sanity/presentation-comlink" "^1.0.4"
     mendoza "3.0.8"
 
-"@sanity/preview-url-secret@^1.6.21":
-  version "1.6.21"
-  resolved "https://registry.npmjs.org/@sanity/preview-url-secret/-/preview-url-secret-1.6.21.tgz"
-  integrity sha512-ZAIT4I5Nrsax+RBQVhSBY4PnnHgaI+eybSd5aHhjZi97+ziMTtTLnL1Hsg+ViLtPqJWwX0GiB0l8nSfGAt7+QA==
-  dependencies:
-    "@sanity/uuid" "3.0.2"
-
-"@sanity/preview-url-secret@^2.1.4":
-  version "2.1.4"
-  resolved "https://registry.npmjs.org/@sanity/preview-url-secret/-/preview-url-secret-2.1.4.tgz"
-  integrity sha512-D66VcYbGGXIkF4VQrvWo61l921LdyHKZgg5PYH0ZHcAE/wTXrMIM93I70jOp1DpN913c0vJ1sLxbLCbrEk7n8Q==
-  dependencies:
-    "@sanity/uuid" "3.0.2"
-
-"@sanity/preview-url-secret@2.1.4":
+"@sanity/preview-url-secret@^2.0.5", "@sanity/preview-url-secret@^2.1.4", "@sanity/preview-url-secret@2.1.4":
   version "2.1.4"
   resolved "https://registry.npmjs.org/@sanity/preview-url-secret/-/preview-url-secret-2.1.4.tgz"
   integrity sha512-D66VcYbGGXIkF4VQrvWo61l921LdyHKZgg5PYH0ZHcAE/wTXrMIM93I70jOp1DpN913c0vJ1sLxbLCbrEk7n8Q==
@@ -6125,7 +6111,7 @@ next-sanity-image@^6.1.1:
   dependencies:
     "@sanity/image-url" "^1.0.2"
 
-next-sanity@^9.5.0:
+next-sanity@^9.8.30:
   version "9.8.47"
   resolved "https://registry.npmjs.org/next-sanity/-/next-sanity-9.8.47.tgz"
   integrity sha512-PRss8KBjMBPJ1pkfd0EP4Ht2Nt4kJ3tSgolxRRT34xqspvvexAIWdT+LxLywR1R4BT7kSYw4iqc6uHlDMlgKfg==
@@ -6144,12 +6130,12 @@ next-seo@^6.6.0:
   resolved "https://registry.npmjs.org/next-seo/-/next-seo-6.6.0.tgz"
   integrity sha512-0VSted/W6XNtgAtH3D+BZrMLLudqfm0D5DYNJRXHcDgan/1ZF1tDFIsWrmvQlYngALyphPfZ3ZdOqlKpKdvG6w==
 
-"next@^13.0.0 || ^14.0.0", "next@^14.1 || ^15.0.0-0", "next@^14.2 || ^15.0.0-0", "next@^8.1.1-canary.54 || >=9.0.0", "next@>= 13 || >=14.3.0-canary.0 <14.3.0 || >=15.0.0-rc", next@14.2.12:
-  version "14.2.12"
-  resolved "https://registry.npmjs.org/next/-/next-14.2.12.tgz"
-  integrity sha512-cDOtUSIeoOvt1skKNihdExWMTybx3exnvbFbb9ecZDIxlvIbREQzt9A5Km3Zn3PfU+IFjyYGsHS+lN9VInAGKA==
+"next@^13.0.0 || ^14.0.0", "next@^14.1 || ^15.0.0-0", "next@^14.2 || ^15.0.0-0", next@^14.2.22, "next@^8.1.1-canary.54 || >=9.0.0", "next@>= 13 || >=14.3.0-canary.0 <14.3.0 || >=15.0.0-rc":
+  version "14.2.24"
+  resolved "https://registry.npmjs.org/next/-/next-14.2.24.tgz"
+  integrity sha512-En8VEexSJ0Py2FfVnRRh8gtERwDRaJGNvsvad47ShkC2Yi8AXQPXEA2vKoDJlGFSj5WE5SyF21zNi4M5gyi+SQ==
   dependencies:
-    "@next/env" "14.2.12"
+    "@next/env" "14.2.24"
     "@swc/helpers" "0.5.5"
     busboy "1.6.0"
     caniuse-lite "^1.0.30001579"
@@ -6157,15 +6143,15 @@ next-seo@^6.6.0:
     postcss "8.4.31"
     styled-jsx "5.1.1"
   optionalDependencies:
-    "@next/swc-darwin-arm64" "14.2.12"
-    "@next/swc-darwin-x64" "14.2.12"
-    "@next/swc-linux-arm64-gnu" "14.2.12"
-    "@next/swc-linux-arm64-musl" "14.2.12"
-    "@next/swc-linux-x64-gnu" "14.2.12"
-    "@next/swc-linux-x64-musl" "14.2.12"
-    "@next/swc-win32-arm64-msvc" "14.2.12"
-    "@next/swc-win32-ia32-msvc" "14.2.12"
-    "@next/swc-win32-x64-msvc" "14.2.12"
+    "@next/swc-darwin-arm64" "14.2.24"
+    "@next/swc-darwin-x64" "14.2.24"
+    "@next/swc-linux-arm64-gnu" "14.2.24"
+    "@next/swc-linux-arm64-musl" "14.2.24"
+    "@next/swc-linux-x64-gnu" "14.2.24"
+    "@next/swc-linux-x64-musl" "14.2.24"
+    "@next/swc-win32-arm64-msvc" "14.2.24"
+    "@next/swc-win32-ia32-msvc" "14.2.24"
+    "@next/swc-win32-x64-msvc" "14.2.24"
 
 node-html-parser@^6.1.13:
   version "6.1.13"
@@ -8223,7 +8209,7 @@ strip-json-comments@~2.0.1:
   resolved "https://registry.npmjs.org/strip-json-comments/-/strip-json-comments-2.0.1.tgz"
   integrity sha512-4gB8na07fecVVkOI6Rs4e7T6NOTki5EmL7TUduTs6bu3EdnSycntVJ4re8kgZA+wx9IueI2Y11bfbgwtzuE0KQ==
 
-"styled-components@^5.2 || ^6", styled-components@^6.1:
+"styled-components@^5.2 || ^6", styled-components@^6.1, styled-components@^6.1.13:
   version "6.1.14"
   resolved "https://registry.npmjs.org/styled-components/-/styled-components-6.1.14.tgz"
   integrity sha512-KtfwhU5jw7UoxdM0g6XU9VZQFV4do+KrM8idiVCH5h4v49W+3p3yMe0icYwJgZQZepa5DbH04Qv8P0/RdcLcgg==

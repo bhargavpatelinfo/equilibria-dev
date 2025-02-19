@@ -1,10 +1,8 @@
 type Params<T> = {
   data: T | T[];
-  isPreview: boolean;
 };
 export const filterSanityDataToSingleItem = <T extends { _id: string }>({
   data,
-  isPreview,
 }: Params<T | undefined>) => {
   let result: T | undefined
 
@@ -18,11 +16,7 @@ export const filterSanityDataToSingleItem = <T extends { _id: string }>({
       result = firstItem;
     }
 
-    if (isPreview) {
-      result = data?.find((i) => i?._id?.startsWith("drafts.")) || data[0];
-    } else {
-      result = data?.find((i) => !i?._id?.startsWith("drafts.")) || data[0];
-    }
+    result = data?.find((i) => !i?._id?.startsWith("drafts.")) || data[0];
   }
 
   return result ?? null;

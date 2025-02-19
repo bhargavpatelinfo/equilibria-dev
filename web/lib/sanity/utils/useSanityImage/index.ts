@@ -3,7 +3,7 @@ import {
   UseNextSanityImageBuilder,
   UseNextSanityImageOptions,
 } from "next-sanity-image";
-import { getClient } from "../getClient";
+import { client } from "../getClient";
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 const defaultImageBuilder: UseNextSanityImageBuilder = (
@@ -21,7 +21,6 @@ export const useSanityImage = function (
   img: SanityImageSource,
   options?: UseNextSanityImageOptions
 ) {
-  const client = getClient();
   const { alt, caption } = img as { alt: string, caption: string } || {}
   try {
     const imageProps = useNextSanityImage(client!, img, {

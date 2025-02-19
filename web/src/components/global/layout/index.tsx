@@ -30,15 +30,15 @@ const Layout: React.FC<PropsWithChildren<LayoutProps>> = ({
   return (
     <main>
       <CustomNextSeo seo={seo} slug={slug} />
-      {preview && <AlertBanner preview={preview} loading={loading} />}
       {header && (
         <Header
-          block={header}
-          path={slug?.startsWith("/") ? slug : `/${slug}`}
+        block={header}
+        path={slug?.startsWith("/") ? slug : `/${slug}`}
         />
       )}
       {children}
       {footer && <Footer block={footer} />}
+      {preview && <AlertBanner preview={preview} loading={loading} />}
     </main>
   );
 };

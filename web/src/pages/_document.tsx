@@ -6,7 +6,7 @@ import Document, {
   DocumentContext,
 } from "next/document";
 import { groq } from "next-sanity";
-import { getClient, readToken } from "../../lib/sanity";
+import { sanityClientWithToken } from "../../lib/sanity";
 import { imageFields } from "../../lib/sanity/queries/helper/imageFields";
 import { CustomImageType } from "../../lib/sanity/types";
 
@@ -20,8 +20,7 @@ class MyDocument extends Document<CustomDocumentProps> {
     let faviconImage = "/favicon.ico";
 
     try {
-      const client = getClient(readToken);
-      const settings = await client.fetch<{ favicon?: CustomImageType }>(
+      const settings = await sanityClientWithToken.fetch<{ favicon?: CustomImageType }>(
         groq`
           *[_type == "settings"][0] {
             favicon {

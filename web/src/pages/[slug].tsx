@@ -8,16 +8,13 @@ import { REVALIDATE_DURATION } from "../../lib/constants";
 import PageView from "../../views/PageView";
 import { SharedPageProps } from "../../lib/sanity/types";
 import type { Page } from "../../lib/sanity/types/Page";
+import { QueryParams } from "next-sanity";
 
 
 const PreviewPageView = dynamic(() => import("../../views/PreviewPageView"));
 
 interface PageProps extends SharedPageProps {
   page: Page;
-}
-
-interface Query {
-  [key: string]: string;
 }
 
 const Page: NextPage<PageProps> = ({ page, draftMode }) => {
@@ -30,7 +27,7 @@ const Page: NextPage<PageProps> = ({ page, draftMode }) => {
     <PageView page={page} slug={`/${page?.slug}`} />
   );
 };
-export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
+export const getStaticProps: GetStaticProps<PageProps, QueryParams> = async (ctx) => {
   const { draftMode = false, params } = ctx;
 
   const pageData = await fetchDataFromSanity<Page[]>({
@@ -38,12 +35,10 @@ export const getStaticProps: GetStaticProps<PageProps, Query> = async (ctx) => {
     queryParams: {
       slug: params?.slug,
     },
-    isPreview: draftMode,
   });
 
   const page = filterSanityDataToSingleItem({
     data: pageData,
-    isPreview: draftMode,
   });
 
   if (!page) {

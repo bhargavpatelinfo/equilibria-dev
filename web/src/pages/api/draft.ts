@@ -1,9 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { validatePreviewUrl } from "@sanity/preview-url-secret";
-import { getClient } from "../../../lib/sanity";
+import { createClient } from "next-sanity";
+import { readToken, sanityConfig } from "../../../lib/sanity";
 
-const clientWithToken = getClient(process.env.SANITY_API_TOKEN);
-
+const clientWithToken = createClient({
+  ...sanityConfig,
+  token: readToken,
+  useCdn: false,
+});
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<string | void>

@@ -1,5 +1,5 @@
 import { createClient } from '@sanity/client';
-import { apiVersion, dataset, projectId, useCdn } from '../../config';
+import { apiVersion, dataset, projectId, readToken, useCdn } from '../../config';
 
 export const sanityConfig = {
   projectId,
@@ -8,21 +8,23 @@ export const sanityConfig = {
   apiVersion,
 };
 
-const client = createClient({
+export const client = createClient(sanityConfig)
+
+export const sanityClientWithToken = createClient({
   ...sanityConfig,
-  perspective: "published",
-});
+  token: readToken,
+})
 
-
-function getPreviewClient(previewToken?: string) {
-  return createClient({
-    ...sanityConfig,
-    useCdn: !previewToken,
-    token: previewToken,
-    perspective: 'previewDrafts',
-  })
-}
-
-export function getClient(previewToken?: string) {
-  return previewToken ? getPreviewClient(previewToken) : client
+export function getPreviewClient(preview?: { token: string }) {
+  if (preview) {
+    if (!preview.token) {
+      throw new Error("You must provide a token to preview drafts");
+    }
+    return createClient({
+      ...sanityConfig,
+      token: preview.token,
+      perspective: "previewDrafts",
+    });
+  }
+  return client;
 }
