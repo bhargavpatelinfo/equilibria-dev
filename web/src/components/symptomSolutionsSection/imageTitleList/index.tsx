@@ -16,7 +16,10 @@ const ImageTitleList: React.FC<{
           title && (
             <div
               key={imageTitleListIndex}
+           
               className={cn(
+                "transition-all duration-500",
+            hasAnimated ? "delay-1000 opacity-100" : "opacity-0",
                 "md:absolute bg-white p-2 xl:p-4 duration-500 transition-all  delay-800 rounded-2xl text-sm font-semibold shadow-cardSolutionShadow flex items-center gap-[11px] z-20 w-full md:w-fit justify-center",
                 // left
                 itemIndex === 0 &&
