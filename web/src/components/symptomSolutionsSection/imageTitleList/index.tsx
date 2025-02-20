@@ -24,12 +24,12 @@ const ImageTitleList: React.FC<{
                 // left
                 itemIndex === 0 &&
                   imageTitleListIndex === 0 &&
-                  "translation-all delay-300 duration-500 md:left-[-120px] xl:left-[-200px] md:top-[100px] xl:top-[300px]",
+                  "translation-all delay-300 duration-500 md:left-[-120px] xl:left-[-200px] md:top-[100px] xl:top-[310px]",
                 // left animation
                 itemIndex === 0 &&
                   imageTitleListIndex === 0 &&
                   hasAnimated &&
-                  "1xl:left-[-500px] ",
+                  "1xl:left-[-550px] ",
                 // center
                 itemIndex === 1 &&
                   imageTitleListIndex === 0 &&
@@ -49,13 +49,12 @@ const ImageTitleList: React.FC<{
                 // right
                 itemIndex === 2 &&
                   imageTitleListIndex === 0 &&
-                  "md:right-[-130px] delay-300  duration-500 top-[10px]",
-                itemIndex === 2 && imageTitleListIndex === 1 && "bg-[#800062]",
+                  "md:right-[-130px] delay-300  duration-500 top-[100px]",
                 // right animation
                 itemIndex === 2 &&
                   imageTitleListIndex === 0 &&
                   hasAnimated &&
-                  "xl:right-[-560px]"
+                  "xl:right-[-520px]"
               )}
             >
               {image && (
