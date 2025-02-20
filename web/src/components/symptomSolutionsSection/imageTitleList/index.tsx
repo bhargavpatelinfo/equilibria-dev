@@ -24,16 +24,16 @@ const ImageTitleList: React.FC<{
                 // left
                 itemIndex === 0 &&
                   imageTitleListIndex === 0 &&
-                  "translation-all delay-300 duration-500 md:left-[-120px] xl:left-[-200px] md:top-[100px] xl:top-[120px] bg-[red]",
+                  "translation-all delay-300 duration-500 md:left-[-120px] xl:left-[-200px] md:top-[100px] xl:top-[300px]",
                 // left animation
                 itemIndex === 0 &&
                   imageTitleListIndex === 0 &&
                   hasAnimated &&
-                  "1xl:left-[-500px] bg-[teal]",
+                  "1xl:left-[-500px] ",
                 // center
                 itemIndex === 1 &&
                   imageTitleListIndex === 0 &&
-                  "md:left-[-130px] top-[-20px] xl:top-[-38px]",
+                  "md:left-[-130px] top-[-20px] xl:top-[-80px]",
                 itemIndex === 1 &&
                   imageTitleListIndex === 1 &&
                   "md:right-[-130px] top-[-80px]",

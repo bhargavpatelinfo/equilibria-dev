@@ -29,11 +29,11 @@ const SymptomSolutionCard: React.FC<{
           className={cn(
             "w-full h-full object-cover z-20 transition-all duration-500 rounded-[32px]",
             itemIndex === 0 && hasAnimated
-              ? " -translate-x-[200px] mr-[500px] -translate-y-[-60px] delay-800 delay-300 scale-110 md:rotate-[-20deg] opacity-100"
+              ? " -translate-x-[200px] mr-[620px] -translate-y-[-190px] delay-800 delay-300 scale-110 md:rotate-[-15deg] opacity-100"
               : "-translate-x-[30px]",
             itemIndex === 1 && hasAnimated && "scale-105 -translate-y-8",
             itemIndex === 2 && hasAnimated
-              ? "translate-x-[330px] translate-y-[20px] scale-110 delay-800 delay-300 md:rotate-[20deg] opacity-100"
+              ? "translate-x-[330px] translate-y-[130px] scale-110 delay-800 delay-300 md:rotate-[11deg] opacity-100"
               : "translate-x-[30px]"
           )}
         />
